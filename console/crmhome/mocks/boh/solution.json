@@ -1,0 +1,66 @@
+{
+  "solutions": [{
+      "img": "https://zos.alipayobjects.com/rmsportal/rlwtYjJzVWGXXhz.png@300h_300w",
+      "name": "解决方案名称",
+      "parts": [{
+          "title": "标题",
+          "mainInfo": "主内容",
+          "subInfo": "次内容",
+          "img": "https://zos.alipayobjects.com/rmsportal/rlwtYjJzVWGXXhz.png@300h_300w"
+      }, {
+          "title": "标题",
+          "mainInfo": "主内容",
+          "subInfo": "次内容",
+          "img": "https://zos.alipayobjects.com/rmsportal/rlwtYjJzVWGXXhz.png@300h_300w"
+      }]
+  }, {
+      "img": "https://zos.alipayobjects.com/rmsportal/rlwtYjJzVWGXXhz.png@300h_300w",
+      "name": "解决方案名称",
+      "parts": [{
+          "title": "标题",
+          "mainInfo": "主内容",
+          "subInfo": "次内容",
+          "img": "https://zos.alipayobjects.com/rmsportal/rlwtYjJzVWGXXhz.png@300h_300w"
+      }, {
+          "title": "标题",
+          "mainInfo": "主内容",
+          "subInfo": "次内容",
+          "img": "https://zos.alipayobjects.com/rmsportal/rlwtYjJzVWGXXhz.png@300h_300w"
+      }]
+  }],
+  "demos": [{
+      "img": "https://zos.alipayobjects.com/rmsportal/rlwtYjJzVWGXXhz.png@300h_300w",
+      "name": "案例名称",
+      "parts": [{
+          "title": "标题",
+          "mainInfo": "主内容",
+          "subInfo": "次内容",
+          "img": "https://zos.alipayobjects.com/rmsportal/rlwtYjJzVWGXXhz.png@300h_300w"
+      }, {
+          "title": "标题",
+          "mainInfo": "主内容",
+          "subInfo": "次内容",
+          "img": "https://zos.alipayobjects.com/rmsportal/rlwtYjJzVWGXXhz.png@300h_300w"
+      }]
+  }, {
+      "img": "https://zos.alipayobjects.com/rmsportal/rlwtYjJzVWGXXhz.png@300h_300w",
+      "name": "案例名称",
+      "parts": [{
+          "title": "标题",
+          "mainInfo": "主内容",
+          "subInfo": "次内容",
+          "img": "https://zos.alipayobjects.com/rmsportal/rlwtYjJzVWGXXhz.png@300h_300w"
+      }, {
+          "title": "标题",
+          "mainInfo": "主内容",
+          "subInfo": "次内容",
+          "img": "https://zos.alipayobjects.com/rmsportal/rlwtYjJzVWGXXhz.png@300h_300w"
+      }]
+  }],
+  "purchases": [{
+      "img": "https://zos.alipayobjects.com/rmsportal/rlwtYjJzVWGXXhz.png@300h_300w",
+      "name": "宝贝名称",
+      "desc": "宝贝描述",
+      "link": "https://www.alipay.com"
+  }]
+}

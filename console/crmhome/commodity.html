@@ -1,0 +1,965 @@
+<!DOCTYPE html>
+<html class="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+  <meta name="renderer" content="webkit" />
+  <meta name="force-rendering" content="webkit" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <title>商家中心</title>
+
+
+  <link rel="icon" href="https://i.alipayobjects.com/common/favicon/favicon.ico" type="image/x-icon" />
+  <link rel="shortcut icon" href="https://i.alipayobjects.com/common/favicon/favicon.ico" type="image/x-icon" /><link href="https://a.alipayobjects.com" rel="dns-prefetch" />
+  <link href="https://app.alipay.com" rel="dns-prefetch" />
+  <link href="https://my.alipay.com" rel="dns-prefetch" />
+  <link href="https://lab.alipay.com" rel="dns-prefetch" />
+  <link href="https://cashier.alipay.com" rel="dns-prefetch" />
+  <link href="https://financeprod.alipay.com" rel="dns-prefetch" />
+  <link href="https://shenghuo.alipay.com" rel="dns-prefetch" />
+
+  <!-- uitpl:/component/trackerTime.vm -->
+  <!-- FD:106:alipay/tracker/iconfont.vm:START --><style>
+  @font-face {
+    font-family: "rei";
+    src: url("https://i.alipayobjects.com/common/fonts/rei.eot?20150616"); /* IE9 */
+    src: url("https://i.alipayobjects.com/common/fonts/rei.eot?20150616#iefix") format("embedded-opentype"), /* IE6-IE8 */
+    url("https://i.alipayobjects.com/common/fonts/rei.woff?20150616") format("woff"), /* chrome 6+、firefox 3.6+、Safari5.1+、Opera 11+ */
+    url("https://i.alipayobjects.com/common/fonts/rei.ttf?20150616")  format("truetype"), /* chrome、firefox、opera、Safari, Android, iOS 4.2+ */
+    url("https://i.alipayobjects.com/common/fonts/rei.svg?20150616#rei") format("svg"); /* iOS 4.1- */
+  }
+  .iconfont {
+    font-family:"rei";
+    font-style: normal;
+    font-weight: normal;
+    cursor: default;
+    -webkit-font-smoothing: antialiased;
+  }
+</style>
+  <!-- FD:106:alipay/tracker/iconfont.vm:END -->
+  <script type="text/javascript">
+    window._to = { start: new Date() };
+  </script>
+
+  <!-- FD:106:alipay/tracker/monitor.vm:START --><!-- FD:106:alipay/tracker/sai_seer.vm:START --><script type="text/javascript">
+
+  !function(e){function n(o){if(r[o])return r[o].exports;var i=r[o]={exports:{},id:o,loaded:!1};return e[o].call(i.exports,i,i.exports,n),i.loaded=!0,i.exports}var r={};return n.m=e,n.c=r,n.p="",n(0)}({0:function(e,n,r){e.exports=r(5)},5:function(e,n){function r(e){var n=String(e).match(l);return n?n[0]:"global"}function o(e){for(var n=[],o=0;e.arguments&&e.arguments.callee&&e.arguments.callee.caller&&(e=e.arguments.callee.caller,n.push("at "+r(e)),e.caller!==e)&&!(o++>c););return n.join("\n")}function i(e,n,r,i,t,a,u){!u&&arguments.callee.caller&&(u=o(arguments.callee.caller));var c={profile:s,type:e,msg:n||"",file:r||"",line:i||0,col:t||0,num:a||"",stack:u||"",lang:navigator.language||navigator.browserLanguage||"",lost:b.join(",")},l=r+":"+i+":"+n;return p.hasOwnProperty(l)||(c.uv=1,p[l]=!0),Sai.log(c)}var t=window;if(t.Sai)e.exports={};else{var a=t.Sai={};a._DATAS=[];var u=a._EVENTS=[];a.on=function(e,n){u.push([e,n])},a.off=function(){};var s="log";a.log=function(e,n){if(e&&!(arguments.length>=3)){var r;return"[object Object]"===Object.prototype.toString.call(e)?(r=e,r.profile=n||r.profile||s):r={profile:n||s,seed:e},a._DATAS.push(r),r}};var s="jserror",c=20,l=/^\s*function\b[^\)]+\)/,b=[],f={};a.lost=function(e){return f.hasOwnProperty(e)?void 0:(f[e]=!0,b.push(e),b)};var p={};a.error=function(e){return e instanceof Error?i("catched",e.message||e.description,e.filename||e.fileName||e.sourceURL,e.lineno||e.lineNumber||e.line,e.colno||e.columnNumber,e.number,e.stack||e.stacktrace):void 0},t.onerror=function(e,n,r,o){return i("global",e,n,r,o),!1}}}});
+
+</script><!-- FD:106:alipay/tracker/sai_seer.vm:END --><!-- FD:106:alipay/tracker/monitor.vm:END -->
+  <!-- FD:106:alipay/tracker/seajs.vm:START --><!-- FD:106:alipay/tracker/seajs.vm:782:seajs.schema:seajs-静态文件地址:START -->
+
+
+
+  <!-- monitor 防错代码 -->
+  <script>
+    (function(win){
+      if(!win.monitor){win.monitor = {};}
+
+      var METHODS = ["lost", "log", "error", "on", "off"];
+
+      for(var i=0,method,l=METHODS.length; i<l; i++){
+        method = METHODS[i];
+        if("function" !== typeof win.monitor[method]){
+          win.monitor[method] = function(){};
+        }
+      }
+    })(window);
+  </script>
+
+  <!-- seajs以及插件 -->
+  <script charset="utf-8" crossorigin="anonymous" id="seajsnode" onerror="window.monitor && monitor.lost && monitor.lost(this.src)" src="https://a.alipayobjects.com/??seajs/seajs/2.2.3/sea.js,seajs/seajs-combo/1.0.0/seajs-combo.js,seajs/seajs-style/1.0.2/seajs-style.js,seajs/seajs-log/1.0.0/seajs-log.js,jquery/jquery/1.7.2/jquery.js,gallery/json/1.0.3/json.js,alipay-request/3.0.3/index.js"></script>
+
+  <!-- seajs config 配置 -->
+  <script>
+    seajs.config({
+      alias: {
+        '$': 'jquery/jquery/1.7.2/jquery',
+        '$-debug': 'jquery/jquery/1.7.2/jquery',
+        'jquery': 'jquery/jquery/1.7.2/jquery',
+        'jquery-debug': 'jquery/jquery/1.7.2/jquery-debug',
+        'seajs-debug': 'seajs/seajs-debug/1.1.1/seajs-debug'
+      },
+      crossorigin: function(uri){
+
+        function typeOf(type){
+          return function(object){
+            return Object.prototype.toString.call(object) === '[object ' + type + ']';
+          }
+        }
+        var isString = typeOf("String");
+        var isRegExp = typeOf("RegExp");
+
+        var whitelist = [];
+
+
+
+        whitelist.push('https://a.alipayobjects.com/');
+
+
+
+        for (var i=0, rule, l=whitelist.length; i<l; i++){
+          rule = whitelist[i];
+          if (
+            (isString(rule) && uri.indexOf(rule) === 0) ||
+            (isRegExp(rule) && rule.test(uri))
+          ) {
+
+            return "anonymous";
+          }
+        }
+      },
+      vars: {
+        locale: 'zh-cn'
+      }
+    });
+  </script>
+
+  <!-- 兼容原有的 plugin-i18n 写法 -->
+  <!-- https://github.com/seajs/seajs/blob/1.3.1/src/plugins/plugin-i18n.js -->
+  <script>
+    seajs.pluginSDK = seajs.pluginSDK || {
+        Module: {
+          _resolve: function() {}
+        },
+        config: {
+          locale: ''
+        }
+      };
+    // 干掉载入 plugin-i18n.js，避免 404
+    seajs.config({
+      map: [
+        [/^.*\/seajs\/plugin-i18n\.js$/, ''],
+        [/^.*\i18n!lang\.js$/, '']
+      ]
+    });
+  </script>
+
+  <!-- 路由旧 ID，解决 seajs.use('select/x.x.x/select') 的历史遗留问题 -->
+  <script>
+    (function(){
+
+      var JQ = '/jquery/1.7.2/jquery.js';
+      seajs.cache['https://a.alipayobjects.com/gallery' + JQ] = seajs.cache['https://a.alipayobjects.com/jquery' + JQ];
+
+      var GALLERY_MODULES = [
+        'async','backbone','coffee','cookie','es5-safe','handlebars','iscroll',
+        'jasmine','jasmine-jquery','jquery','jquery-color','json','keymaster',
+        'labjs','less','marked','moment','mustache','querystring','raphael',
+        'socketio','store','swfobject','underscore','zepto','ztree'
+      ];
+
+      var ARALE_MODULES = [
+        'autocomplete','base','calendar','class','cookie','dialog','easing',
+        'events','iframe-uploader','iframe-shim','messenger','overlay','popup',
+        'position','select','switchable','tip','validator','widget'
+      ];
+
+      var util = {};
+      util.indexOf = Array.prototype.indexOf ?
+        function(arr, item) {
+          return arr.indexOf(item);
+        } :
+        function(arr, item) {
+          for (var i = 0; i < arr.length; i++) {
+            if (arr[i] === item) {
+              return i;
+            }
+          }
+          return -1;
+        };
+      util.map = Array.prototype.map ?
+        function(arr, fn) {
+          return arr.map(fn);
+        } :
+        function(arr, fn) {
+          var ret = [];
+          for (var i = 0; i < arr.length; i++) {
+            ret.push(fn(arr[i], i, arr));
+          }
+          return ret;
+        };
+
+      function contains(arr, item) {
+        return util.indexOf(arr, item) > -1
+      }
+
+      function map(id) {
+        id = id.replace('#', '');
+
+        var parts = id.split('/');
+        var len = parts.length;
+        var root, name;
+
+        // id = root/name/x.y.z/name
+        if (len === 4) {
+          root = parts[0];
+          name = parts[1];
+
+          // gallery 或 alipay 开头的没有问题
+          if (root === 'alipay' || root === 'gallery') {
+            return id;
+          }
+
+          // arale 开头的
+          if (root === 'arale') {
+            // 处理 arale/handlebars 的情况
+            if (contains(GALLERY_MODULES, name)) {
+              return id.replace('arale/', 'gallery/');
+            } else {
+              return id;
+            }
+          }
+        }
+        // id = name/x.y.z/name
+        else if (len === 3) {
+          name = parts[0]
+
+          // 开头在 GALLERY_MODULES 或 ARALE_MODULES
+          if (contains(GALLERY_MODULES, name)) {
+            return 'gallery/' + id;
+          } else if (contains(ARALE_MODULES, name)) {
+            return 'arale/' + id;
+          }
+        }
+
+        return id;
+      }
+
+      var _use = seajs.use;
+
+      seajs.use = function(ids, callback) {
+        if (typeof ids === 'string') {
+          ids = [ids];
+        }
+
+        ids = util.map(ids, function(id) {
+          return map(id);
+        });
+
+        return _use(ids, callback);
+      }
+
+    })();
+  </script><!-- FD:106:alipay/tracker/seajs.vm:782:seajs.schema:seajs-静态文件地址:END --><!-- FD:106:alipay/tracker/seajs.vm:END -->
+  <!-- FD:106:alipay/tracker/tracker_time.vm(1.0.5):START --><!-- FD:106:alipay/tracker/tracker_time.vm(1.0.5):784:tracker_time.schema:tracker_time-tracker功能:START --><script charset="utf-8" crossorigin="crossorigin" src="https://a.alipayobjects.com/static/ar/alipay.light.base-1.8.js"></script>
+
+
+
+  <script type="text/javascript">
+    if (!window._to) {
+      window._to = { start: new Date() };
+    }
+  </script>
+  <script charset="utf-8" src="https://as.alipayobjects.com/??g/component/tracker/2.2.2/index.js,component/smartracker/2.0.1/index.js"></script>
+  <script>
+    window.Tracker && Tracker.start && Tracker.start();
+  </script>
+
+
+  <!-- FD:106:alipay/tracker/tracker_time.vm(1.0.5):784:tracker_time.schema:tracker_time-tracker功能:END -->
+  <!-- FD:106:alipay/tracker/tracker_time.vm(1.0.5):END -->
+  <link type="text/css" media="screen" charset="utf-8" rel="stylesheet" href="https://a.alipayobjects.com/al/out.pa_new-1.0.css" />
+
+  <link charset="utf-8" rel="stylesheet" href="https://a.alipayobjects.com/jui/2.1.4/jui.css" media="all" />
+  <link charset="utf-8" rel="stylesheet" href="https://a.alipayobjects.com/crmhome/1.1.7/common/common.css" media="all" />
+
+  <style type="text/css">
+    .jui-table-lg td{
+      padding: 15px 1em;
+    }
+    [class^=jui-table] .discount-title{
+      font-size: 14px;
+    }
+    .discount-subtitle{
+      font-size: 14px;
+      text-align: center;
+      padding: 15px 0 0 0;
+      color: #808080;
+    }
+    .discount-data{
+      font-size: 20px;
+      color: #1a1a1a;
+      text-align: center;
+      padding: 10px 0;
+    }
+    .pagination {
+      text-align: right;
+      padding-top: 10px;
+    }
+    .news-item{
+      width: 800px;
+      cursor: pointer;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      white-space: nowrap;
+    }
+    .news-creat-time {
+      color: #808080;
+    }
+    .news-creat-time, .news-readed {
+      color: #808080;
+    }
+    .tbf-bdr{
+      width:20%
+    }
+    .tbf-contextBody{
+      overflow: visible;
+    }
+    .index-notice{
+      border: 1px solid #cdd7e4;
+      background: #e6f5ff;
+      line-height: 44px;
+      padding-left: 16px;
+    }
+    /* 活动通知 start */
+    .activity-box {
+      font-size: 14px;
+      text-align: center;
+      font-family: "Microsoft Yahei", Tahoma, Arial;
+    }
+    .activity-box .activity-head {
+      width: 960px;
+      height: 300px;
+      position: relative;
+    }
+    .activity-box .activity-mask {
+      height: 300px;
+      opacity: 0.6;
+      background-color: #000;
+      filter: alpha(opacity=60);
+    }
+    .activity-box .activity-content {
+      width: 960px;
+      height: 300px;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+    .activity-box .activity-title {
+      color: #fff;
+      font-size: 38px;
+      line-height: 64px;
+      padding: 104px 10px 25px 10px;
+    }
+    .activity-box .activity-sub-title {
+      font-size: 16px;
+      color: #f0f0f2;
+    }
+    .activity-box .activity-item {
+      padding: 21px 20px 0 20px;
+    }
+    .activity-box .activity-item li {
+      padding: 8px;
+      color: #333;
+    }
+    .activity-box .activity-detail {
+      padding: 18px 0 82px 0;
+    }
+    .activity-dialog {
+      padding: 0;
+    }
+    .activity-dialog .jui-dialog-close {
+      color: #fff;
+    }
+    /* 活动通知 end */
+    /*下拉框显示*/
+    #J_multiPartner+.jui-select {
+      position: absolute;
+      top:20px;
+      right: 160px;
+    }
+
+    #J_multiPartnerTip {
+      position: absolute;
+      top:57px;
+      right: 197px;
+      font-size: 12px;
+      line-height: 5px;
+      color: #FF8208;
+    }
+  </style></head>
+<!--[if lt IE 7]><body class="ie6 "><![endif]-->
+<!--[if IE 7]><body class="ie7 "><![endif]-->
+<!--[if IE 8]><body class="ie8 "><![endif]-->
+<!--[if IE 9]><body class="ie9 "><![endif]-->
+<!--[if !IE]><!--><body class=""><!--<![endif]-->
+<script type="text/javascript">
+  AralePreload = [];
+  var AP = AP || {};
+  AP.PageVar = {
+    app_domain:"",
+    appstore_domain: "https://app.alipay.com",
+    personal_domain:"",
+    personalprod_domain:"",
+    mipgw_domain:"",
+    ccrprod_domain:"",
+    zhangdan_domain:"",
+    benefits_domain:"",
+    image_domain:"http://img.alipay.net:80",
+    communityweb_domain: "",
+    tfs_domain:"",
+    benefitprod_domain:"$benefitprodServer"
+  }
+</script>
+<style>
+  #container {padding-top: 1px;}
+</style>
+
+<!-- uninav -->
+
+
+
+
+
+
+
+
+<!-- CMS:全站公共 cms/nav/navSwitch.vm开始:alipay/nav/navSwitch.vm -->
+<script>
+  MSGSWITCH = true;
+</script>
+
+<script>
+  MERCHANT_SWITCH = 'true';
+</script>
+
+<!-- CMS:全站公共 cms/全站导航/网站改版新旧版切换开始:alipay/nav/versionSwitch.vm -->
+
+
+
+
+
+
+<!-- CMS:全站公共 cms/全站导航/网站改版新旧版切换结束:alipay/nav/versionSwitch.vm --><!-- CMS:全站公共 cms/nav/navSwitch.vm结束:alipay/nav/navSwitch.vm --><!-- abtestEnabled: false -->
+
+<!-- CMS:全站公共 cms/nav/uribroker.vm开始:alipay/nav/uribroker.vm -->    <script type="text/javascript">
+  window.GLOBAL || (GLOBAL = {});
+  GLOBAL.system = {};
+  GLOBAL.system["assetsServer"] = "https://a.alipayobjects.com"; GLOBAL.system["apimgServer"] = "https://i.alipayobjects.com"; GLOBAL.system["personalportalServer"] = "https://my.alipay.com"; GLOBAL.system["personalServer"] = "https://lab.alipay.com"; GLOBAL.system["personalprodServer"] = "https://shenghuo.alipay.com"; GLOBAL.system["memberprodServer"] = "https://memberprod.alipay.com"; GLOBAL.system["tfsImageServer"] = "https://tfsimg.alipay.com"; GLOBAL.system["merchantwebServer"] = "https://shanghu.alipay.com"; GLOBAL.system["authCenterServer"] = "https://auth.alipay.com"; GLOBAL.system["securityServer"] = "https://securitycenter.alipay.com"; GLOBAL.system["tradecmtServer"] = "https://pingjia.alipay.com"; GLOBAL.system["appstoreServer"] = "https://app.alipay.com"; GLOBAL.system["zhangdanServer"] = "https://zd.alipay.com"; GLOBAL.system["uninavServer"] = "https://uninav.alipay.com"; GLOBAL.system["pucprodServer"] = "https://jiaofei.alipay.com"; GLOBAL.system["benefitprodServer"] = "https://zht.alipay.com"; GLOBAL.system["enterpriseportalServer"] = "https://enterpriseportal.alipay.com"; GLOBAL.system["couriercoreServer"] = "https://couriercore.alipay.com"; GLOBAL.system["uemprodServer"] = "https://uemprod.alipay.com"; GLOBAL.system["bizfundprodServer"] = "https://bizfundprod.alipay.com"; GLOBAL.system["morderprodServer"] = "https://b.alipay.com"; GLOBAL.system["consumeprodServer"] = "https://consumeprod.alipay.com"; GLOBAL.system["emembercenterServer"] = "https://emembercenter.alipay.com"; GLOBAL.system["crmhomeServer"] = "https://e.alipay.com"; GLOBAL.system["cshallServer"] = "https://cshall.alipay.com"; GLOBAL.system["openhomeServer"] = "https://openhome.alipay.com"; GLOBAL.system["yebprodServer"] = "https://yebprod.alipay.com"; GLOBAL.system["financeprodServer"] = "https://financeprod.alipay.com"; GLOBAL.system["goldetfprodServer"] = "https://goldetfprod.alipay.com"; GLOBAL.system["certifyServer"] = "https://certify.alipay.com"; GLOBAL.system["securitycenterServer"] = "https://securitycenter.alipay.com"; GLOBAL.system["couponwebServer"] = "https://hongbao.alipay.com"; GLOBAL.system["pointprodServer"] = "https://jf.alipay.com"; GLOBAL.system["pcreditprodServer"] = "https://huabei.alipay.com"; GLOBAL.system["cardServer"] = "https://card.alipay.com"; GLOBAL.system["membercenterServer"] = "https://accounts.alipay.com"; GLOBAL.system["custwebServer"] = "https://custweb.alipay.com";  </script>
+<!-- CMS:全站公共 cms/nav/uribroker.vm结束:alipay/nav/uribroker.vm -->
+
+
+
+
+
+<div id="J-global-notice-container" class="global-notice-container" style="position: relative; z-index: 999; background: #ff6600;">
+
+
+  <!-- CMS:全站公共 cms/notice/headNotice.vm开始:alipay/notice/headNotice.vm --><!--[if lte IE 7]>
+  <style>.kie-bar { display: none; height: 24px; line-height: 1.8; font-weight:normal; text-align: center; border:1px solid #fce4b5; background-color:#FFFF9B; color:#e27839; position: relative; font-size: 12px; margin: 5px 0 0 0; padding: 5px 0 2px 0; } .kie-bar a { text-decoration: none; color:#08c; background-repeat: none; } .kie-bar a#kie-setup-IE8,.kie-bar a#kie-setup-taoBrowser { padding: 0 0 2px 20px; *+padding-top: 2px; *_padding-top: 2px; background-repeat: no-repeat; background-position: 0 0; } .kie-bar a:hover { text-decoration: underline; } .kie-bar a#kie-setup-taoBrowser { background-position: 0 -20px; }</style>
+  <div id="kie-bar" class="kie-bar">您现在使用的浏览器版本过低，可能会导致部分图片和信息的缺失。请立即 <a href="http://www.microsoft.com/china/windows/IE/upgrade/index.aspx" id="kie-setup-IE8" seed="kie-setup-IE8" target="_blank" title="免费升级至IE8浏览器">免费升级</a> 或下载使用 <a href="http://download.browser.taobao.com/client/browser/down.php?pid=0080_2062" id="kie-setup-taoBrowser" seed="kie-setup-taoBrowser" target="_blank" title="淘宝浏览器">淘宝浏览器</a> ，安全更放心！ <a title="查看帮助" target="_blank" seed="kie-setup-help" href="http://help.alipay.com/lab/help_detail.htm?help_id=260579">查看帮助</a></div>
+  <script type="text/javascript">
+    (function () {
+      function IEMode() {
+        var ua = navigator.userAgent.toLowerCase();
+        var re_trident = /\btrident\/([0-9.]+)/;
+        var re_msie = /\b(?:msie |ie |trident\/[0-9].*rv[ :])([0-9.]+)/;
+        var version;
+        if (!re_msie.test(ua)) {
+          return false;
+        }
+        var m = re_trident.exec(ua);
+        if (m) {
+          version = m[1].split(".");
+          version[0] = parseInt(version[0], 10) + 4;
+          version = version.join(".");
+        } else {
+          m = re_msie.exec(ua);
+          version = m[1];
+        }
+        return parseFloat(version);
+      }
+      var ie = IEMode();
+      if (ie && ie < 8 && (self.location.href.indexOf("_xbox=true") < 0)) {
+        document.getElementById('kie-bar').style.display = 'block';
+        document.getElementById('kie-setup-IE8').style.backgroundImage = 'url(https://i.alipayobjects.com/e/201307/jYwARebNl.png)';
+        document.getElementById('kie-setup-taoBrowser').style.backgroundImage = 'url(https://i.alipayobjects.com/e/201307/jYwARebNl.png)';
+      }
+    })();
+  </script>
+  <![endif]-->
+
+  <!-- CMS:全站公共 cms/notice/headNotice.vm结束:alipay/notice/headNotice.vm --></div>
+
+
+<!--[if lt IE 8]><script>location.href = 'https://www.alipay.com/x/kill-ie.htm';</script><![endif]-->
+
+
+
+<div id="J-nav-container" class="nav-common">
+  <!-- FD:76:crmhome/common/customNav.vm:START --><!-- FD:76:crmhome/common/customNav.vm:446:customNav.schema:customNav-自定义统一导航内容:START -->
+
+  <style>
+    #J-nav-merchant-global .nav-merchant-global-top-wrapper{ line-height: 26px;}
+  </style>
+
+
+
+
+  <script id="J-nav-logo-custom" type="text/html">
+    <div style="position: relative;">
+      <img src="https://t.alipayobjects.com/images/rmsweb/T1RZlgXiprXXXXXXXX.png" height="30" style="display:block;margin-top:25px;" />
+      <a href="/index.htm" style="width:75px;position:absolute;top:0;left:100px;height:29px;display:block;"></a>
+    </div>
+  </script>
+
+  <!-- FD:76:crmhome/common/customNav.vm:446:customNav.schema:customNav-自定义统一导航内容:END --><!-- FD:76:crmhome/common/customNav.vm:END --></div>
+
+<script type="text/javascript">
+
+  // Domain
+  document.domain = document.domain.split(".").slice(-2).join(".");
+
+  // Compatible for xbox
+  (function (win) {
+    function noop() {}
+
+    function fake(namespace, method) {
+      namespace = namespace.split('.');
+
+      var target = win, len = namespace.length, index = 0, ns;
+
+      for (; index < len; index++) {
+        ns = namespace[index];
+
+        if (!target[ns]) {
+          target[ns] = {};
+        }
+
+        target = target[ns];
+      }
+
+      if (typeof target[method] !== 'function') {
+        target[method] = noop;
+      }
+    }
+
+    fake('mytip', 'show');
+    fake('AP.pk.pa.asidePortrait', 'renew');
+  }(window));
+
+  // Global nav data
+  window.GLOBAL_NAV_DATA = {
+    nav: 'merchant.global',
+    navData: '',
+    customNav: '/crmhome/common/customNav.vm',
+    appKey: '',
+    catKey: '',
+    title: '商家中心',
+    pageName: '商家中心@/index.htm',
+    userName : '支付宝国内事业群产品测试帐户七',
+    email: 'testyufabu07@alipay.com',
+    mobile: '137****0153',
+    logonIdType: 'EMAIL',
+    userId: '2088211521646673',
+    portraitPath: '/images/partner/T1kV8lXcteXXXXXXXX',
+    container : '#J-nav-container',
+    timestamp : new Date().getTime(),
+    pageAbsUrl : 'http://e.alipay.com/merchant/index.htm',
+    isLogin : true,
+    showTaobaoLogin : false,
+    showAlibabaLogin : false,
+    showMerchant : false,
+    showPersonal : false,
+    merchantSwitch: window.MERCHANT_SWITCH,
+    uriBrokers: GLOBAL.system
+  };
+</script>
+
+<!-- CMS:全站公共 cms/nav/nav_js.vm开始:alipay/nav/nav_js.vm -->
+<script src="https://a.alipayobjects.com/alipay-nav/2.4.13/merchant.global.js" charset="utf-8"></script>
+<!-- CMS:全站公共 cms/nav/nav_js.vm结束:alipay/nav/nav_js.vm -->
+
+<div id="container" class="ui-container">
+  <style>
+    ::-moz-placeholder{color:#808080;}
+    ::-webkit-input-placeholder{color:#808080;}
+    :-ms-input-placeholder{color:#808080;}
+  </style>
+
+  <!-- start container -->
+  <div class="tbf-container">
+
+    <!-- start slide nav-->
+    <div class="tbf-sliderNav">
+      <!-- FD:76:crmhome/common/menu.vm:START --><!-- 区块模板样例 -->
+
+      <!-- 1. schema 的使用 -->
+      <!-- 1.1 引用路径从包目录开始 -->
+      <!-- 1.2 使用指南请查看 https://site.alipay.net/fengdie/dev-guide/datum/schema.html -->
+
+
+      <style>
+        @font-face {
+          font-family: 'crmhome';
+          src: url('//at.alicdn.com/t/font_1449223593_6449525.eot'); /* IE9*/
+          src: url('//at.alicdn.com/t/font_1449223593_6449525.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */ url('//at.alicdn.com/t/font_1449223593_6449525.woff') format('woff'), /* chrome、firefox */ url('//at.alicdn.com/t/font_1449223593_6449525.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/ url('//at.alicdn.com/t/font_1449223593_6449525.svg#crmhome') format('svg'); /* iOS 4.1- */
+        }
+
+        .iconfont-crmhome {
+          font-family: 'crmhome';
+          font-weight: 400;
+          font-style: normal;
+          cursor: default;
+          -webkit-font-smoothing: antialiased;
+          -webkit-text-stroke-width: .2px
+        }
+
+      </style>
+      <div id="gloablMenu" class="fn-hide">
+        <!-- 服务商菜单-->
+        <dl>
+          <dt data-mcode="12"><a href="/merchant/myMerchantQuery.htm"><i class="iconfont-crmhome" title="首页">&#xe601;</i>首页</a>
+          </dt>
+        </dl>
+
+        <dl>
+          <dt data-mcode="16"><a href="/merchant/bvIndex.htm"><i class="iconfont-crmhome" title="首页">&#xe601;</i>首页</a>
+          </dt>
+        </dl>
+
+        <dl>
+          <dt data-mcode="14">
+            <em><i class="iconfont-crmhome" title="品牌营销">&#xe61e;</i>品牌营销</em>
+          </dt>
+          <dd data-mcode="1401"><a href="/goods/discountpromo/create.htm">单品折扣券</a></dd>
+          <dd data-mcode="1402"><a href="/goods/discountpromo/rtCreate.htm">实时优惠</a></dd>
+          <dd data-mcode="1403"><a href="/goods/itempromo/brandVendorItems.htm">管理</a></dd>
+        </dl>
+
+        <dl>
+          <dt data-mcode="15">
+            <em><i class="iconfont-crmhome" title="经营分析">&#xe61e;</i>经营分析</em>
+          </dt>
+          <dd data-mcode="1501" data-rehost="no"><a
+            href="https://luopan.alipay.com/offlinetb/kb_brandowner_promo_data.htm">营销数据</a></dd>
+          <dd data-mcode="1504" data-rehost="no"><a href="https://luopan.alipay.com/offlinetb/supermarket_product.htm">商品分析</a>
+          </dd>
+          <!--<dd data-mcode="1502" data-rehost="no"><a href="https://luopan.alipay.com/offlinetb/kb_app_market_index.htm">应用市场</a></dd>-->
+        </dl>
+
+        <dl>
+          <dt data-mcode="08">
+            <em><i class="iconfont-crmhome" title="Leads管理">&#xe61e;</i>Leads管理</em>
+          </dt>
+          <dd data-mcode="0801"><a href="/merchant/myMerchantQuery.htm">私海Leads</a></dd>
+          <dd data-mcode="0802"><a href="/merchant/unclaimedMerchantQuery.htm">公海Leads</a></dd>
+          <dd data-mcode="0803" class="navMerchant"><a href="/merchant/merchantAdd.htm" id="J_op_add_merchant"
+                                                       class="jui-btn jui-btn-virtual" data-gldisabled="true">+
+            添加Leads</a></dd>
+        </dl>
+
+        <dl>
+          <dt data-mcode="13">
+            <em><i class="iconfont-crmhome" title="商家管理">&#xe60d;</i>商家管理</em>
+          </dt>
+          <dd data-mcode="1301"><a href="/merchant/merchantManageQuery.htm">商家概况</a></dd>
+          <dd data-mcode="1302"><a href="/merchant/merchantShopReport.htm">门店运营</a></dd>
+          <!-- <dt data-mcode="13"><a href="/merchant/merchantManageQuery.htm"><i class="iconfont-crmhome" title="商家管理">&#xe60d;</i>商家管理</a></dt> -->
+        </dl>
+
+        <dl>
+          <dt data-mcode="09">
+            <em><i class="iconfont-crmhome" title="人员管理" style="font-size: 22px;padding-right: 8px;">
+              &#xe60c;</i>人员管理</em>
+          </dt>
+          <dd data-mcode="0901"><a href="/staff/query.htm">员工管理</a></dd>
+          <dd data-mcode="0902"><a href="#">角色及权限</a></dd>
+        </dl>
+        <dl style="display:none;">
+          <dt data-mcode="10" data-rehost="no"><a href="https://mbillexprod.alipay.com/crmhome/commisionBill.htm"><i
+            class="iconfont-crmhome" title="佣金查询"></i>佣金查询</a></dt>
+        </dl>
+        <dl>
+          <dt data-mcode="21">
+            <em><i class="iconfont-crmhome" title="返佣">&#xe610;</i>返佣</em>
+          </dt>
+          <dd data-mcode="2101"><a href="/merchant/merchantRebateQuery.htm">返佣查询</a></dd>
+        </dl>
+        <dl>
+          <dt data-mcode="11"><a href="/comment/queryOpLog.htm"><i class="iconfont-crmhome" title="操作日志">&#xe60f;</i>操作日志</a>
+          </dt>
+        </dl>
+        <dl>
+          <dt data-mcode="25"><a href="/merchant/notice.htm"><i class="iconfont-crmhome" title="公告">&#xe605;</i>公告</a>
+          </dt>
+        </dl>
+
+        <!-- 商家中心菜单-->
+        <dl>
+          <dt data-mcode="00"><a href="/merchant/index.htm"><i class="iconfont-crmhome" title="首页">&#xe601;</i>首页</a></dt>
+        </dl>
+        <dl>
+          <dt data-mcode="01">
+            <em><i class="iconfont-crmhome" title="商家营销">&#xe60e;</i>商家营销</em>
+          </dt>
+          <dd data-mcode="0108"><a href="activity/memberpromo.json">会员营销v2</a></dd>
+          <dd data-mcode="0101"><a href="/goods/itempromo/create.htm">发布折扣</a></dd>
+          <dd data-mcode="0104"><a href="/goods/itempromo/exchangeCreate.htm">发布兑换券</a></dd>
+          <dd data-mcode="0105"><a href="/goods/itempromo/activityManage.htm">营销活动</a></dd>
+          <dd data-mcode="0102"><a href="/goods/itempromo/index.htm">管理</a></dd>
+          <dd data-mcode="0107" data-rehost="no"><a href="https://luopan.alipay.com/offlinetb/crowd.htm">会员营销</a></dd>
+        </dl>
+
+
+        <dl>
+          <dt data-mcode="24">
+            <em><i class="iconfont-crmhome" title="商户储值卡">&#xe625;</i>商户储值卡</em>
+          </dt>
+          <dd data-mcode="2401" data-rehost="no"><a href="https://card.alipay.com/fundcard/fundCardManage.htm">管理储值卡</a>
+          </dd>
+          <dd data-mcode="2403" data-rehost="no"><a href="https://card.alipay.com/fundcard/overview.htm">查询&退卡</a></dd>
+        </dl>
+
+        <!--双十二菜单-->
+        <dl>
+          <dt data-mcode="17">
+            <em><i class="iconfont-crmhome" title="平台活动">&#xe60e;</i>平台活动</em>
+          </dt>
+          <dd data-mcode="1701"><a href="#/item-promo">活动报名</a></dd>
+          <dd data-mcode="1702"><a href="/goods/itempromo/recruitOrderQueryInit.htm">活动管理</a></dd>
+        </dl>
+        <dl>
+          <dt data-mcode="02">
+            <em><i class="iconfont-crmhome" title="评价管理">&#xe603;</i>评价管理</em>
+          </dt>
+          <dd data-mcode="0201"><a href="/comment/summary.htm">消费者评价</a></dd>
+          <dd data-mcode="0202"><a href="/comment/rank.htm">门店评价排名</a></dd>
+        </dl>
+        <dl>
+          <dt data-mcode="03">
+            <em><i class="iconfont-crmhome" title="经营分析">&#xe602;</i>经营分析</em>
+          </dt>
+
+          <dd data-mcode="0301" data-rehost="no"><a
+            href="https://luopan.alipay.com/offlinetb/kb_retailer_operation_overview.htm">效果概览</a></dd>
+          <dd data-mcode="0302" data-rehost="no"><a
+            href="https://luopan.alipay.com/offlinetb/kb_retailer_promo_data.htm">营销数据</a></dd>
+          <dd data-mcode="0303" data-rehost="no"><a
+            href="https://luopan.alipay.com/offlinetb/kb_retailer_trade_data.htm">交易数据</a></dd>
+          <dd data-mcode="0309" data-rehost="no"><a href="https://luopan.alipay.com/offlinetb/kb_app_market_index.htm">应用市场</a>
+          </dd>
+
+        </dl>
+        <dl>
+          <dt data-mcode="04">
+            <em><i class="iconfont-crmhome" title="运营工具">&#xe611;</i>运营工具</em>
+          </dt>
+          <dd data-mcode="0401"><a href="/merchant/bindingAd.htm">服务窗</a></dd>
+          <dd data-mcode="0402"><a href="/merchant/weiboManage.htm">新浪微博</a></dd>
+          <dd data-mcode="0403" data-rehost="no"><a href="https://app.alipay.com/commodity/onlineCommodity.htm">更多服务</a>
+          </dd>
+          <dd data-mcode="0404" data-rehost="no"><a href="https://life.alipay.com/merchantApp.htm">下载客户端</a></dd>
+        </dl>
+        <dl>
+          <dt data-mcode="05">
+            <em><i class="iconfont-crmhome" title="门店管理">&#xe60d;</i>门店管理</em>
+          </dt>
+          <dd data-mcode="0501"><a href="/shop/query.htm">我的门店</a></dd>
+          <dd data-mcode="0502"><a href="/shop/decorateInit.htm">店铺装修</a></dd>
+          <dd data-mcode="0503" style="display:none"><a href="/merchant/accountQuery.htm">员工管理</a></dd>
+        </dl>
+        <dl>
+          <dt data-mcode="18" data-rehost="no">
+            <a href="https://emembercenter.alipay.com/console/crmhome/index.htm"><i class="iconfont-crmhome" title="人员管理">
+              &#xe60c;</i>人员管理</a>
+          </dt>
+        </dl>
+        <dl>
+          <dt data-mcode="20" data-rehost="no">
+            <a href="https://epsecuritycenter.alipay.com/sc/crmSecuritySetForOper.htm"><i class="iconfont-crmhome" title="安全设置">
+              &#xe60c;</i>安全设置</a>
+          </dt>
+        </dl>
+        <dl>
+          <dt data-mcode="06">
+            <em><i class="iconfont-crmhome" title="资金管理">&#xe610;</i>资金管理</em>
+          </dt>
+          <dd data-mcode="0601"><a href="/fund/withdraw/config.htm">自动提现</a></dd>
+          <dd data-mcode="0602"><a href="/fund/withdraw/query.htm">提现记录</a></dd>
+          <dd data-mcode="0603" data-rehost="no"><a href="https://mbillexprod.alipay.com/crmhome/tradeQuery.htm">交易查询</a></dd>
+        </dl>
+        <dl>
+          <dt data-mcode="07"><a href="/material/initMaterial.htm"><i class="iconfont-crmhome" title="素材中心">&#xe600;</i>素材中心</a>
+          </dt>
+        </dl>
+        <dl>
+          <dt data-mcode="99"><a href="/material/printableMaterials.htm"><i class="iconfont-crmhome" title="物料模版">
+            &#xe622;</i>物料模版</a></dt>
+        </dl>
+      </div>
+
+
+
+      <!-- 2. 可以继续引入多个 schema -->
+
+      <!-- 3. 添加的后端的 vm 变量，会保持原样输出 -->
+
+
+      <!-- FD:76:crmhome/common/menu.vm:END -->    </div>
+    <!-- end slide nav-->
+
+    <!-- start context-->
+    <div class="tbf-context">
+
+      <link rel="stylesheet" href="./kbservcenter/kb-crmhome/common.css"/>
+      <link rel="stylesheet" href="./kbservcenter/kb-crmhome/index.css"/>
+      <style>
+        html body {
+          background-color: #E7E8EB;
+          height: initial;
+        }
+      </style>
+      <script>
+        window.APP = {
+          ownUrl: 'http://crmhome-1.d3039.alipay.net',
+        };
+      </script>
+      <div id="react-content" style="width:1000px"></div>
+      <!--[if lt IE 10]>
+      <script src="https://as.alipayobjects.com/component/??console-polyfill/0.2.2/index.js,es5-shim/4.1.14/es5-shim.js,es5-shim/4.1.14/es5-sham.js,html5shiv/3.7.2/html5shiv.js"></script>
+      <![endif]-->
+      <script type="text/javascript">
+        window.__fd_banner_data = {banner: [{
+          'trigger': true,
+          'text': 'ceshi',
+          'link': 'http://news.xinhuanet.com/politics/2016-05/05/c_1118812029.htm',
+          'imgLink': 'https://i.alipayobjects.com/i/ecmng/png/201602/6ps6ZIRPXB.png'
+        },{
+          'trigger': true,
+          'text': 'ceshi',
+          'link': 'http://news.xinhuanet.com/politics/2016-05/05/c_1118812029.htm',
+          'imgLink': 'https://i.alipayobjects.com/i/ecmng/jpg/201601/6cuD8OnBnL.jpg'
+        },{
+          'trigger': false,
+          'text': 'ceshi',
+          'link': 'http://news.xinhuanet.com/politics/2016-05/05/c_1118812029.htm',
+          'imgLink': 'https://os.alipayobjects.com/rmsportal/sFAeYkFukNCavUQ.png'
+        },{
+          'trigger': true,
+          'text': 'ceshib',
+          'link': 'http://news.xinhuanet.com/politics/2016-05/05/c_1118812029.htm',
+          'imgLink': 'https://i.alipayobjects.com/i/ecmng/jpg/201512/6JQLEn7ok9.jpg'
+        },{
+          'trigger': true,
+          'text': 'ceshic',
+          'link': 'http://news.xinhuanet.com/politics/2016-05/05/c_1118812029.htm',
+          'imgLink': 'https://i.alipayobjects.com/i/ecmng/jpg/201512/6KFzD59Fcb.jpg'
+        }]};
+        window.__fd_loan_data = {link: 'http://dai.aliloan.com/o2o.html?tracelog=aliloan_dai_o2o_koubei'};
+        window.__fd_index_data = {"members":[{"mainTitle":"低频顾客","subTitle":"提升会员的消费额度","btnText":"发布营销活动"},{"mainTitle":"低频顾客","subTitle":"提升会员消费频次，带来更多回头客","btnText":"发布营销活动"},{"mainTitle":"沉默顾客","subTitle":"挽回一段时间未到店消费的流失会员","btnText":"新会员营销"}],"promoService":[{"mainTitle":"消费送券","subTitle":"单笔消费满额赠送二次消费优惠券","logo":"https://os.alipayobjects.com/rmsportal/bfHRLiTHrlHNEEW.png"},{"mainTitle":"支付会员招募","subTitle":"给顾客一个成为会员的理由","logo":"https://os.alipayobjects.com/rmsportal/EBdjsCIYaqeQZnn.jpg"},{"mainTitle":"挽回流失顾客","subTitle":"自动唤醒即将流失的顾客","logo":"https://os.alipayobjects.com/rmsportal/TPSWLMKkXfrKwGr.jpg"},{"mainTitle":"","subTitle":"更多活动方案和赠券规则","logo":"https://os.alipayobjects.com/rmsportal/mYatEwbDRodJjlQ.jpg"}],"introInfo":[{"pic":"https://os.alipayobjects.com/rmsportal/hCCdkFAUtdxstef.jpg","title":"支付会员招募","desc":"给顾客一个成为会员的理由"},{"pic":"https://os.alipayobjects.com/rmsportal/mPTArIzLQkkRLdH.jpg","title":"吸引回头客","desc":"引导消费过的顾客再次到店"},{"pic":"https://os.alipayobjects.com/rmsportal/hCCdkFAUtdxstef.jpg","title":"提升客单价","desc":"助力提升顾客到店消费额"}],"memberDataInfo":[{"name":"今日新增会员数","value":"首次来店消费会员数"},{"name":"总会员数","value":"店铺累计会员数"},{"name":"交易二次以上会员","value":"来店消费两次及以上的会员数"}],"profitDataInfo":[{"name":"今日收益金额","value":"今日店铺的实收金额"},{"name":"本月收益金额","value":"店铺当月累计实收金额"},{"name":"平均每单消费额","value":"店铺实收金额/成交笔数"}],"activityDataInfo":[{"name":"今日活动收益","value":"今日参加活动交易的实收金额（含营销活动、口碑活动、优惠券）"},{"name":"今日领券数","value":"今日券领取量"},{"name":"当前活动数","value":"今日参加的活动数（含营销活动、口碑活动、优惠券）"}]}
+      </script>
+      <script src="./kbservcenter/kb-crmhome/common.js" charset="utf-8"></script>
+      <script src="./kbservcenter/kb-crmhome/index.js" charset="utf-8"></script>
+
+      <!-- CMS:cms_crmhome/cms_batch/batch_99.vm开始:cms_batch/batch_99.vm --><!-- CMS:cms_crmhome/cms_batch/batch_99.vm结束:cms_batch/batch_99.vm -->    </div></div>
+
+  <!-- start authMenu value-->
+  <input type="hidden" value="[{&quot;itemMenu&quot;:[{&quot;itemMenu&quot;:[{&quot;itemMenu&quot;:[],&quot;menuCode&quot;:&quot;000103&quot;,&quot;menuName&quot;:&quot;消息&quot;}],&quot;menuCode&quot;:&quot;0001&quot;,&quot;menuName&quot;:&quot;商家首页&quot;}],&quot;menuCode&quot;:&quot;00&quot;,&quot;menuName&quot;:&quot;商户首页&quot;},{&quot;itemMenu&quot;:[{&quot;itemMenu&quot;:[{&quot;itemMenu&quot;:[],&quot;menuCode&quot;:&quot;010101&quot;,&quot;menuName&quot;:&quot;发布单品折扣&quot;}],&quot;menuCode&quot;:&quot;0101&quot;,&quot;menuName&quot;:&quot;发布折扣&quot;},{&quot;itemMenu&quot;:[{&quot;itemMenu&quot;:[],&quot;menuCode&quot;:&quot;010201&quot;,&quot;menuName&quot;:&quot;折扣详情&quot;},{&quot;itemMenu&quot;:[],&quot;menuCode&quot;:&quot;010202&quot;,&quot;menuName&quot;:&quot;确认&quot;},{&quot;itemMenu&quot;:[],&quot;menuCode&quot;:&quot;010203&quot;,&quot;menuName&quot;:&quot;零售商测试品牌商商品&quot;},{&quot;itemMenu&quot;:[],&quot;menuCode&quot;:&quot;010204&quot;,&quot;menuName&quot;:&quot;修改&quot;}],&quot;menuCode&quot;:&quot;0102&quot;,&quot;menuName&quot;:&quot;管理折扣&quot;},{&quot;itemMenu&quot;:[],&quot;menuCode&quot;:&quot;0103&quot;,&quot;menuName&quot;:&quot;修改折扣&quot;},{&quot;itemMenu&quot;:[],&quot;menuCode&quot;:&quot;0104&quot;,&quot;menuName&quot;:&quot;发布兑换券&quot;},{&quot;itemMenu&quot;:[{&quot;itemMenu&quot;:[],&quot;menuCode&quot;:&quot;010500&quot;,&quot;menuName&quot;:&quot;营销活动管理&quot;},{&quot;itemMenu&quot;:[],&quot;menuCode&quot;:&quot;010501&quot;,&quot;menuName&quot;:&quot;发布消费送活动&quot;},{&quot;itemMenu&quot;:[],&quot;menuCode&quot;:&quot;010502&quot;,&quot;menuName&quot;:&quot;发布口令送活动&quot;},{&quot;itemMenu&quot;:[],&quot;menuCode&quot;:&quot;010503&quot;,&quot;menuName&quot;:&quot;活动详情&quot;}],&quot;menuCode&quot;:&quot;0105&quot;,&quot;menuName&quot;:&quot;营销活动&quot;}],&quot;menuCode&quot;:&quot;01&quot;,&quot;menuName&quot;:&quot;商品管理&quot;},{&quot;itemMenu&quot;:[{&quot;itemMenu&quot;:[],&quot;menuCode&quot;:&quot;0201&quot;,&quot;menuName&quot;:&quot;消费者评价&quot;},{&quot;itemMenu&quot;:[],&quot;menuCode&quot;:&quot;0202&quot;,&quot;menuName&quot;:&quot;门店评价排名&quot;}],&quot;menuCode&quot;:&quot;02&quot;,&quot;menuName&quot;:&quot;评价管理&quot;},{&quot;itemMenu&quot;:[{&quot;itemMenu&quot;:[{&quot;itemMenu&quot;:[],&quot;menuCode&quot;:&quot;030101&quot;,&quot;menuName&quot;:&quot;效果概览&quot;}],&quot;menuCode&quot;:&quot;0301&quot;,&quot;menuName&quot;:&quot;效果概览&quot;},{&quot;itemMenu&quot;:[{&quot;itemMenu&quot;:[],&quot;menuCode&quot;:&quot;030201&quot;,&quot;menuName&quot;:&quot;折扣数据&quot;},{&quot;itemMenu&quot;:[],&quot;menuCode&quot;:&quot;030202&quot;,&quot;menuName&quot;:&quot;门店折扣&quot;}],&quot;menuCode&quot;:&quot;0302&quot;,&quot;menuName&quot;:&quot;折扣数据&quot;},{&quot;itemMenu&quot;:[{&quot;itemMenu&quot;:[],&quot;menuCode&quot;:&quot;030301&quot;,&quot;menuName&quot;:&quot;总体交易&quot;},{&quot;itemMenu&quot;:[],&quot;menuCode&quot;:&quot;030302&quot;,&quot;menuName&quot;:&quot;门店交易&quot;}],&quot;menuCode&quot;:&quot;0303&quot;,&quot;menuName&quot;:&quot;交易数据&quot;},{&quot;itemMenu&quot;:[{&quot;itemMenu&quot;:[],&quot;menuCode&quot;:&quot;030401&quot;,&quot;menuName&quot;:&quot;区域消费者&quot;},{&quot;itemMenu&quot;:[],&quot;menuCode&quot;:&quot;030402&quot;,&quot;menuName&quot;:&quot;区域竞争&quot;}],&quot;menuCode&quot;:&quot;0304&quot;,&quot;menuName&quot;:&quot;竞争分析&quot;},{&quot;itemMenu&quot;:[{&quot;itemMenu&quot;:[],&quot;menuCode&quot;:&quot;030501&quot;,&quot;menuName&quot;:&quot;品牌分析&quot;}],&quot;menuCode&quot;:&quot;0305&quot;,&quot;menuName&quot;:&quot;品牌分析&quot;},{&quot;itemMenu&quot;:[],&quot;menuCode&quot;:&quot;0307&quot;,&quot;menuName&quot;:&quot;营销数据&quot;},{&quot;itemMenu&quot;:[],&quot;menuCode&quot;:&quot;0308&quot;,&quot;menuName&quot;:&quot;交易数据&quot;},{&quot;itemMenu&quot;:[],&quot;menuCode&quot;:&quot;0309&quot;,&quot;menuName&quot;:&quot;普通商户的应用市场&quot;}],&quot;menuCode&quot;:&quot;03&quot;,&quot;menuName&quot;:&quot;经营效果&quot;},{&quot;itemMenu&quot;:[{&quot;itemMenu&quot;:[],&quot;menuCode&quot;:&quot;0401&quot;,&quot;menuName&quot;:&quot;服务窗&quot;},{&quot;itemMenu&quot;:[{&quot;itemMenu&quot;:[],&quot;menuCode&quot;:&quot;040201&quot;,&quot;menuName&quot;:&quot;新浪微博管理&quot;}],&quot;menuCode&quot;:&quot;0402&quot;,&quot;menuName&quot;:&quot;新浪微博&quot;},{&quot;itemMenu&quot;:[{&quot;itemMenu&quot;:[],&quot;menuCode&quot;:&quot;040301&quot;,&quot;menuName&quot;:&quot;服务市场管理&quot;}],&quot;menuCode&quot;:&quot;0403&quot;,&quot;menuName&quot;:&quot;服务市场&quot;},{&quot;itemMenu&quot;:[],&quot;menuCode&quot;:&quot;0404&quot;,&quot;menuName&quot;:&quot;下载客户端&quot;}],&quot;menuCode&quot;:&quot;04&quot;,&quot;menuName&quot;:&quot;运营工具&quot;},{&quot;itemMenu&quot;:[{&quot;itemMenu&quot;:[{&quot;itemMenu&quot;:[],&quot;menuCode&quot;:&quot;050101&quot;,&quot;menuName&quot;:&quot;新建门店&quot;},{&quot;itemMenu&quot;:[],&quot;menuCode&quot;:&quot;050102&quot;,&quot;menuName&quot;:&quot;批量上传门店&quot;},{&quot;itemMenu&quot;:[],&quot;menuCode&quot;:&quot;050103&quot;,&quot;menuName&quot;:&quot;门店详情&quot;},{&quot;itemMenu&quot;:[],&quot;menuCode&quot;:&quot;050104&quot;,&quot;menuName&quot;:&quot;收款账户管理&quot;},{&quot;itemMenu&quot;:[],&quot;menuCode&quot;:&quot;050105&quot;,&quot;menuName&quot;:&quot;添加收款账户&quot;},{&quot;itemMenu&quot;:[],&quot;menuCode&quot;:&quot;050107&quot;,&quot;menuName&quot;:&quot;门店批量修改&quot;},{&quot;itemMenu&quot;:[],&quot;menuCode&quot;:&quot;050108&quot;,&quot;menuName&quot;:&quot;认领门店&quot;},{&quot;itemMenu&quot;:[],&quot;menuCode&quot;:&quot;050106&quot;,&quot;menuName&quot;:&quot;修改门店&quot;}],&quot;menuCode&quot;:&quot;0501&quot;,&quot;menuName&quot;:&quot;我的门店&quot;},{&quot;itemMenu&quot;:[{&quot;itemMenu&quot;:[],&quot;menuCode&quot;:&quot;050201&quot;,&quot;menuName&quot;:&quot;门店菜单&quot;},{&quot;itemMenu&quot;:[],&quot;menuCode&quot;:&quot;050202&quot;,&quot;menuName&quot;:&quot;品牌故事&quot;},{&quot;itemMenu&quot;:[],&quot;menuCode&quot;:&quot;050203&quot;,&quot;menuName&quot;:&quot;促销信息&quot;}],&quot;menuCode&quot;:&quot;0502&quot;,&quot;menuName&quot;:&quot;店铺装修&quot;}],&quot;menuCode&quot;:&quot;05&quot;,&quot;menuName&quot;:&quot;门店管理 &quot;},{&quot;itemMenu&quot;:[{&quot;itemMenu&quot;:[],&quot;menuCode&quot;:&quot;0601&quot;,&quot;menuName&quot;:&quot;委托提现签约&quot;},{&quot;itemMenu&quot;:[],&quot;menuCode&quot;:&quot;0602&quot;,&quot;menuName&quot;:&quot;提现记录&quot;},{&quot;itemMenu&quot;:[{&quot;itemMenu&quot;:[],&quot;menuCode&quot;:&quot;060301&quot;,&quot;menuName&quot;:&quot;退款查询&quot;},{&quot;itemMenu&quot;:[],&quot;menuCode&quot;:&quot;060302&quot;,&quot;menuName&quot;:&quot;汇总查询&quot;},{&quot;itemMenu&quot;:[],&quot;menuCode&quot;:&quot;060304&quot;,&quot;menuName&quot;:&quot;业务账查询&quot;},{&quot;itemMenu&quot;:[],&quot;menuCode&quot;:&quot;060305&quot;,&quot;menuName&quot;:&quot;包销账查询&quot;},{&quot;itemMenu&quot;:[],&quot;menuCode&quot;:&quot;060306&quot;,&quot;menuName&quot;:&quot;账单查询&quot;}],&quot;menuCode&quot;:&quot;0603&quot;,&quot;menuName&quot;:&quot;交易查询&quot;},{&quot;itemMenu&quot;:[],&quot;menuCode&quot;:&quot;0604&quot;,&quot;menuName&quot;:&quot;收银&quot;},{&quot;itemMenu&quot;:[],&quot;menuCode&quot;:&quot;0605&quot;,&quot;menuName&quot;:&quot;余额查询&quot;},{&quot;itemMenu&quot;:[],&quot;menuCode&quot;:&quot;0606&quot;,&quot;menuName&quot;:&quot;口碑贷&quot;},{&quot;itemMenu&quot;:[],&quot;menuCode&quot;:&quot;060401&quot;,&quot;menuName&quot;:&quot;收银&quot;},{&quot;itemMenu&quot;:[],&quot;menuCode&quot;:&quot;060402&quot;,&quot;menuName&quot;:&quot;账户退款&quot;},{&quot;itemMenu&quot;:[],&quot;menuCode&quot;:&quot;060403&quot;,&quot;menuName&quot;:&quot;门店退款&quot;},{&quot;itemMenu&quot;:[],&quot;menuCode&quot;:&quot;060404&quot;,&quot;menuName&quot;:&quot;商家app交易汇总&quot;}],&quot;menuCode&quot;:&quot;06&quot;,&quot;menuName&quot;:&quot;资金管理&quot;},{&quot;itemMenu&quot;:[{&quot;itemMenu&quot;:[{&quot;itemMenu&quot;:[],&quot;menuCode&quot;:&quot;070001&quot;,&quot;menuName&quot;:&quot;编辑&quot;},{&quot;itemMenu&quot;:[],&quot;menuCode&quot;:&quot;070002&quot;,&quot;menuName&quot;:&quot;上传&quot;},{&quot;itemMenu&quot;:[],&quot;menuCode&quot;:&quot;070003&quot;,&quot;menuName&quot;:&quot;删除&quot;},{&quot;itemMenu&quot;:[],&quot;menuCode&quot;:&quot;070004&quot;,&quot;menuName&quot;:&quot;素材查询&quot;}],&quot;menuCode&quot;:&quot;0700&quot;,&quot;menuName&quot;:&quot;素材中心&quot;}],&quot;menuCode&quot;:&quot;07&quot;,&quot;menuName&quot;:&quot;素材中心&quot;},{&quot;itemMenu&quot;:[{&quot;itemMenu&quot;:[],&quot;menuCode&quot;:&quot;1701&quot;,&quot;menuName&quot;:&quot;平台活动&mdash;&mdash;活动查询&quot;},{&quot;itemMenu&quot;:[],&quot;menuCode&quot;:&quot;1702&quot;,&quot;menuName&quot;:&quot;平台活动&mdash;&mdash;活动管理&quot;},{&quot;itemMenu&quot;:[],&quot;menuCode&quot;:&quot;1703&quot;,&quot;menuName&quot;:&quot;平台活动&mdash;&mdash;活动报名&quot;}],&quot;menuCode&quot;:&quot;17&quot;,&quot;menuName&quot;:&quot;平台活动&quot;},{&quot;itemMenu&quot;:[],&quot;menuCode&quot;:&quot;18&quot;,&quot;menuName&quot;:&quot;人员管理&quot;},{&quot;itemMenu&quot;:[],&quot;menuCode&quot;:&quot;19&quot;,&quot;menuName&quot;:&quot;账户详情&quot;},{&quot;itemMenu&quot;:[],&quot;menuCode&quot;:&quot;22&quot;,&quot;menuName&quot;:&quot;口碑学院&quot;},{&quot;itemMenu&quot;:[{&quot;itemMenu&quot;:[],&quot;menuCode&quot;:&quot;2401&quot;,&quot;menuName&quot;:&quot;管理储值卡&quot;},{&quot;itemMenu&quot;:[],&quot;menuCode&quot;:&quot;2402&quot;,&quot;menuName&quot;:&quot;发布储值卡&quot;},{&quot;itemMenu&quot;:[],&quot;menuCode&quot;:&quot;2403&quot;,&quot;menuName&quot;:&quot;查询退卡储值卡&quot;}],&quot;menuCode&quot;:&quot;24&quot;,&quot;menuName&quot;:&quot;收银员管理&quot;},{&quot;itemMenu&quot;:[],&quot;menuCode&quot;:&quot;23&quot;,&quot;menuName&quot;:&quot;签约管理&quot;},{&quot;itemMenu&quot;:[],&quot;menuCode&quot;:&quot;99&quot;,&quot;menuName&quot;:&quot;打印物料&quot;},{&quot;itemMenu&quot;:[],&quot;menuCode&quot;:&quot;24&quot;,&quot;menuName&quot;:&quot;商户储值卡&quot;}]" data-cmenu="00" id="authMenuTree" />
+  <input type="hidden" value="" id="menuHostName" />
+  <input type="hidden" value="" id="J_crmhome_merchantId" />
+  <!-- end authMenu value-->
+
+  <!-- start footer -->
+  <div class="tbf-footer">
+
+
+    <!-- /component/footCommon.vm -->
+
+    <!-- CMS:全站公共 cms/全站导航/网站改版新旧版切换开始:alipay/nav/versionSwitch.vm -->
+
+
+
+
+
+
+    <!-- CMS:全站公共 cms/全站导航/网站改版新旧版切换结束:alipay/nav/versionSwitch.vm -->
+
+
+
+    <style>
+      .fn-clear:after {font-size:0;}
+      .ui-footer {font-size: 12px; margin-top: 30px; height: 100px; line-height: 18px; background:#1e1b29; color:#808080;}
+      .ui-footer .ui-separator{font-weight: normal;}
+      .ui-footer-link a {padding: 0 3px 0 2px;}
+      .ui-footer a, .ui-footer-copyright .copyright a {color: #808080;}
+      .ui-footer a:hover, .ui-footer-copyright .copyright a:hover {color: #808080; text-decoration: none; border-bottom: 1px solid;}
+      .ui-footer-ctn {padding-top: 30px; text-align: center;}
+      .ui-footer-copyright {padding-top: 10px; background:#1e1b29;}
+      .ui-footer-copyright .server {color: #1e1b29;}
+      .ui-footer-copyright .copyright {color: #808080;}
+    </style>
+
+
+    <div class="ui-footer fn-clear" coor="footer">
+
+      <div class="ui-footer-ctn">
+        <!-- CMS:全站公共 cms/foot/links.vm开始:alipay/foot/links.vm --><div class="ui-footer-link">
+        <a href="https://job.alibaba.com/zhaopin/index.htm" target="_blank" seed="foot-1">诚征英才</a>
+        <em class="ui-separator">|</em>
+        <a seed="foot-2" href="https://ab.alipay.com/i/lianxi.htm" title="联系我们" target="_blank">联系我们</a>
+        <em class="ui-separator">|</em>
+        <a seed="foot-3" href="https://global.alipay.com/" title="International Business" target="_blank">International Business</a>
+      </div><!-- CMS:全站公共 cms/foot/links.vm结束:alipay/foot/links.vm -->
+        <div class="ui-footer-copyright">
+          <!-- CMS:全站公共 cms/foot/copyright.vm开始:foot/copyright.vm --><style>
+          .copyright,.copyright a,.copyright a:hover{color:#808080;}
+        </style>
+          <div class="copyright">
+            支付宝版权所有 2004-2016 <a href="http://fun.alipay.com/certificate/jyxkz.htm" target="_blank">ICP证：沪B2-20150087</a>
+          </div>
+          <div class="server" id="ServerNum">
+            crmhome-70-20 &nbsp; 0ae1709e14617597091138487_0
+          </div><!-- CMS:全站公共 cms/foot/copyright.vm结束:foot/copyright.vm -->        </div>
+      </div>
+    </div>
+    <!-- /component/footCommon.vm -->
+  </div>
+  <!-- end footer -->
+
+  <!-- placeholder for IE -->
+  <!--[if lte IE 9]>
+  <style>
+    input:-ms-input-placeholder, textarea:-ms-input-placeholder{
+      color: #999 !important;
+    }
+    .placeholder{
+      color: #999 !important;
+    }
+  </style>
+  <script type="text/javascript">
+    seajs.use('arale/placeholder/1.1.0/placeholder',function(){});
+  </script>
+  <![endif]-->
+
+
+  <!-- /公用错误提示 -->
+  <script type="text/javascript">
+    araleConfig = {
+      combo_host: "https://a.alipayobjects.com",
+      combo_path: '/ar/??'
+    }
+
+    // 全局引用js
+    seajs.config({
+      alias: {
+        'utils':'crmhome/common/1.0.2/utils'
+      }
+    });
+
+    // 1. 所有链接的点击后，增加op_merchant_id参数
+    // 2. 添加商家，点击后判断时候已经达到上限
+    // 3. 用户权限链接展示
+    seajs.use(['utils', 'arale/dialog/1.2.6/confirmbox', 'crmhome/merchant/1.6.8/util',
+      'crmhome/merchant/1.3.1/upperLimit', 'crmhome/common/1.0.2/authMenu'], function(Utils, ConfirmBox, util) {
+      Utils.customLink();
+
+      //服务商返佣政策确认
+    });
+
+  </script>
+
+  <!-- FD:76:crmhome/common/upgradeBrowser.vm:465:upgradeBrowser.schema:upgradeBrowser-浏览器升级提示cms:END --><!-- FD:76:crmhome/common/upgradeBrowser.vm:END -->
+</body>
+</html>

@@ -1,0 +1,28 @@
+.batch-info-card {
+  @thumbnail-max-size: 200px;
+  @line-height: 22px;
+  .thumbnail {
+    display: inline-block;
+    vertical-align: top;
+    img {
+      max-height: @thumbnail-max-size;
+      max-width: @thumbnail-max-size;
+    }
+  }
+  .text {
+    display: inline-block;
+    dl {
+      dt {
+        float: left;
+        width: 100px;
+        text-align: right;
+        color: #999;
+        line-height: @line-height;
+      }
+      dd {
+        margin-left: 110px;
+        line-height: @line-height;
+      }
+    }
+  }
+}

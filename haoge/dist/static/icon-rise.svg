@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="16px" height="11px" viewBox="0 0 16 11" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 48.1 (47250) - http://www.bohemiancoding.com/sketch -->
+    <title>icon-rise</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="主界面" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(-937.000000, -407.000000)">
+        <g id="账户状态" transform="translate(276.000000, 288.000000)" fill="#E74F5A" fill-rule="nonzero">
+            <g id="icon-rise" transform="translate(668.960842, 123.960842) rotate(15.000000) translate(-668.960842, -123.960842) translate(662.460842, 117.460842)">
+                <polygon id="Shape" points="7.45481481 11.757037 10.9748148 4.70518519 12.2192593 5.42814816 12.2192593 0 7.51407408 2.71407408 8.91259259 3.52 6.53037037 8.2962963 2.97481481 5.92592592 0 11.8637037 2.13333333 12.9185185 3.89925925 9.38666667"></polygon>
+            </g>
+        </g>
+    </g>
+</svg>

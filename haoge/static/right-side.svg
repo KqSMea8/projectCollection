@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="17px" height="14px" viewBox="0 0 17 14" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 48.1 (47250) - http://www.bohemiancoding.com/sketch -->
+    <title>right-side</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="交易查询-分类" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(-202.000000, -84.000000)">
+        <g id="right-side" transform="translate(202.000000, 84.000000)">
+            <path d="M0.259069899,4.03859741 L3.48497134,6.85780327 C3.6149268,6.971375 3.62820844,7.16879279 3.51463672,7.29874824 C3.50532849,7.30939926 3.49530783,7.319406 3.48464387,7.3286994 L0.258906165,10.1398588 C0.193849519,10.1965542 0.0951499573,10.1897761 0.0384545231,10.1247195 C0.013659452,10.0962677 -8.8817842e-16,10.0598032 -8.8817842e-16,10.0220633 L4.16333634e-16,4.15625 C4.16333634e-16,4.06995551 0.0699555078,4 0.15625,4 C0.194064687,4 0.230596326,4.01371356 0.259069899,4.03859741 Z" id="Rectangle-6" fill="#7FA3CF"></path>
+            <path d="M8,7 L16,7" id="Line" stroke="#7FA3CF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+            <path d="M4,1 L16,1" id="Line-Copy-2" stroke="#7FA3CF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+            <path d="M4,13 L16,13" id="Line-Copy" stroke="#7FA3CF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+        </g>
+    </g>
+</svg>

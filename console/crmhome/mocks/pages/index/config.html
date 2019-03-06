@@ -1,0 +1,140 @@
+<Row>
+    <div class="app-detail-header">
+        <span>活动数据
+            <Modal title="详细信息" width="800">
+                <ModalTrigger on="click">
+                    <Icon type="info-circle-o"/>
+                </ModalTrigger>
+                <div>
+                    <p>312321321</p>
+                    <p>31232132</p>
+                </div>
+            </Modal>
+        </span>
+        <span style="{float:'right'}"><Text value="${*reportDate|format('YYYY年MM月DD日')}"/></span>
+    </div>
+    <Row style="{marginBottom: 20, marginTop: 20}">
+        <Col span='6'>
+        <Cascader style="{width: '100%'}"
+                  source="{url:'/midoffice/getData.json',data:{ blockUri:'get_all_region_city' } }"
+                  placeholder="请选择城市" name="city"/>
+        </Col>
+        <Col span='7' offset="1" style="{lineHeight: '28px'}">
+        活动时间: 2016年02月24日 - 2016年03月23日
+        </Col>
+        <Col span='2' offset='8'>
+        <Download style="{float:'right'}" source="{url:'/'}" type="ghost">导出CVS</Download>
+        </Col>
+    </Row>
+    <Row style="{marginBottom: 20}">
+        <List type='simple'
+              source="{url: '/midoffice/getData.json',data: {blockUri: 'midoffice_pc_provider_analysis_sum'}}">
+            <ListItem span="4" title="交易金额(元)" value="${actural_receive_avg_amt|number(0)}"/>
+            <ListItem span="4" title="在线门店数(个)" value="${order_avg_amt|number(0)}"/>
+            <ListItem span="4" title="在线门店数(个)" value="${order_avg_amt|number(0)}"/>
+            <ListItem span="4" title="在线门店数(个)" value="${order_avg_amt|number(0)}"/>
+            <ListItem span="4" title="在线门店数(个)" value="${order_avg_amt|number(0)}"/>
+            <ListItem span="4" title="在线门店数(个)" value="${order_avg_amt|number(0)}"/>
+        </List>
+    </Row>
+    <Row style="{background: '#f7f7f7', lineHeight: '50px', padding: '0 10px', borderRadius:'5px', height: 50, marginBottom: 20}">
+        <Col span='2'>
+        <span>趋势</span>
+        </Col>
+
+        <Col span="2" style="{float: 'right'}">
+        <Modal title="详细信息" width="800">
+            <ModalTrigger on="click">
+                <a style="{float: 'right'}">查看每日详情</a>
+            </ModalTrigger>
+            <Table bordered
+                   pagination
+                   size="small"
+                   showTotal="共 ${total} 个"
+                   showSizeChanger="true"
+                   source="{url: '/midoffice/getData.json',data: {blockUri: 'midoffice_pc_provider_analysis_table', radio: '${radio}'}}"
+                   watch="['radio']">
+                <Column title="服务商名称" value="${key3|number}" sorter="test11"
+                        to="/data/midoffice_pc_shop_analysis?agentServiceCardNo=3&key=${row.key1}"/>
+                <Column title="顺序" value="index" hidden="true"/>
+            </Table>
+        </Modal>
+        </Col>
+    </Row>
+    <Row style="{marginBottom: 20}">
+        <RadioGroup name="mode">
+            <RadioButton value="big">领取分数</RadioButton>
+            <RadioButton value="small">核销份数</RadioButton>
+        </RadioGroup>
+    </Row>
+
+    <Chart style="{width: '100%', height: 300}"
+           source="{url: '/midoffice/getData.json',data: {blockUri: 'midoffice_pc_provider_analysis_chart'}}">
+        <ChartGrid id="grid-1" option="{}"/>
+        <ChartXAxis id="x-1" grid="grid-1" type="category" option="{name:'X轴'}">
+            [{@for:${source} as ${item}@}"${item.date}",{@/for@}]
+        </ChartXAxis>
+        <ChartYAxis id="y-1" grid="grid-1" option="{name:'X轴'}"/>
+        <ChartLine render="${mode|isEqual('big')}" xAxis="x-1" yAxis="y-1" option="{name:'年龄'}">
+            [{@for:${source} as ${item}@}${item.age},{@/for@}]
+        </ChartLine>
+        <ChartLine render="${mode|isEqual('small')}" xAxis="x-1" yAxis="y-1" option="{name:'指标'}">
+            [{@for:${source} as ${item}@}${item.tem},{@/for@}]
+        </ChartLine>
+        <ChartTooltip option="{trigger: 'axis'}"/>
+    </Chart>
+    <Row style="{background: '#f7f7f7', lineHeight: '50px', padding: '0 10px', borderRadius:'5px', height: 50, marginBottom: 20}">
+        <Col span='3'>
+        <span>城市分布数据</span>
+        </Col>
+        <Col span="2">
+        <TreeSelect source="{url:'/midoffice/getData.json',data:{ blockUri:'get_all_region_city'} }"
+                    name="cities" title='选择城市'>
+            <a>选择城市</a>
+        </TreeSelect>
+        </Col>
+
+        <Col span="2" style="{float: 'right'}">
+        <Modal title="详细信息" width="800">
+            <ModalTrigger on="click">
+                <a style="{float: 'right'}">查看每日详情</a>
+            </ModalTrigger>
+            <Table bordered
+                   size="small"
+                   useFixedHeader
+                   source="{url: '/midoffice/getData.json',data: {blockUri: 'midoffice_pc_provider_analysis_table', radio: '${radio}'}}"
+                   watch="['radio']">
+                <Column title="服务商名称" value="${key3|number}" sorter="test11"
+                        to="/data/midoffice_pc_shop_analysis?agentServiceCardNo=3&key=${row.key1}"/>
+                <Column title="顺序" value="index" hidden="true"/>
+            </Table>
+        </Modal>
+        </Col>
+    </Row>
+    <Row style="{marginBottom: 20}">
+        <RadioGroup name="key">
+            <RadioButton value="big">领取分数</RadioButton>
+            <RadioButton value="small">核销份数</RadioButton>
+        </RadioGroup>
+    </Row>
+
+    <Chart style="{width: '100%', height: 300}"
+           source="{url: '/midoffice/getData.json',data: {blockUri: 'midoffice_pc_provider_analysis_chart'}}">
+        <ChartGrid id="grid-1" option="{}"/>
+        <ChartXAxis id="x-1" grid="grid-1" type="category" option="{name:'X轴'}">
+            [{@for:${source} as ${item}@}"${item.date}",{@/for@}]
+        </ChartXAxis>
+        <ChartYAxis id="y-1" grid="grid-1" option="{name:'X轴'}"/>
+        <ChartBar render="${key|isEqual('big')}" xAxis="x-1" yAxis="y-1" option="{name:'年龄'}">
+            [{@for:${source} as ${item}@}${item.age},{@/for@}]
+        </ChartBar>
+        <ChartLine render="${key|isEqual('small')}" xAxis="x-1" yAxis="y-1" option="{name:'指标'}">
+            [{@for:${source} as ${item}@}${item.tem},{@/for@}]
+        </ChartLine>
+        <ChartDataZoom xAxis="x-1" option="{type:'slider', start:50, end:100}"/>
+        <ChartTooltip option="{trigger: 'axis'}"/>
+    </Chart>
+    <Rank source="{url: '/midoffice/getData.json',data: {blockUri: 'midoffice_pc_provider_analysis_test'}}" keyName="TTTTT"></Rank>
+    <ReportIndex pageSize="10"
+            source="{url: '/midoffice/getData.json',data: {blockUri: 'midoffice_pc_provider_analysis_index'}}"/>
+</Row>

@@ -1,0 +1,37 @@
+item-add  {
+  display: block;
+  >div:first-child {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    color: #06ABF1;
+    > i {
+      padding-right: 10px;
+    }
+  }
+  > div:last-child {
+    width: 450px;
+    margin: 100px auto;
+    label[data-fileupload] {
+      display: flex;
+      justify-content: space-around;
+      > strong {
+        margin-top: 5px;
+      }
+      > div > ol {
+        display: block;
+        margin: 5px 0;
+      }
+      > div > a {
+        display: block;
+        margin: 5px 0;
+      }
+      .ant-upload-list {
+        display: none;
+      }
+    }
+    div[data-progress] {
+      padding-left: 30px;
+    }
+  }
+}

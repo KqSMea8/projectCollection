@@ -1,0 +1,143 @@
+#frame-work {
+  .frame-header {
+    position: relative;
+    min-width: 1170px;
+
+    .frame-logo-bar {
+      padding: 15px 24px;
+      background: #f2f2f2;
+      min-width: 1170px;
+
+      .viewport {
+        margin: 0 auto;
+
+        .logo {
+          width: 93px;
+          height: 30px;
+          background: url(https://os.alipayobjects.com/rmsportal/wVoUBzOyOKzIPwq.png) no-repeat;
+          background-size: auto 100%;
+          display: inline-block;
+          vertical-align: middle;
+          border-right: 1px solid #ccc;
+        }
+
+        .name {
+          margin-left: 10px;
+          height: 30px;
+          line-height: 30px;
+          font-size: 20px;
+          color: #333;
+          display: inline-block;
+          vertical-align: middle;
+        }
+      }
+    }
+
+    .frame-top-bar {
+      height: 30px;
+      position: absolute;
+      right: 19px;
+      top: 15px;
+
+      .viewport {
+        line-height: 30px;
+        margin: 0 auto;
+
+        .right {
+          float: right;
+
+          .message {
+            display: inline-block;
+            height: 26px;
+            line-height: 26px;
+            padding: 0 10px;
+            border-radius: 5px;
+
+            &.white {
+              color: white;
+            }
+
+            &.black {
+              color: black;
+            }
+
+            &.green {
+              background: green;
+            }
+
+            &.purple {
+              background: purple;
+            }
+
+            &.yellow {
+              background: yellow;
+            }
+
+            &.red {
+              background: red;
+            }
+          }
+
+          span {
+            margin-left: 15px;
+
+            &.code-span {
+              position: relative;
+              display: inline;
+            }
+
+            .owner-pic {
+              width: 30px;
+              height: 26px;
+              border-radius: 100%;
+              margin-left: 7px;
+              vertical-align: middle;
+            }
+
+            .code-pic {
+              width: 30px;
+              height: 30px;
+              vertical-align: middle;
+            }
+
+            .code-pic-big {
+              width: 158px;
+              height: 208px;
+              position: absolute;
+              top: 100%;
+              padding: 10px 0 0 0;
+              left: -118px;
+              z-index: 999;
+            }
+          }
+
+          .select {
+            width: 80px;
+          }
+        }
+      }
+    }
+  }
+
+  .frame-body {
+    width: 100%;
+    border-top: 1px solid #e4e4e4;
+
+    .frame-menu {
+      width: 200px;
+      float: left;
+      min-height: 1099px;
+
+      .ant-menu-inline {
+        border-right: none;
+      }
+    }
+
+    .frame-content {
+      margin-left: 200px;
+      min-height: 1099px;
+      overflow: hidden;
+      border-left: 1px solid #e6e6ea;
+    }
+  }
+}

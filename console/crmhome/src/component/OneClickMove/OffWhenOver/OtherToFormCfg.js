@@ -1,0 +1,25 @@
+export default [{
+  key: 'Memo',
+  component: 'Input',
+  field: 'name',
+  label: '备注',
+  required: false,
+  rules: [{ type: 'string', max: 50, message: '不能超过 50 字' }],
+  placeholder: '仅作管理使用，不会展示给用户',
+},
+{
+  key: 'UseTheInformation',
+  component: 'AddableInput',
+  field: 'descList',
+  label: '使用须知',
+  required: false,
+  wrapperCol: { span: 21 },
+  labelCol: {span: 3},
+  maxRow: 10,
+  rules: [{
+    max: 50, message: '每条50字以内',
+  }],
+  inputCol: 19,
+  btnCol: 5,
+  styleText: true,
+}];

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="12px" height="13px" viewBox="0 0 12 13" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 48.1 (47250) - http://www.bohemiancoding.com/sketch -->
+    <title>icon-bill</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="主界面" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(-26.000000, -350.000000)">
+        <g id="左侧导航" transform="translate(0.000000, 64.000000)">
+            <g id="icon-bill" transform="translate(26.000000, 286.000000)">
+                <path d="M1,0.5 C0.723857625,0.5 0.5,0.723857625 0.5,1 L0.5,12 C0.5,12.2761424 0.723857625,12.5 1,12.5 L11,12.5 C11.2761424,12.5 11.5,12.2761424 11.5,12 L11.5,1 C11.5,0.723857625 11.2761424,0.5 11,0.5 L1,0.5 Z" id="Rectangle-7" stroke="#7EC6EF"></path>
+                <path d="M4.5625,9.96507417 L9.4375,9.96507417 C9.7484375,9.96507417 10,9.74927287 10,9.48253709 C10,9.21580131 9.7484375,9 9.4375,9 L4.5625,9 C4.2515625,9 4,9.21580131 4,9.48253709 C4,9.74927287 4.2515625,9.96507417 4.5625,9.96507417 Z" id="Shape" fill="#7EC6EF" fill-rule="nonzero"></path>
+                <path d="M4.5625,3.96507417 L9.4375,3.96507417 C9.7484375,3.96507417 10,3.74927287 10,3.48253709 C10,3.21580131 9.7484375,3 9.4375,3 L4.5625,3 C4.2515625,3 4,3.21580131 4,3.48253709 C4,3.74927287 4.2515625,3.96507417 4.5625,3.96507417 Z" id="Shape" fill="#7EC6EF" fill-rule="nonzero"></path>
+                <path d="M4.5625,6.96507417 L9.4375,6.96507417 C9.7484375,6.96507417 10,6.74927287 10,6.48253709 C10,6.21580131 9.7484375,6 9.4375,6 L4.5625,6 C4.2515625,6 4,6.21580131 4,6.48253709 C4,6.74927287 4.2515625,6.96507417 4.5625,6.96507417 Z" id="Shape" fill="#7EC6EF" fill-rule="nonzero"></path>
+                <ellipse id="Oval" fill="#7EC6EF" fill-rule="nonzero" cx="2.48214286" cy="9.48253709" rx="1" ry="1"></ellipse>
+                <ellipse id="Oval" fill="#7EC6EF" fill-rule="nonzero" cx="2.48214286" cy="3.48253709" rx="1" ry="1"></ellipse>
+                <ellipse id="Oval" fill="#7EC6EF" fill-rule="nonzero" cx="2.48214286" cy="6.48253709" rx="1" ry="1"></ellipse>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html class="">
+
+<head>
+  <meta charset="GBK" />
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+  <meta name="renderer" content="webkit" />
+  <meta name="force-rendering" content="webkit" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <title>商家中心嵌入销售中台用测试入口</title>
+
+  <!-- seajs -->
+  <script charset="utf-8" crossorigin="anonymous" id="seajsnode" src="https://a.alipayobjects.com/??seajs/seajs/2.2.3/sea.js,seajs/seajs-combo/1.0.0/seajs-combo.js,seajs/seajs-style/1.0.2/seajs-style.js,seajs/seajs-log/1.0.0/seajs-log.js,jquery/jquery/1.7.2/jquery.js,gallery/json/1.0.3/json.js,alipay-request/3.0.3/index.js"></script>
+
+  <!-- seajs config -->
+  <script>
+    seajs.config({
+      alias: {
+        '$': 'jquery/jquery/1.7.2/jquery',
+        '$-debug': 'jquery/jquery/1.7.2/jquery',
+        'jquery': 'jquery/jquery/1.7.2/jquery',
+        'jquery-debug': 'jquery/jquery/1.7.2/jquery-debug',
+        'seajs-debug': 'seajs/seajs-debug/1.1.1/seajs-debug',
+        'utils': 'crmhome/common/1.0.2/utils'
+      },
+      crossorigin: function (uri) {
+
+        function typeOf(type) {
+          return function (object) {
+            return Object.prototype.toString.call(object) === '[object ' + type + ']';
+          }
+        }
+        var isString = typeOf("String");
+        var isRegExp = typeOf("RegExp");
+
+        var whitelist = [];
+
+        whitelist.push('https://a.alipayobjects.com/');
+
+        for (var i = 0, rule, l = whitelist.length; i < l; i++) {
+          rule = whitelist[i];
+          if (
+            (isString(rule) && uri.indexOf(rule) === 0) ||
+            (isRegExp(rule) && rule.test(uri))
+          ) {
+
+            return "anonymous";
+          }
+        }
+      },
+      vars: {
+        locale: 'zh-cn'
+      }
+    });
+
+    document.domain = document.domain.split('.').slice(-2).join('.');
+
+    var araleConfig = {
+      combo_host: "https://a.alipayobjects.com",
+      combo_path: '/ar/??'
+    }
+
+    function setParentIframeSize() {
+      var data = {};
+      data.id = "crmhomePage";
+      data.width = jQuery(document.body).width();
+      data.height = jQuery(document.body).height();
+      var elems = document.getElementsByTagName("*");
+      var maxHeight = 0;
+      for (var i = 0; i < elems.length; i++) {
+        if (elems[i].offsetHeight > maxHeight) {
+          maxHeight = elems[i].offsetHeight;
+        }
+      }
+      if (data.height < maxHeight) {
+        data.height = maxHeight;
+      }
+      var pageNode = parent.document.getElementById(data.id);
+      if (pageNode && ((pageNode.offsetWidth !== data.width) || (pageNode.offsetHeight !== data.height))) {
+        pageNode.width = data.width;
+        pageNode.height = data.height;
+      }
+    }
+
+    window.onload = function () {
+      setInterval(setParentIframeSize, 300);
+    }
+
+    seajs.use(['utils'], function (Utils) {
+      Utils.customLink();
+    });
+  </script>
+
+  <style>
+    .jui-input-label {
+      width: 100px;
+    }
+
+    .jui-form-tip,
+    .jui-input-another {
+      margin-left: 110px;
+    }
+
+    #J_howToJoinTopic {
+      position: absolute;
+      width: 140px;
+      top: -1px;
+      background-color: #fff;
+    }
+
+    .promoPeriod {
+      font-size: 0;
+      margin-bottom: 10px;
+    }
+
+    .floatTip {
+      /*background: #AAA;*/
+      /*width: 10px;*/
+      margin-left: 110px;
+      float: left;
+    }
+
+    .discountTip {
+      font-size: 12px;
+      line-height: 20px;
+      color: grey;
+      height: 20px;
+    }
+
+    .jui-form-item .discountSuccessTipText {
+      color: #FF8208;
+    }
+
+    .jui-form-item .discountCreateTipWrapper {
+      font-size: 14px;
+      margin-top: 10px;
+    }
+
+     ::-moz-placeholder {
+      color: #808080;
+    }
+
+     ::-webkit-input-placeholder {
+      color: #808080;
+    }
+
+     :-ms-input-placeholder {
+      color: #808080;
+    }
+  </style>
+  <link charset="utf-8" rel="stylesheet" href="https://a.alipayobjects.com/jui/2.1.4/jui.css" media="all" />
+  <link charset="utf-8" rel="stylesheet" href="https://a.alipayobjects.com/crmhome/3.5.2/common/common.css" media="all" />
+</head>
+
+<body>
+  <!-- start context-->
+  <input type="hidden" id="J_isFromKbServ" value="true" />
+  <script>
+    !function(){
+      var _input = document.createElement('input');
+      _input.type = 'hidden';
+      _input.id = 'J_crmhome_merchantId';
+      _input.value = location.search.match(/op_merchant_id=(\d+)/)[1];
+      document.body.appendChild(_input);
+    }();
+  </script>
+  <div class="tbf-context">
+    <!-- FD:1457:swift-assets/kbservcenter/kb-crmhome/version.vm:START -->
+    <!-- FD:1457:swift-assets/kbservcenter/kb-crmhome/version.vm:END -->
+    <link rel="stylesheet" type="text/css" href="http://kb.assets.alipay.net/kbservcenter/kb-crmhome/1.35.35/common.css" />
+    <link rel="stylesheet" type="text/css" href="http://kb.assets.alipay.net/kbservcenter/kb-crmhome/1.35.35/index.css" />
+    <style>
+      html body {
+        background-color: #E7E8EB;
+        height: initial;
+      }
+    </style>
+    <script>
+      window.APP = {
+        ownUrl: 'http://crmhome.stable.alipay.net',
+        mdataProd: "http://mdataprod.stable.alipay.net",
+        pointprodServer: "",
+        isCommon: "false",
+        isOrderPlugin: "",
+        isFoodTopKA: "false",
+        merchantIndexLink: "http://crmhome.stable.alipay.net:80/merchant/index.htm",
+        isCatering: "false",
+        isGenericIndustry: "false",
+        isSuperMarket: "false",
+        isMall: "",
+        isRetailer: "false",
+        now: Date.now() + '',
+        roleType: "",
+        crmhomeUrl: "http://crmhome.stable.alipay.net",
+        kbservcenterUrl: "http://kbservcenter.stable.alipay.net",
+        kbadvertServer: "http://kbadvert.stable.alipay.net",
+        kbopenprodUrl: 'http://kbopenprod.stable.alipay.net',
+        kbservindustryprodUrl: 'http://kbservindustryprod-d5098.alipay.net',
+        kbcateringprod: 'crmhome.stable.alipay.net',
+        isProvider: "true", // 是否是服务商
+        mbillexprodUrl: 'http://mbillexprod.stable.alipay.net'
+      };
+    </script>
+    <!-- FD:892:kb-crmhome-data/index/loan.vm:START -->
+    <!-- FD:892:kb-crmhome-data/index/loan.vm:3203:index/loan.schema:贷款链接:START -->
+    <script>
+      window.__fd_loan_data = '{"link":"http://dai.aliloan.com/o2o.html?tracelog=aliloan_dai_o2o_koubei"}';
+      __fd_loan_data = JSON.parse(__fd_loan_data);
+    </script>
+    <!-- FD:892:kb-crmhome-data/index/loan.vm:3203:index/loan.schema:贷款链接:END -->
+    <!-- FD:892:kb-crmhome-data/index/loan.vm:END -->
+    <!-- FD:892:kb-crmhome-data/index/banner.vm:START -->
+    <!-- FD:892:kb-crmhome-data/index/banner.vm:3202:index/banner.schema:广告位链接:START -->
+    <script>
+      window.__fd_banner_data = '{"banner":[{"trigger":true,"text":"全民好口碑","link":"/main.htm#/marketing-activity/shop/goodkoubei","imgLink":"https://zos.alipayobjects.com/rmsportal/TSNuyJcWjtVUlUC.jpg"},{"trigger":false,"text":"广告链接标题","link":"https://www.alipay.com","imgLink":"https://i.alipayobjects.com/i/ecmng/jpg/201601/6cuD8OnBnL.jpg"},{"trigger":true,"text":"广告链接标题","link":"https://www.alipay.com","imgLink":"https://i.alipayobjects.com/i/ecmng/png/201602/6ps6ZIRPXB.png"},{"trigger":false,"text":"广告链接标题","link":"https://www.alipay.com","imgLink":"https://i.alipayobjects.com/i/ecmng/jpg/201512/6KFzD59Fcb.jpg"},{"trigger":false,"text":"广告链接标题","link":"https://www.alipay.com","imgLink":"https://www.alipay.com"}]}';
+      __fd_banner_data = JSON.parse(__fd_banner_data);
+    </script>
+    <!-- FD:892:kb-crmhome-data/index/banner.vm:3202:index/banner.schema:广告位链接:END -->
+    <!-- FD:892:kb-crmhome-data/index/banner.vm:END -->
+    <!-- FD:892:kb-crmhome-data/index/index.vm:START -->
+    <!-- FD:892:kb-crmhome-data/index/index.vm:3235:index/index.schema:首页参数配置:START -->
+    <script>
+      window.__fd_index_data = '{"members":[{"mainTitle":"低额顾客","subTitle":"提升会员的消费额度","btnText":"发布营销活动"},{"mainTitle":"低频顾客","subTitle":"提升会员消费频次，带来更多回头客","btnText":"发布营销活动"},{"mainTitle":"沉默顾客","subTitle":"挽回一段时间未到店消费的流失会员","btnText":"发布营销活动"}],"promoService":[{"mainTitle":"消费送券","subTitle":"单笔消费满额赠送二次消费优惠券","logo":"https://os.alipayobjects.com/rmsportal/bfHRLiTHrlHNEEW.png"},{"mainTitle":"支付会员招募","subTitle":"给顾客一个成为会员的理由","logo":"https://os.alipayobjects.com/rmsportal/EBdjsCIYaqeQZnn.jpg"},{"mainTitle":"挽回流失顾客","subTitle":"自动唤醒即将流失的顾客","logo":"https://os.alipayobjects.com/rmsportal/TPSWLMKkXfrKwGr.jpg"},{"mainTitle":"","subTitle":"更多活动方案和赠券规则","logo":"https://os.alipayobjects.com/rmsportal/mYatEwbDRodJjlQ.jpg"}],"introInfo":[{"pic":"https://os.alipayobjects.com/rmsportal/hCCdkFAUtdxstef.jpg","title":"支付会员招募","desc":"给顾客一个成为会员的理由"},{"pic":"https://os.alipayobjects.com/rmsportal/mPTArIzLQkkRLdH.jpg","title":"吸引回头客","desc":"引导消费过的顾客再次到店"},{"pic":"https://os.alipayobjects.com/rmsportal/hCCdkFAUtdxstef.jpg","title":"提升客单价","desc":"助力提升顾客到店消费额"}],"memberDataInfo":[{"name":"今日新增会员数","value":"首次来店消费会员数"},{"name":"总会员数","value":"累计会员数"},{"name":"交易二次以上（含）会员","value":"来店消费两次及以上的会员数"}],"profitDataInfo":[{"name":"今日收益金额","value":"今日实收金额"},{"name":"累计收益金额","value":"累计实收金额"},{"name":"笔单价","value":"累积实收金额/累积成交笔数"}],"activityDataInfo":[{"name":"今日活动收益金额","value":"今日参加活动交易的实收金额（含营销活动、口碑活动、优惠券）"},{"name":"今日领券量","value":"今日券领取份数"},{"name":"当前活动数","value":"今日商家的有效活动数（含营销活动、口碑活动、优惠券）"}]}';
+      __fd_index_data = JSON.parse(__fd_index_data);
+    </script>
+    <!-- FD:892:kb-crmhome-data/index/index.vm:3235:index/index.schema:首页参数配置:END -->
+    <!-- FD:892:kb-crmhome-data/index/index.vm:END -->
+    <!-- FD:892:kb-crmhome-data/validate/validate.vm:START -->
+    <!-- FD:892:kb-crmhome-data/validate/validate.vm:3373:validate/validate.schema:错误码文案:START -->
+    <script>
+      window.__fd_validate_data = [{ "code": "HEAD_SHOP_NAME_CANNOT_BE_NULL", "text": "主店名不能为空，且长度不能超过20个字符" }, { "code": "HEAD_SHOP_NAME_LENGTH_INVALID", "text": "主店名长度非法，必须大于1个中文字符，不大于20个中文字符" }, { "code": "HEAD_SHOP_NAME_CANNOT_CONTAIN_BRANCH_NAME", "text": "主店名不能包含分店名以及 xx路店、xx分店、xx总店" }, { "code": "HEAD_SHOP_NAME_CANNOT_CONTAIN_SUSPECTED_BRANCH_NAME", "text": "主店名中不能含有【**店】、（**店）、<**店>、空格**店等分店的名称，请填写至分店名中" }, { "code": "BRANCH_SHOP_NAME_LENGTH_INVALID", "text": "分店名长度需在2~20个字符之间" }, { "code": "BRACH_SHOP_NAME_CANNOT_CONTAIN_ADDRESS", "text": "分店名不能包含店址，例如：xx街xx号" }, { "code": "SHOP_ADDRESS_LENGTH_INVALID", "text": "门店地址长度需在4~50字符之间" }, { "code": "SHOP_POI_CANNOT_BE_NULL", "text": "门店经纬度信息不能为空" }, { "code": "SHOP_POI_FORMAT_INVALID", "text": "门店经纬度值不合法" }, { "code": "SHOP_400_PHONE_FORMAT_INVALID", "text": "门店400电话号码格式不正确" }, { "code": "SHOP_800_PHONE_FORMAT_INVALID", "text": "门店800电话号码格式不正确" }, { "code": "SHOP_PHONE_FORMAT_INVALID", "text": "请输入正确的固话/手机格式" }, { "code": "SHOP_PHONE_CANNOT_BE_NULL", "text": "请输入正确的固话/手机格式" }, { "code": "SUSPECT", "text": "地址存疑" }, { "code": "INVALID", "text": "地址错误" }, { "code": "HEAD_SHOP_NAME_CANNOT_CONTAIL_BRANCHNAME", "text": "主店名中不能含有【**店】、（**店）、<**店>、空格**店等分店的名称，请填写至分店名中" }, { "code": "MERCHANT_CAN_NOT_SIGN_KOUBEI", "text": "您当前账户已签约支付宝，无法继续开店，请更换其他账户来开店或拨打400-826-7710热线，免费解约支付宝。" }, { "code": "BRANCH_SHOP_NAME_CANNOT_CONTAIN_HEAD_NAME", "text": "分店名不可包含主店名，请按示例进行填写" }, { "code": "BRANCH_SHOP_NAME_CANNOT_PARENTHESES", "text": "分店名不能包含括号，[]、（）、()、{}等括号" }, { "code": "HEAD_SHOP_NAME_CANNOT_CONTAIN_ADDRESS", "text": "主店名不能包含店址，例如：xx街xx号" }];
+    </script>
+    <!-- FD:892:kb-crmhome-data/validate/validate.vm:3373:validate/validate.schema:错误码文案:END -->
+    <!-- FD:892:kb-crmhome-data/validate/validate.vm:END -->
+    <!-- FD:892:kb-crmhome-data/notice/commission.vm:START -->
+    <!-- FD:892:kb-crmhome-data/notice/commission.vm:5951:notice/commission.schema:营销返佣配置:START -->
+    <script>
+      window.__fd_commission_data = '{"show":true,"message":"2017年口碑营销返佣策略已确认，","link":"http://alipay.com"}';
+      __fd_commission_data = JSON.parse(__fd_commission_data);
+    </script>
+    <!-- FD:892:kb-crmhome-data/notice/commission.vm:5951:notice/commission.schema:营销返佣配置:END -->
+    <!-- FD:892:kb-crmhome-data/notice/commission.vm:END -->
+    <div id="react-content"></div>
+    <input type="hidden" value="false" id="isFoodTopKA" />
+    <!--[if lt IE 10]>
+<script src="https://as.alipayobjects.com/component/??console-polyfill/0.2.2/index.js,es5-shim/4.1.14/es5-shim.js,es5-shim/4.1.14/es5-sham.js,html5shiv/3.7.2/html5shiv.js"></script>
+<![endif]-->
+    <!-- FD:912:crmhome/common/specialRightContent.vm:START -->
+    <!-- FD:912:crmhome/common/specialRightContent.vm:3963:specialRightContent.schema:specialRightContent质量分特权内容:START -->
+    <script>
+      window._fd_special_right_content = {
+        score: 30,
+        titleOne: '还有机会参加口碑平台基础活动',
+        titleTwo: '参加口碑平台活动',
+        shops: ' 一大波优秀门店已经参加了活动',
+        date: '',
+        rankContent: '达到30分,口碑页面上有机会优先展示哦,享受更好的流量曝光。',
+        activeContent: '达到38分，可以参加口碑城市活动的报名咯。',
+        pictureSrc: 'https://zos.alipayobjects.com/rmsportal/enxLuNlhhHrNXgU.png',
+        pictureSrcUniversal: 'https://zos.alipayobjects.com/rmsportal/pUvFgPEgqWNZpMs.png',
+        code: 'https://zos.alipayobjects.com/rmsportal/JLSOCmLlNQmcXVi.jpg'
+      }
+    </script>
+    <!-- FD:912:crmhome/common/specialRightContent.vm:3963:specialRightContent.schema:specialRightContent质量分特权内容:END -->
+    <!-- FD:912:crmhome/common/specialRightContent.vm:END -->
+    <script src="https://as.alipayobjects.com/g/datavis/g2/1.2.5/index.js"></script>
+    <script src="https://webapi.amap.com/maps?v=2.0&key=283ae07b7c4a1164bdcfb0fa324eaeb1"></script>
+    <script crossorigin="1" charset="utf-8" src="./kbservcenter/kb-crmhome/common.js"></script>
+    <script crossorigin="1" charset="utf-8" src="./kbservcenter/kb-crmhome/index.js"></script>
+    <script crossorigin="1" charset="utf-8" src="https://a.alipayobjects.com/g/foresee/foresee-js/1.0.5/m.js"></script>
+  </div>
+  <style>
+    body {
+      max-width: 1091px;
+      min-width: inherit;
+      background-color: #fff!important;
+    }
+
+    .tbf-context {
+      width: 1091px;
+      background-color: #fff;
+    }
+
+    .ui-mask {
+      background-color: transparent!important;
+    }
+
+    .ant-modal-mask {
+      background-color: transparent!important;
+    }
+
+    .ant-modal-content {
+      -webkit-box-shadow: 8px 8px 25px 1px rgba(0, 0, 0, .3);
+      box-shadow: 8px 8px 25px 1px rgba(0, 0, 0, .3);
+    }
+  </style>
+  <!-- start authMenu value-->
+  <input type="hidden" value="" id="menuHostName" />
+  <!--<input type="hidden" value="2088101139334351" id="J_crmhome_merchantId"/>-->
+  <!-- end authMenu value-->
+  <script type="text/javascript">
+    window.agp_custom_config = {
+      BASE_URL: '//kcart.alipay.com/p.gif',
+      TIMING_ACTION_URL: '//kcart.alipay.com/x.gif'
+    }
+  </script>
+  <script charset="utf-8" src="https://as.alipayobjects.com/g/component/timing/1.0.0/index.js"></script>
+  <!-- FD:904:alipay/tracker/sai.vm:START -->
+  <script>
+    sensScanConfig = {
+      ratio: 0.01,
+      modules: '*',
+      types: '*'
+    };
+  </script>
+
+  <script src='https://as.alipayobjects.com/g/alipay_security/monitor-sens/1.0.1/monitor-sens.min.js'></script>
+
+  <script>
+    try {
+      (function () {
+        var logServer = 'https://magentmng.alipay.com/m.gif';
+        var sample = 0.0001;
+        var url = "https://a.alipayobjects.com/http-watch/1.0.7/index.js";
+
+        // 判断比例
+        if (!!window.addEventListener && Array.prototype.map && Math.random() < sample) {
+          var HEAD = document.head || document.getElementsByTagName('head')[0];
+
+          var spt = document.createElement('script');
+          spt.src = url;
+          HEAD.appendChild(spt);
+
+          setTimeout(function () {
+            window.httpWatch && window.httpWatch({ sample: 1, appname: 'crmhome-d5843.alipay.net', logServer: logServer });
+          }, 1000);
+        }
+      })();
+    } catch (e) { }
+  </script>
+
+
+
+  <script src="https://as.alipayobjects.com/component/console-security-message/1.0.1/index.js"></script>
+  <!-- FD:904:alipay/tracker/cmsbuffer.vm:3407:cmsbuffer.schema:main-CMS全站修复:END -->
+  <!-- FD:904:alipay/tracker/cmsbuffer.vm:END -->
+  <!-- FD:904:alipay/tracker/tracker.vm:2930:tracker.schema:全站自动化/性能/敏感信息打点开关:END -->
+  <!-- FD:904:alipay/tracker/tracker.vm:END -->
+</body>
+
+</html>

@@ -1,0 +1,83 @@
+groups-view-name {
+  display: block;
+  padding: 20px 10px;
+  background-color: #f9f9f9;
+  > div {
+    margin-left: 15px;
+    > h4 {
+      color: #666;
+    }
+    > label {
+      display: inline-block;
+      margin: 5px 0px;
+      font-size: 14px;
+      color: #666;
+    }
+    &:last-child {
+      font-size: small;
+      strong {
+        font-weight: normal;
+        color: red;
+      }
+    }
+  }
+}
+
+groups-view-basic, groups-view-industry, groups-view-consumer, groups-view-location,
+  groups-view-third, groups-view-divide {
+  display: block;
+  > div:first-child {
+    position: relative;
+    margin: 20px 0 10px;
+    color: #666;
+    font-size: 14px;
+    padding-left: 15px;
+    &::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 3px;
+      display: block;
+      width: 5px;
+      height: 16px;
+      background-color: #2db7f5;
+      z-index: 1;
+    }
+  }
+  > div:nth-child(2) {
+    display: flex;
+    flex-flow: row wrap;
+    border-top: 1px solid #F1F1F1;
+    border-right: 1px solid #F1F1F1;
+    border-bottom: 1px solid #F1F1F1;
+    > div {
+      display: flex;
+      width: 33.3%;
+      border-bottom: 1px solid #F1F1F1;
+      &[data-last-line=true] {
+        border-bottom: none;
+      }
+      label {
+        display: block;
+        width: 30%;
+        padding: 15px 10px;
+        border-left: 1px solid #F1F1F1;
+        font-size: 14px;
+        color: #666;
+        background-color: #F9F9F9;
+      }
+      label + span {
+        display: block;
+        width: 70%;
+        padding: 15px 10px;
+        border-left: 1px solid #F1F1F1;
+      }
+    }
+  }
+}
+
+groups-view-basic, groups-view-location {
+  a {
+    padding-left: 5px;
+  }
+}

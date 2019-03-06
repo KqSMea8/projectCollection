@@ -1,0 +1,330 @@
+@colorOrange: #FF6600;
+@colorBlack: #000000;
+.color-red {
+  color: #f50;
+}
+.color-gray {
+  color: #ccc;
+}
+.color-orange {
+  color: @colorOrange;
+}
+.intelligentgoods-list {
+  position: relative;
+  .padleft-blue {
+    position: relative;
+  }
+  .padleft-blue:before {
+    content: "";
+    position: absolute;
+    width: 5px;
+    height: 100%;
+    background: #2db7f5;
+  }
+  .padleft-blue p {
+    padding: 0 0 0 10px;
+  }
+  .topbtn {
+    position: absolute;
+    top: 20px;
+    right: 16px;
+  }
+  .float-right {
+    float: right;
+  }
+  .detail-ellipsis {
+    width:auto;
+    max-width:100%;
+    overflow:hidden;
+    text-overflow:ellipsis;
+    white-space:nowrap;
+    word-break:normal;
+    word-wrap:normal;
+  }
+  .todo-panel{
+    .todocard-empty {
+      text-align: center;
+      padding: 22px 90px;
+      border: 1px solid #f2f2f2;
+      border-radius: 6px;
+      margin-bottom: 20px;
+    }
+    .todocard-empty:hover {
+      background: #f9f9f9;
+      border: 1px solid #cacaca;
+    }
+    .todo-card {
+      margin: 10px 0 ;
+      padding: 10px;
+      border: 1px solid #f2f2f2;
+      border-radius: 6px;
+      vertical-align:top;
+      &:hover {
+        background: #f9f9f9;
+        border: 1px solid #cacaca;
+      }
+      .todo-title{
+        font-size:14px;
+        display:inline-block;
+        max-width:240px;
+        color:#666;
+				height: 24px;
+				line-height: 24px;
+      }
+      a {
+          float:right;
+          font-size:12px;
+          line-height:20px;
+        }
+      }
+      .todo-num {
+        display: flex;
+        color: #999;
+        p {
+          flex: 1;
+          border-right: 1px solid #ccc;
+          margin-right: 5px;
+          &:last-child {
+            border-right: none;
+            margin-right: 0px;
+          }
+        }
+        span {
+          &.color_red {
+            color: #f50;
+          }
+          color: #ccc;
+        }
+      }
+    }
+    .activity-panel {
+      .activity_wrapper {
+        margin-top: 20px;
+        border: 1px solid #cacaca;
+        .form_wrapper {
+          background: #f7f7f7;
+          padding: 6px;
+          border-bottom: 1px solid #cacaca;
+        }
+        .table-actions a {
+          display: inline-block;
+          padding: 0 5px;
+          border-right: 1px solid #ccc;
+        }
+        .table-actions a:first-child {
+          padding-left: 0px;
+        }
+        .table-actions a:last-child {
+          border-right: none;
+          padding-right: 0px;
+        }
+        .activity-table {
+          position: relative;
+          .batchapplyleadsonsale-btn {
+            position: absolute;
+            top: -37px;
+            right: 5px;
+          }
+          .ant-table-placeholder {
+            border-bottom: none;
+          }
+          &.shelved-catering-table-wrapper, &.notshelved-catering-table-wrapper {
+            .color-grey {
+              color: #888;
+            }
+            .text{
+              display: block;
+              padding-left: 100px;
+            }
+            .buttons{
+              position: absolute;
+            }
+            .Aligned,.Huaihai{
+              background: #008000;
+              border: none;
+              padding: 0 5px;
+              margin: 0 3px;
+            }
+            .Huaihai{
+              background: #2db7f5;
+            }
+          }
+        }
+      }
+    }
+  }
+.selectcommoditymodal-item {
+  margin: 10px 0;
+  padding: 10px;
+  display: 'flex';
+  height: '30px';
+  line-height: '30px';
+  border: 1px solid #ccc;
+  display: flex;
+  border-radius: 10px;
+  &.selectcommoditymodal-item-checked {
+    border-color: #2db7f5;
+  }
+  @contentHeight: 35px;
+  .item-content {
+    display: flex;
+    img {
+      width: @contentHeight;
+      height: @contentHeight;
+      margin-right: 5px;
+    }
+    .item-title {
+      flex: 1;
+      font-size: 16px;
+      color: #666;
+      line-height: @contentHeight;
+      .status {
+        color: @colorOrange;
+        font-size: 12px;
+        text-indent: 2;
+        border: 1px solid @colorOrange;
+        border-radius: 4px;
+        padding: 2px 5px;
+      }
+    }
+  }
+  .ant-radio {
+    line-height: @contentHeight;
+    .ant-radio-inner {
+      margin-top: 10px;
+    }
+  }
+}
+.selectcommodity-qrcode-modal {
+  padding: 0px 40px;
+  text-align: center;
+  .title {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  p {
+    line-height: 24px;
+  }
+  img {
+    width: 132px;
+    height: 132px;
+  }
+}
+.table-actions a {
+    display: inline-block;
+    padding: 0 5px;
+    border-right: 1px solid #ccc;
+  }
+  .table-actions a:first-child {
+    padding-left: 0px;
+  }
+  .table-actions a:last-child {
+    border-right: none;
+    padding-right: 0px;
+  }
+  .activity-table {
+    position: relative;
+    .batchapplyleadsonsale-btn {
+      position: absolute;
+      top: -37px;
+      right: 5px;
+    }
+    .ant-table-placeholder {
+      border-bottom: none;
+    }
+  }
+.transaction-modal {
+  padding: 0px 20px;
+  .title {
+    position: relative;
+    padding-left: 20px;
+    .icon {
+      color: #efb336;
+      font-size: 20px;
+      position: absolute;
+      left: -5px;
+      top: -1px;
+    }
+  }
+  .ant-modal-header {
+    border-bottom: none;
+  }
+  .ant-modal-body {
+    padding-top: 0px;
+  }
+  .ant-modal-footer {
+    border-top: none;
+  }
+  .content {
+    padding: 0 20px;
+    .text {
+      line-height: 22px;
+    }
+    .ant-table-thead > tr > th, .ant-table-tbody > tr > td {
+      padding: 8px;
+    }
+    .shop-list-header {
+      border: 1px solid #ddd;
+      border-bottom: none;
+      color: #999;
+      background: #f2f2f2;
+      padding: 8px;
+    }
+    .check-shop-list{
+      border: 1px solid #ddd;
+      border-top: none;
+      padding: 10px;
+      height: 200px;
+      max-height: 200px;
+      overflow: auto;
+
+      dl {
+        margin-bottom: 10px;
+      }
+      dt {
+        font-size: medium;
+      }
+      dd {
+        padding: 7px;
+      }
+
+      .shop-item{
+        margin-bottom: 5px;
+      }
+    }
+  }
+}
+
+.catering-changeinfo-modal {
+  padding: 0px 20px;
+  .title {
+    position: relative;
+    padding-left: 20px;
+    .icon {
+      color: #efb336;
+      font-size: 20px;
+      position: absolute;
+      left: -5px;
+      top: -1px;
+    }
+  }
+  .ant-modal-header {
+    border-bottom: none;
+    padding-bottom: 0;
+  }
+  .ant-modal-body {
+    padding-top: 0px;
+  }
+  .ant-modal-footer {
+    border-top: none;
+  }
+  .content {
+    padding: 16px 20px;
+    .text {
+      line-height: 22px;
+    }
+    .ant-table-thead > tr > th, .ant-table-tbody > tr > td {
+      padding: 8px;
+    }
+  }
+}

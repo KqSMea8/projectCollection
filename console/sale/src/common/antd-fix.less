@@ -1,0 +1,54 @@
+// antd style fix
+.ant-form-item :not(.ant-form) > .ant-form-item {
+  margin-bottom: 0px;
+}
+
+.ant-search-input.ant-input-group .ant-select:first-child {
+  top: 0;
+}
+.ant-cascader-picker.ant-cascader-picker-disabled,
+.ant-cascader-picker.ant-cascader-picker-disabled .ant-input-wrapper {
+  cursor: not-allowed;
+  background-color: #f7f7f7;
+  color: #ccc;
+  & .ant-input.ant-cascader-input {
+    cursor: not-allowed;
+  }
+}
+.node-container > div.content {
+  overflow-x: hidden;
+}
+
+.ant-select-selection--multiple .ant-select-selection__rendered {
+  padding-bottom: 2px;
+}
+
+/* 级联选择 */
+.ant-cascader-menus {
+  z-index: 9999;
+}
+
+/* 图片上传 */
+.ant-upload-select-picture-card i {
+  font-size: 28px;
+  color: #999;
+}
+.ant-upload-select-picture-card .ant-upload-text {
+  margin-top: 8px;
+  font-size: 12px;
+  color: #666;
+}
+
+.ant-tooltip-inner {
+  word-wrap: break-word;
+}
+
+.fix-cascader-disabled {
+  .ant-cascader-input.ant-input {
+    background: transparent !important;
+  }
+}
+
+.ant-form-extra {
+  margin-left: 8px;
+}

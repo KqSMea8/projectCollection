@@ -1,0 +1,73 @@
+.shoptip-wrapper {
+    font-size: 12px;
+    position:relative;
+    display: inline-block;
+    & .shoptip {
+        padding: 3px 4px;
+        display: inline-block;
+        border-radius: 4px;
+        border: 1px solid rgb(225,80,80);
+        background-color: rgb(255,102,102);
+        color: #fff;
+        position: absolute;
+        white-space: nowrap;
+        word-break: keep-all;
+        z-index: 10;
+        transform: translateX(-50%);
+
+        & a {
+            color: #fff;
+            text-decoration: underline;
+        }
+    }
+
+    & .shoptip:before {
+        content: '\20';
+        display: block;
+        width: 0;
+        height: 0;
+        border-width: 5px;
+        border-color: rgb(255,102,102);
+        border-style: solid;
+        z-index: 11;
+        position: absolute;
+        box-sizing: content-box;
+    }
+
+    & .shoptip.bottom:before {
+        top: -5px;
+        left: 50%;
+        margin-right: -3px;
+        border-top-width: 0;
+        border-left-color: transparent;
+        border-right-color: transparent;
+        transform: translateX(-3px);
+    }
+
+    & .shoptip.top:before {
+        bottom: -5px;
+        left: 50%;
+        border-bottom-width: 0;
+        border-left-color: transparent;
+        border-right-color: transparent;
+        transform: translateX(-3px);
+    }
+
+    & .shoptip.left:before {
+        top: 50%;
+        right: -5px;
+        margin-top: -4px;
+        border-right-width: 0;
+        border-top-color: transparent;
+        border-bottom-color: transparent;
+    }
+
+    & .shoptip.right:before {
+        top: 50%;
+        left: -5px;
+        margin-top: -4px;
+        border-left-width: 0;
+        border-top-color: transparent;
+        border-bottom-color: transparent;
+    }
+}

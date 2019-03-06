@@ -1,0 +1,30 @@
+.black-white-list {
+	display: table;
+	width: 100%;
+	padding: 0;
+	& .black-white-row {
+		display: table-row;
+		border-left: 1px solid #e4e4e4;
+		border-top: 1px solid #e4e4e4;
+		line-height: 30px;
+
+		& .black-white-label {
+			display: table-cell;
+			border-right: 1px solid #e4e4e4;
+			border-bottom: 1px solid #e4e4e4;
+			background: #F9F9F9;
+			text-align: right;
+			padding: 10px;
+			min-width: 120px;
+			width: 170px;
+			max-width: 170px
+		}
+
+		& .black-white-item {
+			display: table-cell;
+			padding: 10px 10px;
+			border-right: 1px solid #e4e4e4;
+			border-bottom: 1px solid #e4e4e4;
+		}
+	}
+}

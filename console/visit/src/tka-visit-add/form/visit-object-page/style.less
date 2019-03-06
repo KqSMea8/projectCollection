@@ -1,0 +1,63 @@
+.visit-object-page {
+  background-color: #f2f2f2;
+  padding-bottom: 84px;
+
+  .header-check {
+    .content {
+      margin-left: 30px;
+    }
+  }
+
+  .list {
+    .list-item {
+      display: block;
+      width: 70%;
+      white-space: normal;
+      word-break: break-all;
+      padding-right: 100px;
+    }
+
+    .item-btns {
+      position: absolute;
+      right: 30px;
+      top: 50%;
+      transform: translate(0, -50%);
+      z-index: 99;
+
+      .edit {
+        color: #108ee9;
+        font-size: 26px;
+        padding: 16px;
+      }
+
+      .delete {
+        color: #f66;
+        font-size: 26px;
+        padding: 16px;
+      }
+    }
+
+    .am-list-item .am-list-line .am-list-content {
+      font-size: 32px;
+    }
+  }
+
+  .add-btn {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 24px;
+    background: #108ee9;
+    font-size: 36px;
+    outline: none;
+    color: white;
+    text-align: center;
+    border: none;
+    z-index: 999;
+
+    &:active {
+      background: #0c6eb4;
+    }
+  }
+}

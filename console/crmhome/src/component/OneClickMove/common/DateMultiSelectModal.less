@@ -1,0 +1,66 @@
+.date-multi-position {
+  /*position: relative;*/
+  .date-multi-select{
+    /*float: left;*/
+    position: relative;
+    border: 1px solid #ddd;
+    padding: 0px 5px;
+    border-radius: 5px;
+    line-height: 27px;
+    min-height: 32px;
+    width: 100%;
+    /*.ant-tag {
+      margin-top: -1px;
+    }*/
+  }
+  .multi-position-modal {
+    position: absolute;
+    /*float: left;*/
+    padding: 8px;
+    width: 200px;
+    /*top: 32px;*/
+    border: 1px solid #ddd;
+    line-height: 25px;
+    border-radius: 5px;
+    z-index: 100;
+    background-color: #fff;
+    .multi-position-child{
+      display: inline-block;
+      border: 1px solid #ddd;
+      color: #999;
+      border-radius: 3px;
+      width: 20px;
+      height: 20px;
+      padding-bottom: 2px;
+      text-align: center;
+      line-height: 20px;
+      margin-left: 5px; 
+      background-color: #fff;
+      cursor: pointer;
+      &:hover {
+        background-color: #0091cb;
+        color: #fff;
+      }
+    }
+    .check{
+      background-color: #00b7f4;
+      color: #fff;
+    }
+    .multi-position-botton{
+      float: right;
+      a{
+        padding: 5px 8px;
+        border-radius: 3px;
+        &:hover {
+          background-color: #f5f5f5;
+        }
+      }
+    }
+  }
+}
+.has-error {
+  .select-error{
+    border-color: #f50;
+    box-shadow: 0 0 0 2px rgba(255, 85, 0, 0.2);
+  }
+}

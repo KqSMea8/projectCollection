@@ -1,0 +1,31 @@
+.el-input .el-input__inner{
+    height: 32px;
+}
+.el-table__empty-block{
+    min-height: 100px;
+}
+.el-button{
+    height: 32px;
+    font-size: 14px;
+    padding: 0 10px;
+}
+.el-input__inner{
+    line-height: 32px;
+}
+.el-form-item{
+    margin-bottom: 20px;
+}
+
+.el-table th{
+    height: 48px;
+    padding: 0;
+    background:rgba(24, 144, 255, 0.1)!important;
+    color:rgba(0, 0, 0, 0.85)!important
+}
+.el-table .cell{
+    font-size: 14px;
+}
+.el-pagination{
+    text-align: center;
+    padding-top: 20px;
+}

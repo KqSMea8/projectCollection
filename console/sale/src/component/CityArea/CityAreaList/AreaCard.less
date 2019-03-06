@@ -1,0 +1,42 @@
+.area-wrapper {
+  margin-right: 10px;
+  margin-bottom: 10px;
+  display: inline-block;
+  width: ~'-webkit-calc((100% - 30px)/4)';
+
+  .area-detail {
+    padding: 10px;
+    background: #f2f2f2;
+    border-radius: 5px 5px 0 0;
+    color: #999;
+
+    h2 {
+      font-weight: normal;
+      margin-bottom: 10px;
+      color: #666;
+    }
+
+    .remark {
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      overflow: hidden;
+      width: 100%;
+    }
+  }
+
+  .area-action {
+    padding: 10px;
+    border: 1px solid #f2f2f2;
+    //border-bottom: 1px solid #f2f2f2;
+    //border-left: 1px solid #f2f2f2;
+    //border-right: 1px solid #f2f2f2;
+
+    a {
+      margin-right: 5px;
+    }
+  }
+}
+
+.area-wrapper:nth-child(4n) {
+  margin-right: 0;
+}

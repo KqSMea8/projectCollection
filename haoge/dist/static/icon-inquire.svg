@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="26px" height="26px" viewBox="0 0 26 26" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 48.1 (47250) - http://www.bohemiancoding.com/sketch -->
+    <title>icon-inquire</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="主界面" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(-1194.000000, -326.000000)">
+        <g id="icon-inquire" transform="translate(1195.000000, 327.000000)" stroke-width="1.5">
+            <path d="M13.4580078,24 L2,24 C0.8954305,24 1.3527075e-16,23.1045695 0,22 L0,2 C-1.3527075e-16,0.8954305 0.8954305,2.02906125e-16 2,0 L22,0 C23.1045695,-2.02906125e-16 24,0.8954305 24,2 L24,13.137207" id="Rectangle-8" stroke="#A9A6DF" stroke-linecap="round" stroke-linejoin="round"></path>
+            <path d="M21.4166667,21.4166667 L23.5,23.5" id="Line-12" stroke="#A3A0DB" stroke-linecap="round" stroke-linejoin="round"></path>
+            <circle id="Oval-4" stroke="#A9A6DF" cx="18" cy="18" r="4"></circle>
+            <path d="M3.5,5.5 L15.5,5.5" id="Line-15" stroke="#A9A6DF" stroke-linecap="round" stroke-linejoin="round"></path>
+            <path d="M3.5,9.5 L11.5,9.5" id="Line-15-Copy" stroke="#A9A6DF" stroke-linecap="round" stroke-linejoin="round"></path>
+        </g>
+    </g>
+</svg>

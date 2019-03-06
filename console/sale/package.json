@@ -1,0 +1,79 @@
+{
+  "family": "kbservcenter",
+  "name": "kb-sale",
+  "version": "1.80.2",
+  "entry": {
+    "index": "./src/entry/index.jsx",
+    "lite": "./src/entry/lite.jsx"
+  },
+  "dependencies": {
+    "@ali/tracker": "^3.0.1",
+    "@alipay/hermes-asynctree": "3.0.1-alpha.6",
+    "@alipay/kb-ajax": "^1.0.4",
+    "@alipay/kb-biz-components": "^1.1.9",
+    "@alipay/kb-fetch": "^1.0.0",
+    "@alipay/kb-framework": "^1.6.4",
+    "@alipay/kb-framework-components": "^1.3.0",
+    "@alipay/kb-sign-deals": "^1.0.0",
+    "@alipay/opbase-biz-components": "0.4.4",
+    "antd": "^1.0.0",
+    "babel-polyfill": "^6.23.0",
+    "classnames": "^2.2.1",
+    "common": "^0.2.5",
+    "gregorian-calendar": "^4.1.1",
+    "hermes-react": "^1.5.0",
+    "hermes-tree-select": "^1.0.0-beta.7",
+    "immutable": "^3.8.1",
+    "lodash": "^4.6.1",
+    "lodash.debounce": "^3.1.1",
+    "moment": "^2.13.0",
+    "prop-types": "^15.6.0",
+    "qrcode.react": "^0.7.1",
+    "rc-pagination": "^1.8.2",
+    "react": "^15.0.0",
+    "react-copy-to-clipboard": "^4.2.3",
+    "react-dom": "^15.0.0",
+    "react-router": "~2.5.1"
+  },
+  "devDependencies": {
+    "@alipay/pecker": "^1.9.1",
+    "anyproxy-map-res": "^1.0.1",
+    "atool-build": "^0.8.x",
+    "babel-eslint": "^4.0.5",
+    "babel-plugin-import": "^1.0.1",
+    "cz-conventional-changelog": "^1.1.5",
+    "dora": "^0.4.3",
+    "dora-plugin-livereload": "^0.5.3",
+    "dora-plugin-proxy": "^0.8.5",
+    "dora-plugin-webpack": "^0.8.x",
+    "eslint": "~1.6.0",
+    "eslint-config-airbnb": "~0.1.0",
+    "eslint-plugin-react": "~3.5.1",
+    "handlebars-loader": "^1.4.0",
+    "mockjs": "^1.0.1-beta3",
+    "pre-commit": "1.x",
+    "react-dependence-analyze": "^0.1.1"
+  },
+  "pre-commit": [
+    "lint"
+  ],
+  "scripts": {
+    "start": "npm run local",
+    "dev": "dora -p 8002 --plugins webpack?publicPath=/${npm_package_family}/${npm_package_name}/${npm_package_version}/,proxy?port=8982,livereload",
+    "deploy": "rm -rf node_modules && tnpm install && qt deploy . kb",
+    "pub": "git push origin && qt deploy . kb",
+    "local": "dora -p 8008 --plugins webpack?publicPath=/${npm_package_family}/${npm_package_name}/,proxy?port=8982,livereload",
+    "sit": "dora -p 8002 --plugins webpack?publicPath=/g/${npm_package_family}/${npm_package_name}/${npm_package_version}/,proxy?port=8989",
+    "lint": "eslint --ext .js,.jsx src",
+    "build": "rm -rf dist && atool-build --devtool=#source-map -o ./dist/${npm_package_family}/${npm_package_name}/${npm_package_version}/",
+    "tag": "node ./tag.js",
+    "proxylocal": "lsof -ti:8008 | xargs kill && NODE_ENV=local dora -p 8008 --plugins webpack,livereload & anyproxy-map-res -p 8101 --match .*${npm_package_family}/${npm_package_name}.*/ --replace http://localhost:8008/",
+    "rda": "rda-cli ./ -t",
+    "ci": "pecker -r -e .eslintrc -z -d report src"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  }
+}

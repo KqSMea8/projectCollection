@@ -1,0 +1,172 @@
+{
+  "shopCountGroupByCityVO": [
+    {
+      "shops": [],
+      "cityName": "Shanghai",
+      "cityCode": "SH",
+      "shopCount": 3
+    },
+    {
+      "shops": [],
+      "cityName": "海外",
+      "cityCode": "990100",
+      "shopCount": 1
+    },
+    {
+      "shops": [],
+      "cityName": "离岛",
+      "cityCode": "820200",
+      "shopCount": 1
+    },
+    {
+      "shops": [],
+      "cityName": "澳门半岛",
+      "cityCode": "820100",
+      "shopCount": 4
+    },
+    {
+      "shops": [],
+      "cityName": "大堂区",
+      "cityCode": "820004",
+      "shopCount": 1
+    },
+    {
+      "shops": [],
+      "cityName": "定西市",
+      "cityCode": "621100",
+      "shopCount": 1
+    },
+    {
+      "shops": [],
+      "cityName": "丽江市",
+      "cityCode": "530700",
+      "shopCount": 16
+    },
+    {
+      "shops": [],
+      "cityName": "达州市",
+      "cityCode": "511700",
+      "shopCount": 1
+    },
+    {
+      "shops": [],
+      "cityName": "重庆市",
+      "cityCode": "500100",
+      "shopCount": 2
+    },
+    {
+      "shops": [],
+      "cityName": "东莞市",
+      "cityCode": "460200",
+      "shopCount": 1
+    },
+    {
+      "shops": [],
+      "cityName": "防城港市",
+      "cityCode": "450600",
+      "shopCount": 1
+    },
+    {
+      "shops": [],
+      "cityName": "东莞市",
+      "cityCode": "441900",
+      "shopCount": 1
+    },
+    {
+      "shops": [],
+      "cityName": "恩施土家族苗族自治州",
+      "cityCode": "422800",
+      "shopCount": 1
+    },
+    {
+      "shops": [],
+      "cityName": "荆门市",
+      "cityCode": "420800",
+      "shopCount": 1
+    },
+    {
+      "shops": [],
+      "cityName": "九江市",
+      "cityCode": "360400",
+      "shopCount": 20
+    },
+    {
+      "shops": [],
+      "cityName": "宁德市",
+      "cityCode": "350900",
+      "shopCount": 1
+    },
+    {
+      "shops": [],
+      "cityName": "龙岩市",
+      "cityCode": "350800",
+      "shopCount": 1
+    },
+    {
+      "shops": [],
+      "cityName": "南平市",
+      "cityCode": "350700",
+      "shopCount": 1
+    },
+    {
+      "shops": [],
+      "cityName": "亳州市",
+      "cityCode": "341600",
+      "shopCount": 1
+    },
+    {
+      "shops": [],
+      "cityName": "安庆市",
+      "cityCode": "340800",
+      "shopCount": 23
+    },
+    {
+      "shops": [],
+      "cityName": "铜陵市",
+      "cityCode": "340700",
+      "shopCount": 1
+    },
+    {
+      "shops": [],
+      "cityName": "蚌埠市",
+      "cityCode": "340300",
+      "shopCount": 5
+    },
+    {
+      "shops": [],
+      "cityName": "杭州",
+      "cityCode": "330100",
+      "shopCount": 79
+    },
+    {
+      "shops": [],
+      "cityName": "常州市",
+      "cityCode": "320400",
+      "shopCount": 2
+    },
+    {
+      "shops": [],
+      "cityName": "上海",
+      "cityCode": "310100",
+      "shopCount": 11
+    },
+    {
+      "shops": [],
+      "cityName": "佳木斯市",
+      "cityCode": "230800",
+      "shopCount": 1
+    },
+    {
+      "shops": [],
+      "cityName": "天津城区",
+      "cityCode": "120100",
+      "shopCount": 2
+    },
+    {
+      "shops": [],
+      "cityName": "北京市",
+      "cityCode": "110100",
+      "shopCount": 7
+    }
+  ]
+}

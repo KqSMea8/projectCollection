@@ -1,0 +1,138 @@
+/* 自定义人群查看页面 +  营销活动查看页面 */
+.kb-groups-view {
+  .name {
+    padding: 30px 0;
+    font-size: 16px;
+    background-color: #f9f9f9;
+    .label {
+      display: inline-block;
+      width: 108px;
+      margin-right: 15px;
+      color: #666;
+      text-align: right;
+    }
+  }
+  .sub-title {
+    position: relative;
+    padding: 20px 0 10px;
+    color: #666;
+    font-size: 14px;
+    padding-left: 15px;
+  }
+  .sub-title:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 13px;
+    display: block;
+    width: 5px;
+    height: 16px;
+    background-color: #2db7f5;
+    z-index: 1;
+  }
+  .kb-detail-table-6 td.kb-detail-table-label {
+    color: #666;
+  }
+
+
+  .coupon-info{
+    padding: 30px 15px;
+    font-size: 12px;
+    background-color: #f9f9f9;
+    overflow: hidden;
+
+    img{
+      float: left;
+      width: 128px;
+      height: 95px;
+    }
+    h4{
+      font-size: 16px;
+    }
+    .status{
+      font-size: 12px;
+      font-weight: normal;
+      padding: 2px 6px;
+      border-radius: 4px;
+      margin-left: 5px;
+
+      &.blue{
+        background-color:#2DB7F5;
+        color: #fff;
+      }
+      &.orange{
+        background-color:#FAC450;
+        color: #fff;
+      }
+      &.gray{
+        background-color:#ccc;
+        color: #fff;
+      }
+    }
+    .coupon-detail{
+      color: #666;
+      float: left;
+      margin-left: 15px;
+    }
+  }
+
+  .view-bottom{
+    border-top: 1px solid #ddd;
+    padding-top: 20px;
+    padding-left: 135px;
+  }
+}
+
+.kb-detail-main {
+  position: relative;
+  padding: 16px 16px 24px;
+  font-size: 12px;
+  .ant-upload-list-picture-card .ant-upload-list-item,
+  .ant-upload.ant-upload-select-picture-card {
+    margin-bottom: 0;
+  }
+
+  .ant-breadcrumb {
+    font-size: 14px;
+    padding-top: 12px;
+    padding-bottom: 10px;
+    & > span:last-child {
+      font-weight: normal;
+    }
+  }
+
+  td {
+    img {
+      width: 45px;
+      height: 36px;
+      margin-right: 8px;
+    }
+  }
+
+  .kb-button-list{
+    float: right;
+  }
+}
+
+/* 活动详情 查看商家列表 */
+.check-shop-list{
+  border: 1px solid #ddd;
+  padding: 10px;
+  height: 200px;
+  max-height: 200px;
+  overflow: auto;
+
+  dl {
+    margin-bottom: 10px;
+  }
+  dt {
+    font-size: medium;
+  }
+  dd {
+    padding: 7px;
+  }
+
+  .shop-item{
+    margin-bottom: 5px;
+  }
+}

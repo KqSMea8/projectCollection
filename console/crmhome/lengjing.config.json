@@ -1,0 +1,20 @@
+{
+  "appid": "1001",
+  "name": "crmhome",
+  "desc": "商家中心",
+  "host": "https://e.alipay.com/",
+  "pages": [
+    {
+      "entry": "main.htm",
+      "desc": "首页"
+    },
+    {
+      "entry": "#/item-promo",
+      "desc": "口碑活动报名"
+    },
+    {
+      "entry": "comment/summary.htm",
+      "desc": "消费者评价"
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="16px" height="13px" viewBox="0 0 16 13" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 48.1 (47250) - http://www.bohemiancoding.com/sketch -->
+    <title>icon-rise</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="主界面" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(-509.000000, -500.000000)" stroke-linecap="round" stroke-linejoin="round">
+        <g id="账户状态" transform="translate(276.000000, 288.000000)" fill="#22BB23" stroke="#22BB23" stroke-width="0.5">
+            <path d="M244.899353,215.916859 L243,214.038635 L247.961243,214 L247.961243,218.944687 L245.610412,216.620008 L242.119349,220.18509 L239.319979,216.960267 L237,218.793282 L237,217.394686 L239.424162,215.554814 L242.16361,218.710606 L244.899353,215.916859 Z M235,223 L247.5,223 C247.776142,223 248,223.223858 248,223.5 C248,223.776142 247.776142,224 247.5,224 L234.5,224 C234.223858,224 234,223.776142 234,223.5 L234,213.5 C234,213.223858 234.223858,213 234.5,213 C234.776142,213 235,213.223858 235,213.5 L235,223 Z" id="icon-rise"></path>
+        </g>
+    </g>
+</svg>

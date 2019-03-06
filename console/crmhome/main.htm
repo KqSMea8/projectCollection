@@ -1,0 +1,2163 @@
+<!DOCTYPE html>
+<html class="">
+
+<head>
+    <meta charset="GBK" />
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <meta name="renderer" content="webkit" />
+    <meta name="force-rendering" content="webkit" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <title>口碑商家中心</title>
+
+
+    <link rel="icon" href="https://i.alipayobjects.com/common/favicon/favicon.ico" type="image/x-icon" />
+    <link rel="shortcut icon" href="https://i.alipayobjects.com/common/favicon/favicon.ico" type="image/x-icon" />
+    <link href="https://a.alipayobjects.com" rel="dns-prefetch" />
+    <link href="https://app.alipay.com" rel="dns-prefetch" />
+    <link href="https://my.alipay.com" rel="dns-prefetch" />
+    <link href="https://lab.alipay.com" rel="dns-prefetch" />
+    <link href="https://cashier.alipay.com" rel="dns-prefetch" />
+    <link href="https://financeprod.alipay.com" rel="dns-prefetch" />
+    <link href="https://shenghuo.alipay.com" rel="dns-prefetch" />
+
+
+    <!-- uitpl:/component/trackerTime.vm -->
+    <!-- FD:106:alipay/tracker/iconfont.vm:START -->
+    <style>
+        @font-face {
+            font-family: "rei";
+            src: url("https://i.alipayobjects.com/common/fonts/rei.eot?20150616");
+            /* IE9 */
+            src: url("https://i.alipayobjects.com/common/fonts/rei.eot?20150616#iefix") format("embedded-opentype"), /* IE6-IE8 */
+            url("https://i.alipayobjects.com/common/fonts/rei.woff?20150616") format("woff"), /* chrome 6+、firefox 3.6+、Safari5.1+、Opera 11+ */
+            url("https://i.alipayobjects.com/common/fonts/rei.ttf?20150616") format("truetype"), /* chrome、firefox、opera、Safari, Android, iOS 4.2+ */
+            url("https://i.alipayobjects.com/common/fonts/rei.svg?20150616#rei") format("svg");
+            /* iOS 4.1- */
+        }
+
+        .iconfont {
+            font-family: "rei";
+            font-style: normal;
+            font-weight: normal;
+            cursor: default;
+            -webkit-font-smoothing: antialiased;
+        }
+    </style>
+    <!-- FD:106:alipay/tracker/iconfont.vm:END -->
+    <script type="text/javascript">
+        window._to = { start: new Date() };
+    </script>
+
+    <!-- FD:106:alipay/tracker/monitor.vm:START -->
+    <!-- FD:106:alipay/tracker/sai_seer.vm:START -->
+    <script type="text/javascript">
+
+        !function (n) { function o(r) { if (t[r]) return t[r].exports; var i = t[r] = { exports: {}, id: r, loaded: !1 }; return n[r].call(i.exports, i, i.exports, o), i.loaded = !0, i.exports } var t = {}; return o.m = n, o.c = t, o.p = "", o(0) }([function (n, o) { "use strict"; window.Sai = { log: function () { }, error: function () { }, lost: function () { }, off: function () { }, on: function () { }, _DATAS: [], _EVENTS: [] } }]);
+
+    </script>
+    <!-- FD:106:alipay/tracker/sai_seer.vm:END -->
+    <!-- FD:106:alipay/tracker/monitor.vm:END -->
+    <!-- FD:106:alipay/tracker/seajs.vm:START -->
+
+
+    <!-- monitor 防错代码 -->
+    <script>
+        (function (win) {
+            if (!win.monitor) { win.monitor = {}; }
+
+            var METHODS = ["lost", "log", "error", "on", "off"];
+
+            for (var i = 0, method, l = METHODS.length; i < l; i++) {
+                method = METHODS[i];
+                if ("function" !== typeof win.monitor[method]) {
+                    win.monitor[method] = function () { };
+                }
+            }
+        })(window);
+    </script>
+
+    <!-- seajs以及插件 -->
+    <script charset="utf-8" crossorigin="anonymous" id="seajsnode" onerror="window.monitor && monitor.lost && monitor.lost(this.src)"
+        src="https://a.alipayobjects.com/??seajs/seajs/2.2.3/sea.js,seajs/seajs-combo/1.0.0/seajs-combo.js,seajs/seajs-style/1.0.2/seajs-style.js,seajs/seajs-log/1.0.0/seajs-log.js,jquery/jquery/1.7.2/jquery.js,gallery/json/1.0.3/json.js,alipay-request/3.0.3/index.js"></script>
+
+    <!-- seajs config 配置 -->
+    <script>
+        seajs.config({
+            alias: {
+                '$': 'jquery/jquery/1.7.2/jquery',
+                '$-debug': 'jquery/jquery/1.7.2/jquery',
+                'jquery': 'jquery/jquery/1.7.2/jquery',
+                'jquery-debug': 'jquery/jquery/1.7.2/jquery-debug',
+                'seajs-debug': 'seajs/seajs-debug/1.1.1/seajs-debug'
+            },
+            crossorigin: function (uri) {
+
+                function typeOf(type) {
+                    return function (object) {
+                        return Object.prototype.toString.call(object) === '[object ' + type + ']';
+                    }
+                }
+                var isString = typeOf("String");
+                var isRegExp = typeOf("RegExp");
+
+                var whitelist = [];
+
+                whitelist.push('https://a.alipayobjects.com/');
+
+                for (var i = 0, rule, l = whitelist.length; i < l; i++) {
+                    rule = whitelist[i];
+                    if (
+                        (isString(rule) && uri.indexOf(rule) === 0) ||
+                        (isRegExp(rule) && rule.test(uri))
+                    ) {
+
+                        return "anonymous";
+                    }
+                }
+            },
+            vars: {
+                locale: 'zh-cn'
+            }
+        });
+    </script>
+
+    <!-- 兼容原有的 plugin-i18n 写法 -->
+    <!-- https://github.com/seajs/seajs/blob/1.3.1/src/plugins/plugin-i18n.js -->
+    <script>
+        seajs.pluginSDK = seajs.pluginSDK || {
+            Module: {
+                _resolve: function () { }
+            },
+            config: {
+                locale: ''
+            }
+        };
+        // 干掉载入 plugin-i18n.js，避免 404
+        seajs.config({
+            map: [
+                [/^.*\/seajs\/plugin-i18n\.js$/, ''],
+                [/^.*\i18n!lang\.js$/, '']
+            ]
+        });
+    </script>
+
+    <!-- 路由旧 ID，解决 seajs.use('select/x.x.x/select') 的历史遗留问题 -->
+    <script>
+        (function () {
+
+            var JQ = '/jquery/1.7.2/jquery.js';
+            seajs.cache['https://a.alipayobjects.com/gallery' + JQ] = seajs.cache['https://a.alipayobjects.com/jquery' + JQ];
+
+            var GALLERY_MODULES = [
+                'async', 'backbone', 'coffee', 'cookie', 'es5-safe', 'handlebars', 'iscroll',
+                'jasmine', 'jasmine-jquery', 'jquery', 'jquery-color', 'json', 'keymaster',
+                'labjs', 'less', 'marked', 'moment', 'mustache', 'querystring', 'raphael',
+                'socketio', 'store', 'swfobject', 'underscore', 'zepto', 'ztree'
+            ];
+
+            var ARALE_MODULES = [
+                'autocomplete', 'base', 'calendar', 'class', 'cookie', 'dialog', 'easing',
+                'events', 'iframe-uploader', 'iframe-shim', 'messenger', 'overlay', 'popup',
+                'position', 'select', 'switchable', 'tip', 'validator', 'widget'
+            ];
+
+            var util = {};
+            util.indexOf = Array.prototype.indexOf ?
+                function (arr, item) {
+                    return arr.indexOf(item);
+                } :
+                function (arr, item) {
+                    for (var i = 0; i < arr.length; i++) {
+                        if (arr[i] === item) {
+                            return i;
+                        }
+                    }
+                    return -1;
+                };
+            util.map = Array.prototype.map ?
+                function (arr, fn) {
+                    return arr.map(fn);
+                } :
+                function (arr, fn) {
+                    var ret = [];
+                    for (var i = 0; i < arr.length; i++) {
+                        ret.push(fn(arr[i], i, arr));
+                    }
+                    return ret;
+                };
+
+            function contains(arr, item) {
+                return util.indexOf(arr, item) > -1
+            }
+
+            function map(id) {
+                id = id.replace('#', '');
+
+                var parts = id.split('/');
+                var len = parts.length;
+                var root, name;
+
+                // id = root/name/x.y.z/name
+                if (len === 4) {
+                    root = parts[0];
+                    name = parts[1];
+
+                    // gallery 或 alipay 开头的没有问题
+                    if (root === 'alipay' || root === 'gallery') {
+                        return id;
+                    }
+
+                    // arale 开头的
+                    if (root === 'arale') {
+                        // 处理 arale/handlebars 的情况
+                        if (contains(GALLERY_MODULES, name)) {
+                            return id.replace('arale/', 'gallery/');
+                        } else {
+                            return id;
+                        }
+                    }
+                }
+                // id = name/x.y.z/name
+                else if (len === 3) {
+                    name = parts[0]
+
+                    // 开头在 GALLERY_MODULES 或 ARALE_MODULES
+                    if (contains(GALLERY_MODULES, name)) {
+                        return 'gallery/' + id;
+                    } else if (contains(ARALE_MODULES, name)) {
+                        return 'arale/' + id;
+                    }
+                }
+
+                return id;
+            }
+
+            var _use = seajs.use;
+
+            seajs.use = function (ids, callback) {
+                if (typeof ids === 'string') {
+                    ids = [ids];
+                }
+
+                ids = util.map(ids, function (id) {
+                    return map(id);
+                });
+
+                return _use(ids, callback);
+            }
+
+        })();
+    </script>
+    <!-- FD:106:alipay/tracker/seajs.vm:END -->
+    <!-- FD:106:alipay/tracker/tracker_time.vm:START -->
+    <!-- FD:106:alipay/tracker/tracker_time.vm:784:tracker_time.schema:全站 tracker 开关:START -->
+    <script charset="utf-8" crossorigin="crossorigin" src="https://a.alipayobjects.com/static/ar/alipay.light.base-1.8.js"></script>
+
+
+    <script type="text/javascript">
+        if (!window._to) {
+            window._to = { start: new Date() };
+        }
+    </script>
+
+    <script charset="utf-8" src="https://as.alipayobjects.com/??g/component/tracker/2.3.2/index.js,g/component/smartracker/2.0.2/index.js"></script>
+    <script charset="utf-8" src="https://a.alipayobjects.com/g/utiljs/rd/1.0.2/rd.js"></script>
+
+
+
+    <script>
+        window.Tracker && Tracker.start && Tracker.start();
+    </script>
+
+
+
+
+
+
+
+    <!-- FD:106:alipay/tracker/tracker_time.vm:784:tracker_time.schema:全站 tracker 开关:END -->
+    <!-- FD:106:alipay/tracker/tracker_time.vm:END -->
+    <link type="text/css" media="screen" charset="utf-8" rel="stylesheet" href="https://a.alipayobjects.com/al/out.pa_new-1.0.css"
+    />
+
+    <link charset="utf-8" rel="stylesheet" href="https://a.alipayobjects.com/jui/2.1.4/jui.css" media="all" />
+    <link charset="utf-8" rel="stylesheet" href="https://a.alipayobjects.com/crmhome/3.5.2/common/common.css" media="all" />
+
+</head>
+<!--[if lt IE 7]><body class="ie6 "><![endif]-->
+<!--[if IE 7]><body class="ie7 "><![endif]-->
+<!--[if IE 8]><body class="ie8 "><![endif]-->
+<!--[if IE 9]><body class="ie9 "><![endif]-->
+<!--[if !IE]><!-->
+
+<body class="">
+    <!--<![endif]-->
+    <script type="text/javascript">
+        AralePreload = [];
+        var AP = AP || {};
+        AP.PageVar = {
+            app_domain: "",
+            appstore_domain: "https://app.alipay.com",
+            personal_domain: "",
+            personalprod_domain: "",
+            mipgw_domain: "",
+            ccrprod_domain: "",
+            zhangdan_domain: "",
+            benefits_domain: "",
+            image_domain: "http://img.alipay.net:80",
+            communityweb_domain: "",
+            tfs_domain: "",
+            benefitprod_domain: "$benefitprodServer"
+        }
+    </script>
+    <style>
+        #container {
+            padding-top: 1px;
+        }
+    </style>
+
+    <!-- uninav -->
+
+
+
+
+
+
+
+
+    <!-- FD:231:alipay/nav/navSwitch.vm:START -->
+    <!-- FD:231:alipay/nav/navSwitch.vm:1740:nav/navSwitch.schema:navSwitch-ABTEST_GLOBAL_P:START -->
+
+
+
+
+
+
+
+    <script>
+        MSGSWITCH = true;
+    </script>
+
+
+
+    <script>
+        MERCHANT_SWITCH = 'true';
+    </script>
+
+
+    <!-- FD:231:alipay/nav/versionSwitch.vm:START -->
+    <!-- FD:231:alipay/nav/versionSwitch.vm:1743:nav/versionSwitch.schema:versionSwitch-网站改版导航新老版本切换开关:START -->
+
+
+
+
+
+
+
+    <!-- FD:231:alipay/nav/versionSwitch.vm:1743:nav/versionSwitch.schema:versionSwitch-网站改版导航新老版本切换开关:END -->
+    <!-- FD:231:alipay/nav/versionSwitch.vm:END -->
+    <!-- FD:231:alipay/nav/navSwitch.vm:1740:nav/navSwitch.schema:navSwitch-ABTEST_GLOBAL_P:END -->
+    <!-- FD:231:alipay/nav/navSwitch.vm:END -->
+    <!-- abtestEnabled: false -->
+
+    <!-- FD:231:alipay/nav/uribroker.vm:START -->
+    <!-- FD:231:alipay/nav/uribroker.vm:1742:nav/uribroker.schema:uribroker-URIBroker列表:START -->
+
+    <script type="text/javascript">
+        window.GLOBAL || (GLOBAL = {});
+        GLOBAL.system = {};
+        GLOBAL.system["assetsServer"] = "https://a.alipayobjects.com"; GLOBAL.system["apimgServer"] = "https://i.alipayobjects.com"; GLOBAL.system["personalportalServer"] = "https://my.alipay.com"; GLOBAL.system["personalServer"] = "https://lab.alipay.com"; GLOBAL.system["personalprodServer"] = "https://shenghuo.alipay.com"; GLOBAL.system["memberprodServer"] = "https://memberprod.alipay.com"; GLOBAL.system["tfsImageServer"] = "https://tfs.alipayobjects.com"; GLOBAL.system["merchantwebServer"] = "https://shanghu.alipay.com"; GLOBAL.system["authCenterServer"] = "https://auth.alipay.com"; GLOBAL.system["securityServer"] = "https://securitycenter.alipay.com"; GLOBAL.system["tradecmtServer"] = "https://pingjia.alipay.com"; GLOBAL.system["appstoreServer"] = "https://app.alipay.com"; GLOBAL.system["zhangdanServer"] = "https://zd.alipay.com"; GLOBAL.system["uninavServer"] = "https://uninav.alipay.com"; GLOBAL.system["pucprodServer"] = "https://jiaofei.alipay.com"; GLOBAL.system["benefitprodServer"] = "https://zht.alipay.com"; GLOBAL.system["enterpriseportalServer"] = "https://enterpriseportal.alipay.com"; GLOBAL.system["couriercoreServer"] = "https://couriercore.alipay.com"; GLOBAL.system["uemprodServer"] = "https://uemprod.alipay.com"; GLOBAL.system["bizfundprodServer"] = "https://bizfundprod.alipay.com"; GLOBAL.system["morderprodServer"] = "https://b.alipay.com"; GLOBAL.system["consumeprodServer"] = "https://consumeprod.alipay.com"; GLOBAL.system["emembercenterServer"] = "https://emembercenter.alipay.com"; GLOBAL.system["crmhomeServer"] = "https://e.alipay.com"; GLOBAL.system["cshallServer"] = "https://cshall.alipay.com"; GLOBAL.system["openhomeServer"] = "https://openhome.alipay.com"; GLOBAL.system["yebprodServer"] = "https://yebprod.alipay.com"; GLOBAL.system["financeprodServer"] = "https://financeprod.alipay.com"; GLOBAL.system["goldetfprodServer"] = "https://goldetfprod.alipay.com"; GLOBAL.system["certifyServer"] = "https://certify.alipay.com"; GLOBAL.system["securitycenterServer"] = "https://securitycenter.alipay.com"; GLOBAL.system["couponwebServer"] = "https://hongbao.alipay.com"; GLOBAL.system["pointprodServer"] = "https://jf.alipay.com"; GLOBAL.system["pcreditprodServer"] = "https://huabei.alipay.com"; GLOBAL.system["cardServer"] = "https://card.alipay.com"; GLOBAL.system["membercenterServer"] = "https://accounts.alipay.com"; GLOBAL.system["custwebServer"] = "https://custweb.alipay.com"; GLOBAL.system["zcbprodServer"] = "https://zcbprod.alipay.com";
+    </script>
+
+    <!-- FD:231:alipay/nav/uribroker.vm:1742:nav/uribroker.schema:uribroker-URIBroker列表:END -->
+    <!-- FD:231:alipay/nav/uribroker.vm:END -->
+
+
+
+
+
+    <div id="J-global-notice-container" class="global-notice-container" style="position: relative; z-index: 999; background: #ff6600;">
+
+
+        <!-- FD:231:alipay/notice/headNotice.vm:START -->
+        <!-- FD:231:alipay/notice/headNotice.vm:5381:notice/headNotice.schema:headNotice-全站公告:START -->
+        <!--[if lte IE 7]>
+    <style>.kie-bar { display: none; height: 24px; line-height: 1.8; font-weight:normal; text-align: center; border:1px solid #fce4b5; background-color:#FFFF9B; color:#e27839; position: relative; font-size: 12px; margin: 5px 0 0 0; padding: 5px 0 2px 0; } .kie-bar a { text-decoration: none; color:#08c; background-repeat: none; } .kie-bar a#kie-setup-IE8,.kie-bar a#kie-setup-taoBrowser { padding: 0 0 2px 20px; *+padding-top: 2px; *_padding-top: 2px; background-repeat: no-repeat; background-position: 0 0; } .kie-bar a:hover { text-decoration: underline; } .kie-bar a#kie-setup-taoBrowser { background-position: 0 -20px; }</style>
+    <div id="kie-bar" class="kie-bar">您现在使用的浏览器版本过低，可能会导致部分图片和信息的缺失。请立即 <a href="http://www.microsoft.com/china/windows/IE/upgrade/index.aspx" id="kie-setup-IE8" seed="kie-setup-IE8" target="_blank" title="免费升级至IE8浏览器">免费升级</a> 或下载使用 <a href="http://download.browser.taobao.com/client/browser/down.php?pid=0080_2062" id="kie-setup-taoBrowser" seed="kie-setup-taoBrowser" target="_blank" title="淘宝浏览器">淘宝浏览器</a> ，安全更放心！ <a title="查看帮助" target="_blank" seed="kie-setup-help" href="https://help.alipay.com/lab/help_detail.htm?help_id=260579">查看帮助</a></div>
+    <script type="text/javascript">
+    (function () {
+        function IEMode() {
+            var ua = navigator.userAgent.toLowerCase();
+            var re_trident = /\btrident\/([0-9.]+)/;
+            var re_msie = /\b(?:msie |ie |trident\/[0-9].*rv[ :])([0-9.]+)/;
+            var version;
+            if (!re_msie.test(ua)) {
+                return false;
+            }
+            var m = re_trident.exec(ua);
+            if (m) {
+                version = m[1].split(".");
+                version[0] = parseInt(version[0], 10) + 4;
+                version = version.join(".");
+            } else {
+                m = re_msie.exec(ua);
+                version = m[1];
+            }
+            return parseFloat(version);
+        }
+        var ie = IEMode();
+        if (ie && ie < 8 && (self.location.href.indexOf("_xbox=true") < 0)) {
+            document.getElementById('kie-bar').style.display = 'block';
+            document.getElementById('kie-setup-IE8').style.backgroundImage = 'url(https://i.alipayobjects.com/e/201307/jYwARebNl.png)';
+            document.getElementById('kie-setup-taoBrowser').style.backgroundImage = 'url(https://i.alipayobjects.com/e/201307/jYwARebNl.png)';
+        }
+    })();
+    </script>
+    <![endif]-->
+
+
+
+        <style>
+            .global-notice-announcement {
+                width: 100%;
+                min-width: 990px;
+                height: 24px;
+                line-height: 24px;
+            }
+
+            .global-notice-announcement p {
+                width: 990px;
+                margin: 0 auto;
+                text-align: left;
+                font-size: 12px;
+                color: #fff;
+            }
+
+            .ssl-v3-rc4 {
+                display: none;
+            }
+        </style>
+        <div id="J-global-notice-ssl" class="global-notice-announcement ssl-v3-rc4" style="background-color: #ff6600;">
+            <p>您的浏览器版本太低，为保障信息的安全，
+                <a href="https://www.alipay.com/x/kill-ie.htm">请于2月28日前升级浏览器</a>
+            </p>
+        </div>
+        <script>
+            /*
+             * 获取cookie
+             * @param {String} ctoken
+             */
+            function getCookie(name) {
+                if (document.cookie.length > 0) {
+                    var begin = document.cookie.indexOf(name + '=');
+                    if (begin !== -1) {
+                        begin += name.length + 1;
+                        var end = document.cookie.indexOf(';', begin);
+                        if (end === -1) {
+                            end = document.cookie.length;
+                        }
+                        return unescape(document.cookie.substring(begin, end));
+                    }
+                }
+                return null;
+            }
+            window.onload = function () {
+                var globalNoticeSsl = document.getElementById('J-global-notice-ssl');
+                if (globalNoticeSsl) {
+                    var sslUpgradeTag = getCookie('ssl_upgrade');
+                    if (sslUpgradeTag && sslUpgradeTag === '1') {
+                        // 展示升级公告
+                        globalNoticeSsl.setAttribute('class', 'global-notice-announcement');
+                    } else {
+                        // 删除升级公告
+                        globalNoticeSsl.parentNode.removeChild(globalNoticeSsl);
+                    }
+                }
+            }
+        </script>
+
+        <!-- FD:231:alipay/notice/headNotice.vm:5381:notice/headNotice.schema:headNotice-全站公告:END -->
+        <!-- FD:231:alipay/notice/headNotice.vm:END -->
+    </div>
+
+
+
+
+    <!--[if lt IE 8]><script>location.href = 'https://www.alipay.com/x/kill-ie.htm';</script><![endif]-->
+
+
+
+    <div id="J-nav-container" class="nav-common">
+        <!-- FD:76:crmhome/common/customNav.vm:START -->
+        <!-- FD:76:crmhome/common/customNav.vm:446:customNav.schema:customNav-自定义统一导航内容:START -->
+
+        <style>
+            #J-nav-merchant-global .nav-merchant-global-top-wrapper {
+                line-height: 26px;
+            }
+        </style>
+
+        <script>
+            jQuery(document).ready(function () {
+                var $el = jQuery("#J-nav-merchant-global a:contains('帮助中心')");
+                $el.attr('href', 'https://help.koubei.com/');
+            });
+        </script>
+
+
+
+
+        <script id="J-nav-logo-custom" type="text/html">
+           <div style="position: relative;">
+             <img src="https://t.alipayobjects.com/images/rmsweb/T1RZlgXiprXXXXXXXX.png" height="30" style="display:block;margin-top:25px;" />
+             <a href="/index.htm" style="width:75px;position:absolute;top:0;left:100px;height:29px;display:block;"></a>
+           </div>
+      </script>
+
+        <!-- FD:76:crmhome/common/customNav.vm:446:customNav.schema:customNav-自定义统一导航内容:END -->
+        <!-- FD:76:crmhome/common/customNav.vm:END -->
+    </div>
+
+    <script type="text/javascript">
+
+        // Domain
+        document.domain = document.domain.split(".").slice(-2).join(".");
+
+        // Compatible for xbox
+        (function (win) {
+            function noop() { }
+
+            function fake(namespace, method) {
+                namespace = namespace.split('.');
+
+                var target = win, len = namespace.length, index = 0, ns;
+
+                for (; index < len; index++) {
+                    ns = namespace[index];
+
+                    if (!target[ns]) {
+                        target[ns] = {};
+                    }
+
+                    target = target[ns];
+                }
+
+                if (typeof target[method] !== 'function') {
+                    target[method] = noop;
+                }
+            }
+
+            fake('mytip', 'show');
+            fake('AP.pk.pa.asidePortrait', 'renew');
+        }(window));
+
+        // Global nav data
+        window.GLOBAL_NAV_DATA = {
+            nav: 'merchant.global',
+            navData: '',
+            customNav: '/crmhome/common/customNav.vm',
+            appKey: '',
+            catKey: '',
+            title: '口碑商家中心',
+            pageName: '商家中心@/index.htm',
+            userName: '开放平台测试账号一',
+            email: 'testaop01@alipay.com',
+            mobile: '185******65',
+            logonIdType: 'EMAIL',
+            userId: '2088121509924973',
+            portraitPath: '/images/partner/T1UwtXXcRdXXXXXXXX',
+            container: '#J-nav-container',
+            timestamp: new Date().getTime(),
+            pageAbsUrl: 'http://e.alipay.com/main.htm',
+            isLogin: true,
+            showTaobaoLogin: false,
+            showAlibabaLogin: false,
+            showMerchant: false,
+            showPersonal: false,
+            merchantSwitch: window.MERCHANT_SWITCH,
+            uriBrokers: GLOBAL.system
+        };
+    </script>
+
+    <!-- FD:231:alipay/nav/nav_js.vm:START -->
+    <!-- FD:231:alipay/nav/nav_js.vm:1739:nav/nav_js.schema:nav_js-开启导航引用埋点隐藏为关闭:START -->
+
+
+    <script src="https://a.alipayobjects.com/alipay-nav/2.4.19/merchant.global.js" charset="utf-8"></script>
+    <!-- FD:231:alipay/nav/nav_js.vm:1739:nav/nav_js.schema:nav_js-开启导航引用埋点隐藏为关闭:END -->
+    <!-- FD:231:alipay/nav/nav_js.vm:END -->
+
+    <div id="container" class="ui-container">
+        <div aspm-data-bizType="KOUBEI" aspm-data-spma="a88pc5"></div>
+        <script charset="utf-8" src="https://a.alipayobjects.com/g/spa-tracker/kb-reporter/1.0.1/kb-reporter.js"></script>
+        <script>
+            (function () {
+                setTimeout(function () {
+                    jQuery && jQuery('[smartracker]').each(function (i, d) {
+                        d.removeAttribute('seed');
+                    });
+                }, 500);
+                var s = document.createElement('script');
+                s.charset = 'utf-8';
+                s.src = 'https://as.alipayobjects.com/g/spa-tracker/tracker/1.3.13/tracker.js';
+                document.body.appendChild(s);
+                setTimeout(function () {
+                    window.Smartracker && Smartracker.spaInit && Smartracker.spaInit(true);
+                }, 1000);
+            })();
+        </script>
+        <style>
+            ::-moz-placeholder {
+                color: #808080;
+            }
+
+            ::-webkit-input-placeholder {
+                color: #808080;
+            }
+
+            :-ms-input-placeholder {
+                color: #808080;
+            }
+        </style>
+
+        <!-- start container -->
+        <div class="tbf-container">
+            <input type="hidden" value="" id="J_crmhome_merchantId" />
+            <!-- start slide nav-->
+            <div class="tbf-sliderNav">
+                <!-- FD:76:crmhome/common/menu.vm:START -->
+                <!-- 区块模板样例 -->
+
+                <!-- 1. schema 的使用 -->
+                <!-- 1.1 引用路径从包目录开始 -->
+                <!-- 1.2 使用指南请查看 https://site.alipay.net/fengdie/dev-guide/datum/schema.html -->
+
+
+                <style>
+                    @font-face {
+                        font-family: 'crmhome';
+                        src: url('//at.alicdn.com/t/font_1449223593_6449525.eot');
+                        /* IE9*/
+                        src: url('//at.alicdn.com/t/font_1449223593_6449525.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+                        url('//at.alicdn.com/t/font_1449223593_6449525.woff') format('woff'), /* chrome、firefox */
+                        url('//at.alicdn.com/t/font_1449223593_6449525.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+                        url('//at.alicdn.com/t/font_1449223593_6449525.svg#crmhome') format('svg');
+                        /* iOS 4.1- */
+                    }
+
+                    .iconfont-crmhome {
+                        font-family: 'crmhome';
+                        font-weight: 400;
+                        font-style: normal;
+                        cursor: default;
+                        -webkit-font-smoothing: antialiased;
+                        -webkit-text-stroke-width: .2px
+                    }
+
+                    .tag-new {
+                        color: #fff;
+                        background: #ff650c;
+                        padding: 3px;
+                        font-size: 10px;
+                        margin-left: 5px;
+                        border-radius: 3px;
+                    }
+
+                    .icon-boh {
+                        position: relative;
+                        top: 4px;
+                        padding-right: 5px;
+                        stroke: #b2b2b2;
+                    }
+
+                    .selected .icon-boh {
+                        stroke: #fff;
+                    }
+
+                    .boh-icon {
+                        width: 20px;
+                        height: 20px;
+                    }
+                </style>
+
+                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="position:absolute;width:0;height:0">
+                    <symbol id="bohicon" viewBox="0 0 12 13">
+                        <g stroke="inherit" fill="none" fill-rule="evenodd">
+                            <rect x=".5" y=".5" width="11" height="9" rx="1" />
+                            <rect x="2.5" y="11.5" width="7" height="1" rx=".5" />
+                            <rect x="6" y="9.5" width="1" height="2" rx=".5" />
+                            <rect x=".5" y="7.5" width="11" height="1" rx=".5" />
+                        </g>
+                    </symbol>
+                </svg>
+
+                <div id="gloablMenu" class="fn-hide">
+                    <!-- 服务商菜单-->
+                    <dl>
+                        <dt data-mcode="12">
+                            <a href="/merchant/myMerchantQuery.htm">
+                                <i class="iconfont-crmhome" title="首页">&#xe601;</i>首页</a>
+                        </dt>
+                    </dl>
+
+                    <dl>
+                        <dt data-mcode="16">
+                            <a href="/main.htm#/marketing/brands-index">
+                                <i class="iconfont-crmhome" title="首页">&#xe601;</i>首页</a>
+                        </dt>
+                    </dl>
+
+                    <dl>
+                        <dt data-mcode="26">
+                            <a href="/main.htm#/">
+                                <i class="iconfont-crmhome" title="首页">&#xe601;</i>首页</a>
+                        </dt>
+                    </dl>
+
+                    <dl>
+                        <dt data-mcode="29">
+                            <a href="/main.htm#/mall">
+                                <i class="iconfont-crmhome" title="首页">&#xe601;</i>首页</a>
+                        </dt>
+                    </dl>
+
+                    <dl>
+                        <dt data-mcode="32">
+                            <a href="/main.htm#/payeeIndex">
+                                <i class="iconfont-crmhome" title="首页">&#xe601;</i>首页</a>
+                        </dt>
+                    </dl>
+
+                    <dl>
+                        <dt data-mcode="14">
+                            <em>
+                                <i class="iconfont-crmhome" title="品牌营销">&#xe61e;</i>品牌营销</em>
+                        </dt>
+                        <dd data-mcode="1405" data-rehost="no">
+                            <a href="https://lingshou.alipay.com/main.htm#/marketing/brands">精准营销</a>
+                        </dd>
+                        <dd data-mcode="1401" data-rehost="no">
+                            <a href="https://lingshou.alipay.com/main.htm#/marketing/brands/activity-create/common">单品券</a>
+                        </dd>
+                        <dd data-mcode="1402" data-rehost="no">
+                            <a href="https://lingshou.alipay.com/main.htm#/marketing/brands/activity-create/realtime">买单优惠</a>
+                        </dd>
+                        <dd data-mcode="1404" data-rehost="no">
+                            <a href="https://lingshou.alipay.com/main.htm#/marketing/brands/gift/add">消费送礼</a>
+                        </dd>
+                        <dd data-mcode="1409" data-rehost="no">
+                            <a href="https://lingshou.alipay.com/main.htm#/marketing/brands/bargain/add">买一送一</a>
+                        </dd>
+                        <dd data-mcode="1408" data-rehost="no">
+                            <a href="https://lingshou.alipay.com/main.htm#/marketing/brands/reduction/add">随机立减</a>
+                        </dd>
+                        <dd data-mcode="1410" data-rehost="no">
+                            <a href="https://lingshou.alipay.com/main.htm#/marketing/brands/manage">营销管理</a>
+                        </dd>
+                    </dl>
+
+                    <dl>
+                        <dt data-mcode="15">
+                            <em>
+                                <i class="iconfont-crmhome" title="经营参谋">&#xe61e;</i>经营参谋</em>
+                        </dt>
+                        <dd data-mcode="1506" data-rehost="no">
+                            <a href="https://e.alipay.com:443/report/crmhome_report.htm?pageUri=brand_trade_analysis&funcCode=1506">交易看板</a>
+                        </dd>
+                        <dd data-mcode="1501" data-rehost="no">
+                            <a href="https://e.alipay.com:443/report/crmhome_report.htm?pageUri=partner_center_brand_board&funcCode=1501">营销分析</a>
+                        </dd>
+                        <dd data-mcode="1507" data-rehost="no">
+                            <a href="https://e.alipay.com:443/report/crmhome_report.htm?pageUri=manage_analysis_ma_analysis&funcCode=1507">扫码分析</a>
+                        </dd>
+                    </dl>
+                    <dl>
+                        <dt data-mcode="27">
+                            <em>
+                                <i class="iconfont-crmhome" title="商品管理">&#xe61e;</i>商品管理</em>
+                        </dt>
+                        <dd data-mcode="2701">
+                            <a href="/goods/ic/index.htm#/item-management/item-list">商品库</a>
+                        </dd>
+                    </dl>
+                    <dl>
+                        <dt data-mcode="14">
+                            <em>
+                                <i class="iconfont-crmhome" title="财务管理">&#xe61e;</i>财务管理</em>
+                        </dt>
+                        <dd data-mcode="1411" data-rehost="no">
+                            <a href="https://lingshou.alipay.com/main.htm?funcCode=1411#/settlement/setting">自动结算</a>
+                        </dd>
+                        <dd data-mcode="1412">
+                            <a href="/main.htm#/marketing-activity/bill/download">营销账单下载</a>
+                        </dd>
+                    </dl>
+
+                    <dl>
+                        <dt data-mcode="14">
+                            <em>
+                                <i class="iconfont-crmhome" title="推广渠道">&#xe61e;</i>推广渠道</em>
+                        </dt>
+                        <dd data-mcode="1407" data-rehost="no">
+                            <a href="https://lingshou.alipay.com/main.htm?funcCode=1407#/Show">二维码推广</a>
+                        </dd>
+                    </dl>
+
+                    <dl>
+                        <dt data-mcode="08">
+                            <em>
+                                <i class="iconfont-crmhome" title="Leads管理">&#xe61e;</i>Leads管理</em>
+                        </dt>
+                        <dd data-mcode="0801">
+                            <a href="/merchant/myMerchantQuery.htm">私海Leads</a>
+                        </dd>
+                        <dd data-mcode="0802">
+                            <a href="/merchant/unclaimedMerchantQuery.htm">公海Leads</a>
+                        </dd>
+                        <dd data-mcode="0803" class="navMerchant">
+                            <a href="/merchant/merchantAdd.htm" id="J_op_add_merchant" class="jui-btn jui-btn-virtual" data-gldisabled="true">+ 添加Leads
+                            </a>
+                        </dd>
+                    </dl>
+
+                    <dl>
+                        <dt data-mcode="13">
+                            <em>
+                                <i class="iconfont-crmhome" title="商家管理">&#xe60d;</i>商家管理</em>
+                        </dt>
+                        <dd data-mcode="1301">
+                            <a href="/merchant/merchantManageQuery.htm">商家概况</a>
+                        </dd>
+                        <dd data-mcode="1302">
+                            <a href="/merchant/merchantShopReport.htm">门店运营</a>
+                        </dd>
+                    </dl>
+
+                    <dl>
+                        <dt data-mcode="09">
+                            <em>
+                                <i class="iconfont-crmhome" title="人员管理" style="font-size: 22px;padding-right: 8px;">
+                                    &#xe60c;</i>人员管理</em>
+                        </dt>
+                        <dd data-mcode="0901">
+                            <a href="/staff/query.htm">员工管理</a>
+                        </dd>
+                        <dd data-mcode="0902">
+                            <a href="#">角色及权限</a>
+                        </dd>
+                    </dl>
+                    <dl>
+                        <dt data-mcode="208">
+                            <a href="https://uemprod.alipay.com/user/crmAdminIndex.htm">
+                                <i class="iconfont-crmhome" title="人员管理"></i>人员管理</a>
+                            <dd data-mcode="208210">
+                                <a href="https://emembercenter.alipay.com/console/queryOperatorList.htm">操作员</a>
+                            </dd>
+                            <dd data-mcode="208211">
+                                <a href="https://epsecuritycenter.alipay.com/sc/assignProduct.htm">安全</a>
+                            </dd>
+                            <dd data-mcode="208209">
+                                <a href="https://emembercenter.alipay.com/console/account/personInfo.htm">管理员信息</a>
+                            </dd>
+                        </dt>
+                    </dl>
+                    <dl>
+                        <dt data-mcode="21">
+                            <em>
+                                <i class="iconfont-crmhome" title="返佣">&#xe610;</i>返佣</em>
+                        </dt>
+                        <dd data-mcode="2101">
+                            <a href="/merchant/merchantRebateQuery.htm">返佣查询</a>
+                        </dd>
+                    </dl>
+                    <dl>
+                        <dt data-mcode="11">
+                            <a href="/comment/queryOpLog.htm">
+                                <i class="iconfont-crmhome" title="操作日志">&#xe60f;</i>操作日志</a>
+                        </dt>
+                    </dl>
+                    <dl>
+                        <dt data-mcode="25">
+                            <a href="/merchant/notice.htm">
+                                <i class="iconfont-crmhome" title="公告">&#xe605;</i>公告</a>
+                        </dt>
+                    </dl>
+
+                    <!-- 商家中心菜单-->
+                    <dl>
+                        <dt data-mcode="00">
+                            <a href="/merchant/index.htm">
+                                <i class="iconfont-crmhome" title="首页">&#xe601;</i>首页</a>
+                        </dt>
+                    </dl>
+                    <dl>
+                        <dt data-mcode="01">
+                            <em>
+                                <i class="iconfont-crmhome" title="商家营销">&#xe60e;</i>商家营销</em>
+                        </dt>
+                        <dd data-mcode="0108">
+                            <a href="/main.htm#/framePage">会员营销
+                                <span class="tag-new">支付即会员</span>
+                            </a>
+                        </dd>
+                        <dd data-mcode="0101">
+                            <a href="/goods/itempromo/create.htm">发布折扣</a>
+                        </dd>
+                        <dd data-mcode="0104">
+                            <a href="/goods/itempromo/exchangeCreate.htm">发布兑换券</a>
+                        </dd>
+                        <dd data-mcode="0105">
+                            <a href="/goods/itempromo/activityManage.htm">营销活动</a>
+                        </dd>
+                        <dd data-mcode="0109">
+                            <a href="/goods/itempromo/promotion.htm">口碑活动报名</a>
+                        </dd>
+                        <dd data-mcode="0113">
+                            <a href="/goods/itempromo/promotion.htm#/?merType=MALL">口碑活动报名</a>
+                        </dd>
+                        <dd data-mcode="0110">
+                            <a href="/goods/itempromo/activityManageV2.htm">通用营销工具</a>
+                        </dd>
+                        <dd data-mcode="060401">
+                            <a href="/main.htm#/marketing/vouchers/cancel">验券</a>
+                        </dd>
+                        <dd data-mcode="0102">
+                            <a href="/goods/itempromo/activityList.htm">活动管理</a>
+                        </dd>
+                        <dd data-mcode="0114">
+                            <a href="/goods/itempromo/recruitMallOrderQueryInit.htm">活动管理</a>
+                        </dd>
+                        <dd data-mcode="0107" data-rehost="no">
+                            <a href="https://luopan.alipay.com/offlinetb/crowd.htm">会员圈人</a>
+                        </dd>
+                        <dd data-mcode="0112">
+                            <a href="/shop.htm#/marketing/huabei">花呗分期</a>
+                        </dd>
+                    </dl>
+                    <dl>
+                        <dt data-mcode="31">
+                            <em>
+                                <i class="iconfont-crmhome" title="菜品">&#xe623;</i>菜品</em>
+                        </dt>
+                        <dd data-mcode="311001">
+                            <a href="/dish/index.htm#/qrOrder">扫码点菜</a>
+                        </dd>
+                        <dd data-mcode="311002">
+                            <a href="/dish/index.htm#/dishMarketing">菜品经营</a>
+                        </dd>
+                    </dl>
+                    <dl>
+                        <dt data-mcode="30">
+                            <em>
+                                <i class="iconfont-crmhome" title="商品">&#xe60e;</i>商品</em>
+                        </dt>
+                        <dd data-mcode="3001">
+                            <a href="/main.htm#/stuff/order">泛行业-商品管理</a>
+                        </dd>
+                        <dd data-mcode="3002">
+                            <a href="/main.htm#/catering/list">商品管理</a>
+                        </dd>
+                        <dd data-mcode="3004">
+                            <a href="/main.htm#/market">商场-商品管理</a>
+                        </dd>
+                        <dd data-mcode="3003">
+                            <a href="/main.htm#/stuff/productSettings">商品设置</a>
+                        </dd>
+                    </dl>
+                    <dl>
+                        <dt data-mcode="37">
+                            <a href="/activity/deviceMng/authHomeLoad.htm?funcCode=37">
+                                <i class="icon-boh" title="一体机管理">
+                                    <svg class="boh-icon">
+                                        <use xlink:href="#bohicon" />
+                                    </svg>
+                                </i>
+                                一体机管理
+                                <span class="tag-new">new</span>
+                            </a>
+                        </dt>
+                    </dl>
+                    <dl>
+                        <dt data-mcode="38">
+                            <em>
+                                <i class="icon-boh" title="一体机管理">
+                                    <svg class="boh-icon">
+                                        <use xlink:href="#bohicon" />
+                                    </svg>
+                                </i>
+                                一体机管理
+                            </em>
+                        </dt>
+                        <dd data-mcode="3801">
+                            <a href="/activity/deviceMng/deviceListLoad.htm?funcCode=3801">设备管理</a>
+                        </dd>
+                        <dd data-mcode="3802">
+                            <a href="/activity/deviceMng/bohPageLoad.htm?funcCode=3802" target="_blank">小雅BOH</a>
+                        </dd>
+                    </dl>
+                    <dl>
+                        <dt data-mcode="24">
+                            <em>
+                                <i class="iconfont-crmhome" title="商户储值卡">&#xe625;</i>商户储值卡</em>
+                        </dt>
+                        <dd data-mcode="2401" data-rehost="no">
+                            <a href="https://card.alipay.com/fundcard/fundCardManage.htm">管理储值卡</a>
+                        </dd>
+                        <dd data-mcode="2403" data-rehost="no">
+                            <a href="https://card.alipay.com/fundcard/overview.htm">查询&退卡</a>
+                        </dd>
+                    </dl>
+
+                    <!--双十二菜单-->
+                    <dl>
+                        <dt data-mcode="17">
+                            <em>
+                                <i class="iconfont-crmhome" title="平台活动">&#xe60e;</i>平台活动</em>
+                        </dt>
+                        <dd data-mcode="1701">
+                            <a href="/goods/itempromo/promotion.htm">活动报名</a>
+                        </dd>
+                        <dd data-mcode="1702">
+                            <a href="/goods/itempromo/recruitOrderQueryInit.htm">活动管理</a>
+                        </dd>
+                    </dl>
+                    <dl>
+                        <dt data-mcode="02">
+                            <em>
+                                <i class="iconfont-crmhome" title="评价管理">&#xe603;</i>评价管理</em>
+                        </dt>
+                        <dd data-mcode="0201">
+                            <a href="/comment/summary.htm">消费者评价</a>
+                        </dd>
+                        <dd data-mcode="0202">
+                            <a href="/comment/rank.htm">门店评价排名</a>
+                        </dd>
+                    </dl>
+                    <dl>
+                        <dt data-mcode="03">
+                            <em>
+                                <i class="iconfont-crmhome" title="经营参谋">&#xe602;</i>经营参谋</em>
+                        </dt>
+                        <dd data-mcode="0313" data-rehost="no">
+                            <a href="https://luopan.alipay.com/report/crmhome_report.htm?myreports=v2&pageUri=pageUri1515556923711&url=report&funcCode=0313">
+                                经营概览
+                                <span class="tag-new">new</span>
+                            </a>
+                        </dd>
+                        <dd data-mcode="0302" data-rehost="no">
+                            <a href="https://e.alipay.com:443/report/crmhome_report.htm?pageUri=campaign_analysis_trade_data&funcCode=0302">交易看板</a>
+                        </dd>
+                        <dd data-mcode="0303" data-rehost="no">
+                            <a href="https://luopan.alipay.com/report/crmhome_report.htm?myreports=v2&pageUri=pageUri1515557326174&url=report&funcCode=0303">营销分析</a>
+                        </dd>
+                        <dd data-mcode="0311" data-rehost="no">
+                            <a href="https://e.alipay.com:443/report/crmhome_report.htm?pageUri=retailer_trade_analysis&funcCode=0311">交易看板</a>
+                        </dd>
+                        <dd data-mcode="0310" data-rehost="no">
+                            <a href="https://e.alipay.com:443/report/crmhome_report.htm?pageUri=retailer_campaign_analysis&funcCode=0310">营销分析</a>
+                        </dd>
+                        <dd data-mcode="0301" data-rehost="no">
+                            <a href="https://e.alipay.com:443/report/crmhome_report.htm?pageUri=campaign_user_develop&funcCode=0301">会员看板</a>
+                        </dd>
+                        <dd data-mcode="0312" data-rehost="no">
+                            <a href="https://e.alipay.com:443/report/crmhome_report.htm?pageUri=manage_analysis_ma_analysis&funcCode=0312">扫码分析</a>
+                        </dd>
+                    </dl>
+                    <dl>
+                        <dt data-mcode="04">
+                            <em>
+                                <i class="iconfont-crmhome" title="运营工具">&#xe611;</i>运营工具</em>
+                        </dt>
+                        <dd data-mcode="0401">
+                            <a href="/merchant/bindingAd.htm">服务窗</a>
+                        </dd>
+                        <dd data-mcode="0402">
+                            <a href="/merchant/weiboManage.htm">新浪微博</a>
+                        </dd>
+                        <dd data-mcode="0404" data-rehost="no">
+                            <a href="https://life.alipay.com/merchantApp.htm">下载客户端</a>
+                        </dd>
+                    </dl>
+                    <dl>
+                        <dt data-mcode="33">
+                            <em>
+                                <i class="iconfont-crmhome" title="口碑客">&#xe60f;</i>口碑客</em>
+                        </dt>
+                        <dd data-mcode="3301">
+                            <a href="/main.htm#/promote/cent/unconfirmed">待确认分佣计划</a>
+                        </dd>
+                        <dd data-mcode="3302">
+                            <a href="/main.htm#/promote/cent/toconfig">待设置分佣计划</a>
+                        </dd>
+                        <dd data-mcode="3303">
+                            <a href="/main.htm#/promote/cent/confirmed">已设置分佣计划</a>
+                        </dd>
+                    </dl>
+                    <dl>
+                        <dt data-mcode="28">
+                            <em>
+                                <i class="iconfont-crmhome" title="服务市场">&#xe60e;</i>服务市场</em>
+                        </dt>
+                        <dd data-mcode="2801" data-rehost="no">
+                            <a href="https://app.alipay.com/commodity/onlineCommodity.htm">选购服务</a>
+                        </dd>
+                        <dd data-mcode="2802" data-rehost="no">
+                            <a href="https://app.alipay.com/commodity/myCommodity.htm">我的服务</a>
+                        </dd>
+                        <dd data-mcode="2801" data-rehost="no">
+                            <a href="https://app.alipay.com/commodity/myorder.htm">我的订单</a>
+                        </dd>
+                    </dl>
+                    <dl>
+                        <dt data-mcode="05">
+                            <em>
+                                <i class="iconfont-crmhome" title="门店管理">&#xe60d;</i>门店管理</em>
+                        </dt>
+                        <dd data-mcode="0501">
+                            <a href="/shop.htm#/shop">我的门店</a>
+                        </dd>
+                        <dd data-mcode="050710">
+                            <a href="/main.htm#/shop/map">室内定位</a>
+                        </dd>
+                        <dd data-mcode="0502">
+                            <a href="/main.htm#/decoration">门店内容</a>
+                        </dd>
+                        <dd data-mcode="0503">
+                            <a href="/main.htm#/brand-account">品牌号</a>
+                        </dd>
+                    </dl>
+                    <dl>
+                        <dt data-mcode="18" data-rehost="no">
+                            <a href="https://emembercenter.alipay.com/console/crmhome/index.htm">
+                                <i class="iconfont-crmhome" title="人员管理">
+                                    &#xe60c;</i>人员管理</a>
+                        </dt>
+                    </dl>
+                    <dl>
+                        <dt data-mcode="35">
+                            <em>
+                                <i class="iconfont-crmhome" title="人员管理">&#xe60c;</i>人员管理</em>
+                        </dt>
+                        <dd data-mcode="3501">
+                            <a href="/staff/operator/deparmentManage.htm?funcCode=3501">人员组织</a>
+                        </dd>
+                        <dd data-mcode="3502">
+                            <a href="/staff/role/doRoleInit.htm?funcCode=3502">角色权限</a>
+                        </dd>
+                    </dl>
+                    <dl>
+                        <dt data-mcode="20" data-rehost="no">
+                            <a href="https://epsecuritycenter.alipay.com/sc/crmSecuritySetForOper.htm">
+                                <i class="iconfont-crmhome" title="安全设置">
+                                    &#xe60c;</i>安全设置</a>
+                        </dt>
+                    </dl>
+                    <dl>
+                        <dt data-mcode="06">
+                            <em>
+                                <i class="iconfont-crmhome" title="资金管理">&#xe610;</i>资金管理</em>
+                        </dt>
+                        <dd data-mcode="0601">
+                            <a href="/fund/withdraw/config.htm">自动提现</a>
+                        </dd>
+                        <dd data-mcode="0602">
+                            <a href="/fund/withdraw/query.htm">提现记录</a>
+                        </dd>
+                        <dd data-mcode="0603">
+                            <a href="/kbreport/kbbill/index.htm#/shoukuan/mingxi">交易查询</a>
+                        </dd>
+                        <dd data-mcode="0310">
+                            <a href="/main.htm#/marketing-activity/bill/download/retailers">营销账单下载</a>
+                        </dd>
+                    </dl>
+                    <dl>
+                        <dt data-mcode="07">
+                            <a href="/main.htm#/material/center">
+                                <i class="iconfont-crmhome" title="素材中心">&#xe600;</i>素材中心</a>
+                        </dt>
+                    </dl>
+                    <dl>
+                        <dt data-mcode="99">
+                            <a href="/material/printableMaterials.htm">
+                                <i class="iconfont-crmhome" title="物料模版">
+                                    &#xe622;</i>物料模版</a>
+                        </dt>
+                    </dl>
+                </div>
+
+
+
+                <!-- 2. 可以继续引入多个 schema -->
+
+                <!-- 3. 添加的后端的 vm 变量，会保持原样输出 -->
+                <!-- FD:76:crmhome/common/menu.vm:END -->
+            </div>
+            <!-- end slide nav-->
+
+            <!-- start context-->
+            <div class="tbf-context">
+                <link rel="stylesheet" type="text/css" href="./kbservcenter/kb-crmhome/common.css" />
+                <link rel="stylesheet" type="text/css" href="./kbservcenter/kb-crmhome/index.css" />
+                <style>
+                    html body {
+                        background-color: #E7E8EB;
+                        height: initial;
+                    }
+                </style>
+                <script>
+                    window.APP = {
+                        ownUrl: '',
+                        mdataProd: "https://luopan.alipay.com",
+                        pointprodServer: "",
+                        isCommon: "",
+                        isOrderPlugin: "true",
+                        isFoodTopKA: "",
+                        merchantIndexLink: "https://e.alipay.com:443/merchant/index.htm",
+                        isCatering: "",
+                        isGenericIndustry: "true",
+                        isSuperMarket: "",
+                        isMall: "",
+                        isRetailer: "false",
+                        now: "",
+                        roleType: "",
+                        epsecuritycenterUrl: "https://epsecuritycenter.alipay.com",
+                        ememberUrl: "https://emembercenter.alipay.com",
+                        uemprodUrl: "https://uemprod.alipay.com",
+                        // crmhomeUrl: "https://e.alipay.com:443",
+                        crmhomeUrl: "http://crmhome-zth-9.gz00b.dev.alipay.net",
+                        kbservcenterUrl: "https://kbservcenter.alipay.com",
+                        kbsalesUrl: "https://kbsales.alipay.com",
+                        kbadvertServer: "https://koubeike.alipay.com",
+                        kbopenprodUrl: 'https://kbopenprod.alipay.com',
+                        kbretailprod: "https://lingshou.alipay.com",
+                        kbretailprodUrl: 'https://lingshou.alipay.com',
+                        kbservindustryprodUrl: 'https://kbservindustryprod.alipay.com',
+                        isProvider: "false",
+                        uvUserId: "2088121509924973",
+                        mbillexprodUrl: "https://mbillexprod.alipay.com"
+                    };
+                </script>
+                <!-- FD:117:kb-crmhome-data/index/loan.vm:START -->
+                <!-- FD:117:kb-crmhome-data/index/loan.vm:1008:index/loan.schema:贷款链接:START -->
+                <script>
+                    window.__fd_loan_data = '{"link":"https://loan.mybank.cn/dk/b2bapply/credit/apply_form.htm?channId=KOUBEI_CN&site=ALIPAY"}';
+                    __fd_loan_data = JSON.parse(__fd_loan_data);
+                </script>
+                <!-- FD:117:kb-crmhome-data/index/loan.vm:1008:index/loan.schema:贷款链接:END -->
+                <!-- FD:117:kb-crmhome-data/index/loan.vm:END -->
+                <!-- FD:117:kb-crmhome-data/index/banner.vm:START -->
+                <!-- FD:117:kb-crmhome-data/index/banner.vm:1006:index/banner.schema:广告位链接:START -->
+                <script>
+                    window.__fd_banner_data = '{"banner":[{"trigger":true,"text":"","link":"https://e.alipay.com/report/report/brandCampBoard/index.htm","imgLink":"https://gw.alipayobjects.com/zos/rmsportal/OuZvGyJIRMfjdkjImZOY.jpg"},{"trigger":true,"text":"人气眼","link":"https://os.alipayobjects.com/rmsportal/ZisFGpctputXhmWhljep.html?tagid=bacdcaccddiiajhfachd","imgLink":"http://alipay-rmsdeploy-image.cn-hangzhou.alipay.aliyun-inc.com/rmsportal/gBGMJwErekhbCtgbxvEl.jpg"},{"trigger":true,"text":"钉钉","link":"https://tms.dingtalk.com/markets/dingtalk/ddkoubei?lwfrom=20160824180043841","imgLink":"https://gw.alicdn.com/tps/TB1jMDCMVXXXXbTXVXXXXXXXXXX-965-85.jpg"},{"trigger":true,"text":"口碑贷","link":"https://loan.mybank.cn/loanportal/r.htm?target=https://loan.mybank.cn/loan/loan.htm&c=default&c_ext=koubeisjzx&site=1","imgLink":"https://zos.alipayobjects.com/rmsportal/XKXwKUBvvRWFOCXUTWAc.jpg"},{"trigger":false,"text":"广告链接标题","link":"https://www.alipay.com","imgLink":"https://www.alipay.com"}]}';
+                    __fd_banner_data = JSON.parse(__fd_banner_data);
+                </script>
+                <!-- FD:117:kb-crmhome-data/index/banner.vm:1006:index/banner.schema:广告位链接:END -->
+                <!-- FD:117:kb-crmhome-data/index/banner.vm:END -->
+                <!-- FD:117:kb-crmhome-data/index/index.vm:START -->
+                <!-- FD:117:kb-crmhome-data/index/index.vm:1007:index/index.schema:首页参数配置:START -->
+                <script>
+                    window.__fd_index_data = '{"members":[{"mainTitle":"低额顾客","subTitle":"提升会员的消费额度","btnText":"发布营销活动"},{"mainTitle":"低频顾客","subTitle":"提升会员消费频次，带来更多回头客","btnText":"发布营销活动"},{"mainTitle":"沉默顾客","subTitle":"挽回一段时间未到店消费的流失会员","btnText":"发布营销活动"}],"promoService":[{"mainTitle":"消费送券","subTitle":"单笔消费满额赠送二次消费优惠券","logo":"https://os.alipayobjects.com/rmsportal/bfHRLiTHrlHNEEW.png"},{"mainTitle":"支付会员招募","subTitle":"给顾客一个成为会员的理由","logo":"https://os.alipayobjects.com/rmsportal/EBdjsCIYaqeQZnn.jpg"},{"mainTitle":"挽回流失顾客","subTitle":"自动唤醒即将流失的顾客","logo":"https://os.alipayobjects.com/rmsportal/TPSWLMKkXfrKwGr.jpg"},{"mainTitle":"","subTitle":"更多活动方案和赠券规则","logo":"https://os.alipayobjects.com/rmsportal/mYatEwbDRodJjlQ.jpg"}],"introInfo":[{"pic":"https://os.alipayobjects.com/rmsportal/hCCdkFAUtdxstef.jpg","title":"支付会员招募","desc":"给顾客一个成为会员的理由"},{"pic":"https://os.alipayobjects.com/rmsportal/mPTArIzLQkkRLdH.jpg","title":"吸引回头客","desc":"引导消费过的顾客再次到店"},{"pic":"https://os.alipayobjects.com/rmsportal/hCCdkFAUtdxstef.jpg","title":"提升客单价","desc":"助力提升顾客到店消费额"}],"memberDataInfo":[{"name":"今日新增会员数","value":"首次来店消费会员数"},{"name":"总会员数","value":"累计会员数"},{"name":"交易二次以上会员","value":"来店消费两次及以上的会员数"}],"profitDataInfo":[{"name":"今日收益金额","value":"今日实收金额"},{"name":"累计收益金额","value":"累计实收金额"},{"name":"笔单价","value":"累计实收金额/累计成交笔数"}],"activityDataInfo":[{"name":"今日活动收益金额","value":"今日参加活动交易的实收金额（含营销活动、口碑活动、优惠券）"},{"name":"今日领券量","value":"今日券领取份数"},{"name":"当前活动数","value":"今日商家的有效活动数（含营销活动、口碑活动、优惠券）"}]}';
+                    __fd_index_data = JSON.parse(__fd_index_data);
+                </script>
+                <!-- FD:117:kb-crmhome-data/index/index.vm:1007:index/index.schema:首页参数配置:END -->
+                <!-- FD:117:kb-crmhome-data/index/index.vm:END -->
+                <!-- FD:117:kb-crmhome-data/validate/validate.vm:START -->
+                <!-- FD:117:kb-crmhome-data/validate/validate.vm:1009:validate/validate.schema:错误码文案:START -->
+                <script>
+                    window.__fd_validate_data = [{ "code": "HEAD_SHOP_NAME_CANNOT_BE_NULL", "text": "主店名不能为空，且长度不能超过20个字符" }, { "code": "HEAD_SHOP_NAME_LENGTH_INVALID", "text": "主店名长度非法，必须大于1个中文字符，不大于20个中文字符" }, { "code": "HEAD_SHOP_NAME_CANNOT_CONTAIN_BRANCH_NAME", "text": "主店名不能包含分店名以及 xx路店、xx分店、xx总店" }, { "code": "HEAD_SHOP_NAME_CANNOT_CONTAIN_SUSPECTED_BRANCH_NAME", "text": "主店名中不能含有【**店】、（**店）、<**店>、空格**店等分店的名称，请填写至分店名中" }, { "code": "BRANCH_SHOP_NAME_LENGTH_INVALID", "text": "分店名长度需在2~20个字符之间" }, { "code": "BRACH_SHOP_NAME_CANNOT_CONTAIN_ADDRESS", "text": "分店名不能包含店址，例如：xx街xx号" }, { "code": "SHOP_ADDRESS_LENGTH_INVALID", "text": "门店地址长度需在4~50字符之间" }, { "code": "SHOP_POI_CANNOT_BE_NULL", "text": "门店经纬度信息不能为空" }, { "code": "SHOP_POI_FORMAT_INVALID", "text": "门店经纬度值不合法" }, { "code": "SHOP_400_PHONE_FORMAT_INVALID", "text": "门店400电话号码格式不正确" }, { "code": "SHOP_800_PHONE_FORMAT_INVALID", "text": "门店800电话号码格式不正确" }, { "code": "SHOP_PHONE_FORMAT_INVALID", "text": "请输入正确的固话/手机格式" }, { "code": "SHOP_PHONE_CANNOT_BE_NULL", "text": "请输入正确的固话/手机格式" }, { "code": "SUSPECT", "text": "您输入的地址存疑，请确认输入的地址正确" }, { "code": "INVALID", "text": "您输入的地址存疑，请确认输入的地址正确" }, { "code": "SUSPECT_INVALID", "text": "地址需写清楚门店所在的道路名及门牌号" }, { "code": "HEAD_SHOP_NAME_CANNOT_CONTAIL_BRANCHNAME", "text": "主店名中不能含有【**店】、（**店）、<**店>、空格**店等分店的名称，请填写至分店名中" }, { "code": "MERCHANT_CAN_NOT_SIGN_KOUBEI", "text": "您当前账户已签约支付宝，无法继续开店，请更换其他账户来开店或拨打400-826-7710热线，免费解约支付宝。" }, { "code": "BRANCH_SHOP_NAME_CANNOT_CONTAIN_HEAD_NAME", "text": "分店名不可包含主店名，请按示例进行填写" }, { "code": "BRANCH_SHOP_NAME_CANNOT_PARENTHESES", "text": "分店名不能包含括号，[]、（）、()、{}等括号" }, { "code": "HEAD_SHOP_NAME_CANNOT_CONTAIN_ADDRESS", "text": "主店名不能包含店址，例如：xx街xx号" }];
+                </script>
+                <!-- FD:117:kb-crmhome-data/validate/validate.vm:1009:validate/validate.schema:错误码文案:END -->
+                <!-- FD:117:kb-crmhome-data/validate/validate.vm:END -->
+                <!-- FD:117:kb-crmhome-data/notice/commission.vm:START -->
+                <!-- FD:117:kb-crmhome-data/notice/commission.vm:2590:notice/commission.schema:2017口碑营销返佣政策确认:START -->
+                <script>
+                    window.__fd_commission_data = '{"show":false,"message":"2017年口碑营销返佣政策已确认，","link":"https://help.koubei.com/takeaway/knowledgeDetail.htm?knowledgeId=201602072490"}';
+                    __fd_commission_data = JSON.parse(__fd_commission_data);
+                </script>
+                <!-- FD:117:kb-crmhome-data/notice/commission.vm:2590:notice/commission.schema:2017口碑营销返佣政策确认:END -->
+                <!-- FD:117:kb-crmhome-data/notice/commission.vm:END -->
+                <div id="react-content"></div>
+                <input type="hidden" value="" id="isFoodTopKA" />
+                <!--[if lt IE 10]>
+    <script src="https://as.alipayobjects.com/component/??console-polyfill/0.2.2/index.js,es5-shim/4.1.14/es5-shim.js,es5-shim/4.1.14/es5-sham.js,html5shiv/3.7.2/html5shiv.js"></script>
+    <![endif]-->
+                <!-- FD:76:crmhome/common/specialRightContent.vm:START -->
+                <!-- FD:76:crmhome/common/specialRightContent.vm:1214:specialRightContent.schema:specialRightContent质量分特权内容:START -->
+                <script>
+                    window._fd_special_right_content = {
+                        score: 30,
+                        titleOne: '还有机会参加口碑平台基础活动',
+                        titleTwo: '参加口碑平台活动',
+                        shops: ' 一大波优秀门店已经参加了活动',
+                        date: '',
+                        rankContent: '达到30分,口碑页面上有机会优先展示哦,享受更好的流量曝光。',
+                        activeContent: '达到38分，可以参加口碑城市活动的报名咯。',
+                        pictureSrc: 'https://zos.alipayobjects.com/rmsportal/enxLuNlhhHrNXgU.png',
+                        pictureSrcUniversal: 'https://zos.alipayobjects.com/rmsportal/pUvFgPEgqWNZpMs.png',
+                        code: 'https://zos.alipayobjects.com/rmsportal/JLSOCmLlNQmcXVi.jpg'
+                    }
+                </script>
+                <!-- FD:76:crmhome/common/specialRightContent.vm:1214:specialRightContent.schema:specialRightContent质量分特权内容:END -->
+                <!-- FD:76:crmhome/common/specialRightContent.vm:END -->
+                <script src="https://as.alipayobjects.com/g/datavis/g2/1.2.5/index.js"></script>
+                <script src="https://webapi.amap.com/maps?v=2.0&key=283ae07b7c4a1164bdcfb0fa324eaeb1"></script>
+                <link charset="utf-8" rel="stylesheet" href="https://indoorweb.amap.com/indoormapeditor-1.3.css" media="all" />
+                <script type="text/javascript" src="https://indoorweb.amap.com/indoormapeditor-1.3.js"></script>
+                <script crossorigin="1" charset="utf-8" src="./kbservcenter/kb-crmhome/common.js"></script>
+                <script crossorigin="1" charset="utf-8" src="./kbservcenter/kb-crmhome/index.js"></script>
+                <script crossorigin="1" charset="utf-8" src="https://a.alipayobjects.com/g/foresee/foresee-js/1.0.5/m.js"></script>
+            </div>
+        </div>
+
+        <!-- start authMenu value-->
+        <input type="hidden" value="[{&quot;itemMenu&quot;:[],&quot;menuCode&quot;:&quot;26&quot;,&quot;menuName&quot;:&quot;系统首页&quot;},{&quot;itemMenu&quot;:[{&quot;itemMenu&quot;:[{&quot;itemMenu&quot;:[],&quot;menuCode&quot;:&quot;010201&quot;,&quot;menuName&quot;:&quot;折扣详情&quot;},{&quot;itemMenu&quot;:[],&quot;menuCode&quot;:&quot;010202&quot;,&quot;menuName&quot;:&quot;确认&quot;},{&quot;itemMenu&quot;:[],&quot;menuCode&quot;:&quot;010203&quot;,&quot;menuName&quot;:&quot;零售商测试品牌商商品&quot;},{&quot;itemMenu&quot;:[],&quot;menuCode&quot;:&quot;010204&quot;,&quot;menuName&quot;:&quot;修改&quot;}],&quot;menuCode&quot;:&quot;0102&quot;,&quot;menuName&quot;:&quot;营销管理&quot;},{&quot;itemMenu&quot;:[],&quot;menuCode&quot;:&quot;0103&quot;,&quot;menuName&quot;:&quot;修改折扣&quot;},{&quot;itemMenu&quot;:[],&quot;menuCode&quot;:&quot;0108&quot;,&quot;menuName&quot;:&quot;会员营销&quot;},{&quot;itemMenu&quot;:[],&quot;menuCode&quot;:&quot;0109&quot;,&quot;menuName&quot;:&quot;口碑活动招商&quot;},{&quot;itemMenu&quot;:[],&quot;menuCode&quot;:&quot;0110&quot;,&quot;menuName&quot;:&quot;其他营销工具&quot;},{&quot;itemMenu&quot;:[],&quot;menuCode&quot;:&quot;0111&quot;,&quot;menuName&quot;:&quot;零售商自定义人群&quot;}],&quot;menuCode&quot;:&quot;01&quot;,&quot;menuName&quot;:&quot;商品管理&quot;},{&quot;itemMenu&quot;:[{&quot;itemMenu&quot;:[],&quot;menuCode&quot;:&quot;0201&quot;,&quot;menuName&quot;:&quot;消费者评价&quot;},{&quot;itemMenu&quot;:[],&quot;menuCode&quot;:&quot;0202&quot;,&quot;menuName&quot;:&quot;门店评价排名&quot;}],&quot;menuCode&quot;:&quot;02&quot;,&quot;menuName&quot;:&quot;评价管理&quot;},{&quot;itemMenu&quot;:[{&quot;itemMenu&quot;:[{&quot;itemMenu&quot;:[],&quot;menuCode&quot;:&quot;030101&quot;,&quot;menuName&quot;:&quot;效果概览&quot;}],&quot;menuCode&quot;:&quot;0301&quot;,&quot;menuName&quot;:&quot;效果概览&quot;},{&quot;itemMenu&quot;:[{&quot;itemMenu&quot;:[],&quot;menuCode&quot;:&quot;030201&quot;,&quot;menuName&quot;:&quot;折扣数据&quot;},{&quot;itemMenu&quot;:[],&quot;menuCode&quot;:&quot;030202&quot;,&quot;menuName&quot;:&quot;门店折扣&quot;}],&quot;menuCode&quot;:&quot;0302&quot;,&quot;menuName&quot;:&quot;折扣数据&quot;},{&quot;itemMenu&quot;:[{&quot;itemMenu&quot;:[],&quot;menuCode&quot;:&quot;030301&quot;,&quot;menuName&quot;:&quot;总体交易&quot;},{&quot;itemMenu&quot;:[],&quot;menuCode&quot;:&quot;030302&quot;,&quot;menuName&quot;:&quot;门店交易&quot;}],&quot;menuCode&quot;:&quot;0303&quot;,&quot;menuName&quot;:&quot;交易数据&quot;},{&quot;itemMenu&quot;:[{&quot;itemMenu&quot;:[],&quot;menuCode&quot;:&quot;030401&quot;,&quot;menuName&quot;:&quot;区域消费者&quot;},{&quot;itemMenu&quot;:[],&quot;menuCode&quot;:&quot;030402&quot;,&quot;menuName&quot;:&quot;区域竞争&quot;}],&quot;menuCode&quot;:&quot;0304&quot;,&quot;menuName&quot;:&quot;竞争分析&quot;},{&quot;itemMenu&quot;:[{&quot;itemMenu&quot;:[],&quot;menuCode&quot;:&quot;030501&quot;,&quot;menuName&quot;:&quot;品牌分析&quot;}],&quot;menuCode&quot;:&quot;0305&quot;,&quot;menuName&quot;:&quot;品牌分析&quot;},{&quot;itemMenu&quot;:[],&quot;menuCode&quot;:&quot;0307&quot;,&quot;menuName&quot;:&quot;营销数据&quot;},{&quot;itemMenu&quot;:[],&quot;menuCode&quot;:&quot;0308&quot;,&quot;menuName&quot;:&quot;交易数据&quot;},{&quot;itemMenu&quot;:[],&quot;menuCode&quot;:&quot;0309&quot;,&quot;menuName&quot;:&quot;普通商户的应用市场&quot;},{&quot;itemMenu&quot;:[],&quot;menuCode&quot;:&quot;0313&quot;,&quot;menuName&quot;:&quot;经营概览&quot;}],&quot;menuCode&quot;:&quot;03&quot;,&quot;menuName&quot;:&quot;经营效果&quot;},{&quot;itemMenu&quot;:[{&quot;itemMenu&quot;:[],&quot;menuCode&quot;:&quot;0401&quot;,&quot;menuName&quot;:&quot;服务窗&quot;},{&quot;itemMenu&quot;:[{&quot;itemMenu&quot;:[],&quot;menuCode&quot;:&quot;040201&quot;,&quot;menuName&quot;:&quot;新浪微博管理&quot;}],&quot;menuCode&quot;:&quot;0402&quot;,&quot;menuName&quot;:&quot;新浪微博&quot;},{&quot;itemMenu&quot;:[],&quot;menuCode&quot;:&quot;0403&quot;,&quot;menuName&quot;:&quot;门店动态&quot;},{&quot;itemMenu&quot;:[],&quot;menuCode&quot;:&quot;0404&quot;,&quot;menuName&quot;:&quot;下载客户端&quot;},{&quot;itemMenu&quot;:[],&quot;menuCode&quot;:&quot;0405&quot;,&quot;menuName&quot;:&quot;分佣推广&quot;}],&quot;menuCode&quot;:&quot;04&quot;,&quot;menuName&quot;:&quot;运营工具&quot;},{&quot;itemMenu&quot;:[{&quot;itemMenu&quot;:[{&quot;itemMenu&quot;:[],&quot;menuCode&quot;:&quot;050101&quot;,&quot;menuName&quot;:&quot;新建门店&quot;},{&quot;itemMenu&quot;:[],&quot;menuCode&quot;:&quot;050102&quot;,&quot;menuName&quot;:&quot;批量上传门店&quot;},{&quot;itemMenu&quot;:[],&quot;menuCode&quot;:&quot;050103&quot;,&quot;menuName&quot;:&quot;门店详情&quot;},{&quot;itemMenu&quot;:[],&quot;menuCode&quot;:&quot;050104&quot;,&quot;menuName&quot;:&quot;收款账户管理&quot;},{&quot;itemMenu&quot;:[],&quot;menuCode&quot;:&quot;050105&quot;,&quot;menuName&quot;:&quot;添加收款账户&quot;},{&quot;itemMenu&quot;:[],&quot;menuCode&quot;:&quot;050107&quot;,&quot;menuName&quot;:&quot;门店批量修改&quot;},{&quot;itemMenu&quot;:[],&quot;menuCode&quot;:&quot;050108&quot;,&quot;menuName&quot;:&quot;认领门店&quot;},{&quot;itemMenu&quot;:[],&quot;menuCode&quot;:&quot;050106&quot;,&quot;menuName&quot;:&quot;修改门店&quot;},{&quot;itemMenu&quot;:[],&quot;menuCode&quot;:&quot;050109&quot;,&quot;menuName&quot;:&quot;确认开店&quot;}],&quot;menuCode&quot;:&quot;0501&quot;,&quot;menuName&quot;:&quot;我的门店&quot;},{&quot;itemMenu&quot;:[{&quot;itemMenu&quot;:[],&quot;menuCode&quot;:&quot;050201&quot;,&quot;menuName&quot;:&quot;门店菜单&quot;},{&quot;itemMenu&quot;:[],&quot;menuCode&quot;:&quot;050202&quot;,&quot;menuName&quot;:&quot;品牌故事&quot;},{&quot;itemMenu&quot;:[],&quot;menuCode&quot;:&quot;050203&quot;,&quot;menuName&quot;:&quot;促销信息&quot;}],&quot;menuCode&quot;:&quot;0502&quot;,&quot;menuName&quot;:&quot;店铺装修&quot;}],&quot;menuCode&quot;:&quot;05&quot;,&quot;menuName&quot;:&quot;门店管理 &quot;},{&quot;itemMenu&quot;:[{&quot;itemMenu&quot;:[{&quot;itemMenu&quot;:[],&quot;menuCode&quot;:&quot;060401&quot;,&quot;menuName&quot;:&quot;券查询/券核销/核销券查询&quot;}],&quot;menuCode&quot;:&quot;0604&quot;,&quot;menuName&quot;:&quot;兑换券验券&quot;},{&quot;itemMenu&quot;:[],&quot;menuCode&quot;:&quot;0601&quot;,&quot;menuName&quot;:&quot;委托提现签约&quot;},{&quot;itemMenu&quot;:[],&quot;menuCode&quot;:&quot;0602&quot;,&quot;menuName&quot;:&quot;提现记录&quot;},{&quot;itemMenu&quot;:[{&quot;itemMenu&quot;:[],&quot;menuCode&quot;:&quot;060301&quot;,&quot;menuName&quot;:&quot;退款查询&quot;},{&quot;itemMenu&quot;:[],&quot;menuCode&quot;:&quot;060302&quot;,&quot;menuName&quot;:&quot;汇总查询&quot;},{&quot;itemMenu&quot;:[],&quot;menuCode&quot;:&quot;060304&quot;,&quot;menuName&quot;:&quot;业务账查询&quot;},{&quot;itemMenu&quot;:[],&quot;menuCode&quot;:&quot;060305&quot;,&quot;menuName&quot;:&quot;包销账查询&quot;},{&quot;itemMenu&quot;:[],&quot;menuCode&quot;:&quot;060306&quot;,&quot;menuName&quot;:&quot;账单查询&quot;},{&quot;itemMenu&quot;:[],&quot;menuCode&quot;:&quot;060307&quot;,&quot;menuName&quot;:&quot;账单查询&quot;}],&quot;menuCode&quot;:&quot;0603&quot;,&quot;menuName&quot;:&quot;交易查询&quot;},{&quot;itemMenu&quot;:[],&quot;menuCode&quot;:&quot;0604&quot;,&quot;menuName&quot;:&quot;收银&quot;},{&quot;itemMenu&quot;:[],&quot;menuCode&quot;:&quot;0605&quot;,&quot;menuName&quot;:&quot;余额查询&quot;},{&quot;itemMenu&quot;:[],&quot;menuCode&quot;:&quot;0606&quot;,&quot;menuName&quot;:&quot;口碑贷&quot;},{&quot;itemMenu&quot;:[],&quot;menuCode&quot;:&quot;0607&quot;,&quot;menuName&quot;:&quot;营销账单下载&quot;},{&quot;itemMenu&quot;:[],&quot;menuCode&quot;:&quot;060401&quot;,&quot;menuName&quot;:&quot;收银&quot;},{&quot;itemMenu&quot;:[],&quot;menuCode&quot;:&quot;060402&quot;,&quot;menuName&quot;:&quot;账户退款&quot;},{&quot;itemMenu&quot;:[],&quot;menuCode&quot;:&quot;060403&quot;,&quot;menuName&quot;:&quot;门店退款&quot;},{&quot;itemMenu&quot;:[],&quot;menuCode&quot;:&quot;060404&quot;,&quot;menuName&quot;:&quot;商家app交易汇总&quot;},{&quot;itemMenu&quot;:[],&quot;menuCode&quot;:&quot;060306&quot;,&quot;menuName&quot;:&quot;商品订单查询&quot;}],&quot;menuCode&quot;:&quot;06&quot;,&quot;menuName&quot;:&quot;资金管理&quot;},{&quot;itemMenu&quot;:[{&quot;itemMenu&quot;:[{&quot;itemMenu&quot;:[],&quot;menuCode&quot;:&quot;070001&quot;,&quot;menuName&quot;:&quot;编辑&quot;},{&quot;itemMenu&quot;:[],&quot;menuCode&quot;:&quot;070002&quot;,&quot;menuName&quot;:&quot;上传&quot;},{&quot;itemMenu&quot;:[],&quot;menuCode&quot;:&quot;070003&quot;,&quot;menuName&quot;:&quot;删除&quot;},{&quot;itemMenu&quot;:[],&quot;menuCode&quot;:&quot;070004&quot;,&quot;menuName&quot;:&quot;素材查询&quot;},{&quot;itemMenu&quot;:[],&quot;menuCode&quot;:&quot;070005&quot;,&quot;menuName&quot;:&quot;素材模糊搜索&quot;}],&quot;menuCode&quot;:&quot;0700&quot;,&quot;menuName&quot;:&quot;素材中心&quot;}],&quot;menuCode&quot;:&quot;07&quot;,&quot;menuName&quot;:&quot;素材中心&quot;},{&quot;itemMenu&quot;:[],&quot;menuCode&quot;:&quot;18&quot;,&quot;menuName&quot;:&quot;人员管理&quot;},{&quot;itemMenu&quot;:[],&quot;menuCode&quot;:&quot;19&quot;,&quot;menuName&quot;:&quot;账户详情&quot;},{&quot;itemMenu&quot;:[],&quot;menuCode&quot;:&quot;22&quot;,&quot;menuName&quot;:&quot;口碑学院&quot;},{&quot;itemMenu&quot;:[],&quot;menuCode&quot;:&quot;23&quot;,&quot;menuName&quot;:&quot;签约管理&quot;},{&quot;itemMenu&quot;:[],&quot;menuCode&quot;:&quot;99&quot;,&quot;menuName&quot;:&quot;打印物料&quot;},{&quot;itemMenu&quot;:[{&quot;itemMenu&quot;:[],&quot;menuCode&quot;:&quot;2801&quot;,&quot;menuName&quot;:&quot;选购服务&quot;},{&quot;itemMenu&quot;:[],&quot;menuCode&quot;:&quot;2802&quot;,&quot;menuName&quot;:&quot;我的服务&quot;},{&quot;itemMenu&quot;:[],&quot;menuCode&quot;:&quot;2803&quot;,&quot;menuName&quot;:&quot;我的服务&quot;},{&quot;itemMenu&quot;:[],&quot;menuCode&quot;:&quot;2899&quot;,&quot;menuName&quot;:&quot;服务插件功能授权&quot;}],&quot;menuCode&quot;:&quot;28&quot;,&quot;menuName&quot;:&quot;服务市场&quot;},{&quot;itemMenu&quot;:[{&quot;itemMenu&quot;:[],&quot;menuCode&quot;:&quot;3001&quot;,&quot;menuName&quot;:&quot;我的商品&quot;},{&quot;itemMenu&quot;:[],&quot;menuCode&quot;:&quot;3002&quot;,&quot;menuName&quot;:&quot;商品管理&quot;},{&quot;itemMenu&quot;:[],&quot;menuCode&quot;:&quot;3003&quot;,&quot;menuName&quot;:&quot;商品设置&quot;}],&quot;menuCode&quot;:&quot;30&quot;,&quot;menuName&quot;:&quot;商品&quot;},{&quot;itemMenu&quot;:[{&quot;itemMenu&quot;:[],&quot;menuCode&quot;:&quot;311001&quot;,&quot;menuName&quot;:&quot;扫码点菜&quot;}],&quot;menuCode&quot;:&quot;31&quot;,&quot;menuName&quot;:&quot;菜品中心&quot;},{&quot;itemMenu&quot;:[{&quot;itemMenu&quot;:[],&quot;menuCode&quot;:&quot;3301&quot;,&quot;menuName&quot;:&quot;待确认分佣计划&quot;},{&quot;itemMenu&quot;:[],&quot;menuCode&quot;:&quot;3302&quot;,&quot;menuName&quot;:&quot;待设置分佣计划&quot;},{&quot;itemMenu&quot;:[],&quot;menuCode&quot;:&quot;3303&quot;,&quot;menuName&quot;:&quot;已设置分佣计划&quot;}],&quot;menuCode&quot;:&quot;33&quot;,&quot;menuName&quot;:&quot;口碑客&quot;},{&quot;itemMenu&quot;:[{&quot;itemMenu&quot;:[],&quot;menuCode&quot;:&quot;3401&quot;,&quot;menuName&quot;:&quot;经营数据查看权限（汇总）&quot;}],&quot;menuCode&quot;:&quot;34&quot;,&quot;menuName&quot;:&quot;数据管理&quot;}]"
+            data-cmenu="menuCode" id="authMenuTree" />
+        <input type="hidden" value="" id="menuHostName" />
+        <!-- end authMenu value-->
+
+        <!-- start footer -->
+        <div class="tbf-footer">
+
+
+            <!-- /component/footCommon.vm -->
+
+            <!-- FD:231:alipay/nav/versionSwitch.vm:START -->
+            <!-- FD:231:alipay/nav/versionSwitch.vm:1743:nav/versionSwitch.schema:versionSwitch-网站改版导航新老版本切换开关:START -->
+
+
+
+
+
+
+
+            <!-- FD:231:alipay/nav/versionSwitch.vm:1743:nav/versionSwitch.schema:versionSwitch-网站改版导航新老版本切换开关:END -->
+            <!-- FD:231:alipay/nav/versionSwitch.vm:END -->
+
+
+
+            <style>
+                .fn-clear:after {
+                    font-size: 0;
+                }
+
+                .ui-footer {
+                    font-size: 12px;
+                    margin-top: 30px;
+                    height: 100px;
+                    line-height: 18px;
+                    background: #1e1b29;
+                    color: #808080;
+                }
+
+                .ui-footer .ui-separator {
+                    font-weight: normal;
+                }
+
+                .ui-footer-link a {
+                    padding: 0 3px 0 2px;
+                }
+
+                .ui-footer a,
+                .ui-footer-copyright .copyright a {
+                    color: #808080;
+                }
+
+                .ui-footer a:hover,
+                .ui-footer-copyright .copyright a:hover {
+                    color: #808080;
+                    text-decoration: none;
+                    border-bottom: 1px solid;
+                }
+
+                .ui-footer-ctn {
+                    padding-top: 30px;
+                    text-align: center;
+                }
+
+                .ui-footer-copyright {
+                    padding-top: 10px;
+                    background: #1e1b29;
+                }
+
+                .ui-footer-copyright .server {
+                    color: #1e1b29;
+                }
+
+                .ui-footer-copyright .copyright {
+                    color: #808080;
+                }
+            </style>
+
+
+            <div class="ui-footer fn-clear" coor="footer">
+
+                <div class="ui-footer-ctn">
+                    <!-- FD:231:alipay/foot/links.vm:START -->
+                    <!-- FD:231:alipay/foot/links.vm:2600:foot/links.schema:links-底部链接:START -->
+                    <div class="ui-footer-link">
+
+                        <a href="https://job.alibaba.com/zhaopin/index.htm" target="_blank" seed="foot-1">诚征英才</a>
+
+
+                        <em class="ui-separator">|</em>
+                        <a seed="foot-2" href="https://ab.alipay.com/i/lianxi.htm" title="联系我们" target="_blank">联系我们</a>
+
+                        <em class="ui-separator">|</em>
+                        <a seed="foot-3" href="https://global.alipay.com/" title="International Business" target="_blank">International Business</a>
+
+
+                    </div>
+                    <!-- FD:231:alipay/foot/links.vm:2600:foot/links.schema:links-底部链接:END -->
+                    <!-- FD:231:alipay/foot/links.vm:END -->
+                    <div class="ui-footer-copyright">
+                        <!-- FD:231:alipay/foot/copyright.vm:START -->
+                        <!-- FD:231:alipay/foot/copyright.vm:2604:foot/copyright.schema:支付宝copyright:START -->
+                        <style>
+                            .copyright,
+                            .copyright a,
+                            .copyright a:hover {
+                                color: #808080;
+                            }
+                        </style>
+                        <div class="copyright">
+                            <a href="https://fun.alipay.com/certificate/jyxkz.htm" target="_blank">ICP证：沪B2-20150087</a>
+                        </div>
+                        <div class="server" id="ServerNum">
+                            crmhome-99-5006 &nbsp; 0bbcb3c515239491101415142110358_0
+                        </div>
+                        <!-- FD:231:alipay/foot/copyright.vm:2604:foot/copyright.schema:支付宝copyright:END -->
+                        <!-- FD:231:alipay/foot/copyright.vm:END -->
+                    </div>
+                </div>
+            </div>
+            <!-- /component/footCommon.vm -->
+        </div>
+        <!-- end footer -->
+
+        <!-- placeholder for IE -->
+        <!--[if lte IE 9]>
+    <style>
+    input:-ms-input-placeholder, textarea:-ms-input-placeholder{
+        color: #999 !important;
+    }
+    .placeholder{
+        color: #999 !important;
+    }
+    </style>
+    <script type="text/javascript">
+    seajs.use('arale/placeholder/1.1.0/placeholder',function(){});
+    </script>
+    <![endif]-->
+
+
+        <!-- /公用错误提示 -->
+        <script type="text/javascript">
+            araleConfig = {
+                combo_host: "https://a.alipayobjects.com",
+                combo_path: '/ar/??'
+            }
+
+            // 全局引用js
+            seajs.config({
+                alias: {
+                    'utils': 'crmhome/common/1.0.2/utils'
+                }
+            });
+
+            // 1. 所有链接的点击后，增加op_merchant_id参数
+            // 2. 添加商家，点击后判断时候已经达到上限
+            // 3. 用户权限链接展示
+            seajs.use(['utils', 'arale/dialog/1.2.6/confirmbox', 'crmhome/merchant/1.6.8/util',
+                'crmhome/merchant/1.3.1/upperLimit', 'crmhome/common/1.0.2/authMenu'], function (Utils, ConfirmBox, util) {
+                    Utils.customLink();
+
+                    //服务商返佣政策确认
+                });
+
+        </script>
+
+        <script type="text/javascript">
+        </script>
+
+        <!-- FD:174:alipay/foot/cliveService.vm:START -->
+        <!-- FD:174:alipay/foot/cliveService.vm:1261:cliveService.schema:在线客服配置:START -->
+        <div style="display:none">onlineServer</div>
+        <script type="text/javascript">
+            try {
+                (function () {
+                    var loadOnlineServer = function () {
+                        seajs.config({
+                            comboExcludes: /\/u\/(js|css|cschannel|ecmng)\//,
+                            alias: {
+                                '$': 'jquery/jquery/1.7.2/jquery',
+                                'onlineServerConfig': 'https://os.alipayobjects.com/rmsportal/iwBOQWtuJpTikoO.js',
+                                'portalServerConfig': 'https://os.alipayobjects.com/rmsportal/FiPHyRpEbxSvFkDoPXIQ.js',
+                                'merchantServerConfig': 'https://gw.alipayobjects.com/os/cschannel/WTPOGxJenJVdEDYZYaPA.js',
+                                'customerServerConfig': 'https://gw.alipayobjects.com/os/cschannel/eKIrsHTTgHXrEJIaDKxq.js',
+                                'koubeiServerConfig': 'https://gw.alipayobjects.com/os/cschannel/pQmbmblGTxzzURaFbUca.js',
+                                'defaultDataConfig': 'https://a.alipayobjects.com/u/js/201311/1acIoVU1Xx.js',
+                                'onlineServerJS': 'https://gw.alipayobjects.com/os/rmsportal/WEOWYffCRGKmRGuZORXB.js',//云客服匹配
+                                'onlineServerCSS': 'https://gw.alipayobjects.com/os/rmsportal/JYPlpkORtirXRzLzOBud.css'//云客服通用样式
+                            }
+                        });
+                        seajs.use(['onlineServerConfig', 'portalServerConfig', 'merchantServerConfig', 'koubeiServerConfig', 'customerServerConfig'], function () {
+                            jQuery(function () {
+                                window.OS = OS = {},
+                                    OS.server = {
+                                        cliveServer: 'https://clive.alipay.com',
+                                        cschannelServer: 'https://cschannel.alipay.com',
+                                        initiativeServer: 'https://webpushgw.alipay.com',
+                                        cshallServer: 'https://cshall.alipay.com'
+                                    },
+                                    OS.params = {
+                                        'uid': '2088121509924973'
+                                    };
+                                var tradeNos4Clive = '' || '';
+                                OS.params.featureStr = "{'tradeNos':'" + tradeNos4Clive + "'}";
+                                OS.config = {
+                                    onlineServerURL: OS.server.cliveServer + '/csrouter.htm',
+                                    portalServerURL: OS.server.cschannelServer + '/csrouter.htm',
+                                    newPortalServerURL: OS.server.cschannelServer + '/newPortal.htm',
+                                    webpushFlashURL: 'https://t.alipayobjects.com/tfscom/T1JsNfXoxiXXXXXXXX.swf',
+                                    onlineServerIconDefault: 'https://a.alipayobjects.com/u/css/201401/1v9cu1dxaf.css' //在线客服默认图片
+                                };
+                                seajs.use('onlineServerCSS');
+                                seajs.use('onlineServerJS');
+                            });
+                        });
+                    }
+                    var bindOnlineServer = function (func) {
+                        var w = window;
+                        if (w.attachEvent) {
+                            w.attachEvent('onload', func);
+                        } else {
+                            w.addEventListener('load', func, false);
+                        }
+                    };
+                    window.initOnlineServer = function () {
+                        var w = window, o = 'seajs', d = document;
+                        if (w[o]) { return loadOnlineServer() }
+                        var s = d.createElement("script")
+                        s.id = o + "node"
+                        s.charset = "utf-8";
+                        s.type = "text/javascript";
+                        s.src = "https://a.alipayobjects.com/??seajs/seajs/2.1.1/sea.js,jquery/jquery/1.7.2/jquery.js";
+                        var head = d.head || d.getElementsByTagName("head")[0] || d.documentElement;
+                        head.appendChild(s);
+                        s.onload = s.onreadystatechange = function () { if (!s.readyState || /loaded|complete/.test(s.readyState)) { loadOnlineServer() } };
+                    };
+                    if (!window.isLazyLoadOnlineService) {
+                        bindOnlineServer(initOnlineServer);
+                    };
+                })();
+            } catch (e) {
+                window.console && console.log && console.log(e);
+                window.Tracker && Tracker.click('onlineServer-error-init-' + e);
+            }
+        </script>
+        <!-- FD:174:alipay/foot/cliveService.vm:1261:cliveService.schema:在线客服配置:END -->
+
+        <!-- FD:174:alipay/foot/cliveService.vm:END -->
+
+        <!-- uitpl:/component/tracker.vm -->
+        <!-- FD:106:alipay/tracker/tracker.vm:START -->
+        <!-- FD:106:alipay/tracker/tracker.vm:785:tracker.schema:全站自动化/性能/敏感信息打点开关:START -->
+
+
+
+        <script type="text/javascript">
+            window.Smartracker && Smartracker.sow && Smartracker.sow();
+        </script>
+
+
+
+
+
+
+        <script type="text/javascript">
+
+            window.agp_custom_config = {
+                BASE_URL: '//kcart.alipay.com/p.gif',
+                TIMING_ACTION_URL: '//kcart.alipay.com/x.gif'
+            }
+
+        </script>
+        <script charset="utf-8" src="https://a.alipayobjects.com/g/memberAsset/securityMsg/1.0.3/index.js"></script>
+
+
+
+
+
+        <!-- FD:106:alipay/tracker/sai.vm:START -->
+        <script>
+            sensScanConfig = {
+                ratio: 0.01,
+                modules: '*',
+                types: '*'
+            };
+        </script>
+
+        <script src='https://as.alipayobjects.com/g/alipay_security/monitor-sens/1.0.1/monitor-sens.min.js'></script>
+        <!-- FD:106:alipay/tracker/sai.vm:END -->
+
+
+
+        <!-- FD:106:alipay/tracker/cmsbuffer.vm:START -->
+        <!-- FD:106:alipay/tracker/cmsbuffer.vm:997:cmsbuffer.schema:main-CMS全站修复:START -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <script>
+            try {
+                (function () {
+                    var logServer = 'https://magentmng.alipay.com/m.gif';
+                    var sample = 0.0001;
+                    var url = "https://a.alipayobjects.com/http-watch/1.0.7/index.js";
+
+                    // 判断比例
+                    if (!!window.addEventListener && Array.prototype.map && Math.random() < sample) {
+                        var HEAD = document.head || document.getElementsByTagName('head')[0];
+
+                        var spt = document.createElement('script');
+                        spt.src = url;
+                        HEAD.appendChild(spt);
+
+                        setTimeout(function () {
+                            window.httpWatch && window.httpWatch({ sample: 1, appname: 'crmhome-99-5006', logServer: logServer });
+                        }, 1000);
+                    }
+                })();
+            } catch (e) { }
+        </script>
+
+        <!-- FD:106:alipay/tracker/cmsbuffer.vm:997:cmsbuffer.schema:main-CMS全站修复:END -->
+        <!-- FD:106:alipay/tracker/cmsbuffer.vm:END -->
+        <!-- FD:106:alipay/tracker/tracker.vm:785:tracker.schema:全站自动化/性能/敏感信息打点开关:END -->
+        <!-- FD:106:alipay/tracker/tracker.vm:END -->
+        <!-- FD:76:crmhome/common/helpcms.vm:START -->
+        <!-- FD:76:crmhome/common/helpcms.vm:451:helpcms.schema:helpcms-站临时代码cms:START -->
+        <style>
+            /*#J-nav-container{display:none;}*/
+
+            /*#container{display:none;}*/
+        </style>
+
+        <script>
+
+            //提示用户改签协议
+            seajs.use([
+                'jquery/jquery/1.7.2/jquery',
+                'alipay/xbox/1.1.5/xbox',
+                'arale/dialog/1.2.6/confirmbox'
+            ], function (jQuery, Xbox, ConfirmBox) {
+
+                var tpl = "" +
+                    '<style>.updateProtocol input{margin-right:10px;}.updateProtocol p{margin:30px 60px;font-size:14px;text-align:center;}</style>' +
+                    '<div class="updateProtocol">' +
+                    '   <p>' +
+                    '       <span id="J_protocolTip"></span><a href="#" target="_blank" id="J_protocolExtLink">《<span id="J_protocolName"></span>》</a>' +
+                    '   </p>' +
+                    '</div>';
+                var tipA = "商户使用口碑平台服务，须同意",
+                    protocolA = "《口碑平台商户服务协议》",
+                    tipB = "服务商使用口碑平台服务，须同意",
+                    protocolB = "《口碑城市服务商合作协议》";
+
+                jQuery(function () {
+                    var feedbackChecked = function () {
+                        jQuery.post("/home/changeSign.json", "", function (data) { });
+                    };
+
+                    // 表单浮层
+                    var protocolBox = new ConfirmBox({
+                        width: 700,
+                        title: '协议确认',
+                        classPrefix: 'jui-dialog',
+                        message: tpl,
+                        confirmTpl: '<button class="jui-btn jui-btn-blue J_protocolConfirmBtn">已阅读并同意此协议</button>',
+                        cancelTpl: '',
+                        closeTpl: "",
+                        onConfirm: function () {
+                            protocolBox.destroy();
+                            //feedbackChecked.call();
+                        }
+                    });
+                    protocolBox.render();
+
+                    protocolBox.after("show", function () { });
+                    /*
+                      jQuery.get("/home/changeSignQuery.json",function(data){
+                          if(data.needResign){
+                              var isProvider = data.provider,
+                                  el = jQuery(protocolBox.element);
+              
+                              protocolBox.show();
+              
+                              el.find("#J_protocolExtLink").attr("href",data.url);
+                              
+                              if(!isProvider){
+                                  el.find("#J_protocolTip").html(tipA);   
+                                  el.find("#J_protocolExtLink").html(protocolA);    
+                              }else{
+                                  el.find("#J_protocolTip").html(tipB);
+                                  el.find("#J_protocolExtLink").html(protocolB);    
+                              }
+                              protocolBox.show();
+                          }
+                      });
+                    */
+                    // 临时解决方案,替换logo
+                    jQuery('.nav-left-part').css('position', 'relative').html('<img src="https://t.alipayobjects.com/images/rmsweb/T1RZlgXiprXXXXXXXX.png" height="30" style="display: block;margin-top: 25px;" /><a href="/index.htm" style="width:100px;position: absolute;top: 25px;left: 100px;height: 29px;display: block;"></a>');
+
+                    /*setTimeout(function() {
+                            jQuery('#J-nav-container').css('display','block');
+                            jQuery('#container').css('display','block');
+                  }, 100);*/
+                });
+            });
+        </script>
+        <!-- FD:76:crmhome/common/helpcms.vm:451:helpcms.schema:helpcms-站临时代码cms:END -->
+        <!-- FD:76:crmhome/common/helpcms.vm:END -->
+        <!-- FD:76:crmhome/common/upgradeBrowser.vm:START -->
+        <!-- FD:76:crmhome/common/upgradeBrowser.vm:465:upgradeBrowser.schema:upgradeBrowser-浏览器升级提示cms:START -->
+        <!--[if lte IE 9]>
+    <style>
+    .browserUpgrade *{
+      font-family: "宋体";
+    }
+    .upgrade-flexBox{
+      position: absolute;
+      left: 0;
+      top: 0;
+      z-index: 999;
+      width: 100%;
+      height: 100%;
+      display: table-cell;
+      background-color: #fff;
+    }
+    .browserUpgrade .upgrade-slogan{
+      font-family: "Microsoft Yahei";
+    }
+    .upgrade-header{
+      background-color: #00aaee;
+    }
+    .upgrade-header .upgrade-header-content{
+      overflow: hidden;
+      width: 774px;
+      height: 42px;
+      line-height: 42px;
+      margin: 0 auto;
+    }
+    .browserUpgrade .upgrade-btn, .browserUpgrade .upgrade-btn:hover{
+      margin-top: 8px;
+    }
+    .browserUpgrade .upgrade-text, .browserUpgrade .upgrade-btn{
+      display: inline-block;
+      float: left;
+      font-size: 12px;
+    }
+    .browserUpgrade .upgrade-text{
+      margin-right: 14px;
+      color: #fff;
+      font-size: 14px;
+    }
+    .browserUpgrade .upgrade-btn{
+      margin-right: 20px;
+      border: none;
+      width: 150px;
+      height: 28px;
+      line-height: 28px;
+    }
+    .browserUpgrade .upgrade-btn:last-child{
+      margin-right: 0;
+    }
+    .browserUpgrade .upgrade-btn.upgrade-btn-360{
+      background-image: url(https://t.alipayobjects.com/images/rmsweb/T1WWxgXhxzXXXXXXXX.png);
+      background-repeat: no-repeat;
+      background-position: 23px 4px;
+      text-indent: 18px;
+    }
+    .browserUpgrade .upgrade-btn.upgrade-btn-chrome{
+      background-image: url(https://t.alipayobjects.com/images/rmsweb/T1xYVgXbxgXXXXXXXX.png);
+      background-repeat: no-repeat;
+      background-position: 13px 4px;
+      text-indent: 14px;
+    }
+    .upgrade-body{
+      text-align: center;
+      padding-top: 72px;
+      background-color:#fff;
+    }
+    .upgrade-body .upgrade-logo, 
+    .upgrade-body .upgrade-slogan, 
+    .upgrade-body .upgrade-slogan-explain{
+      display: block;
+    }
+    .upgrade-body .upgrade-slogan{
+      font-size: 28px;
+      line-height: 28px;
+      margin-top: 48px;
+    }
+    .upgrade-body .upgrade-slogan-explain{
+      margin-top: 29px;
+      margin-bottom: 20px;
+    }
+    .upgrade-downLoadBrowser{
+      overflow: hidden;
+      width: 510px;
+      margin: 25px auto 0;
+    }
+    .upgrade-downLoadBrowser .jui-btn{
+      width: 240px;
+      height: 62px;
+      line-height: 62px;
+      background-color: #fff;
+      float: left;
+      background-image: url(https://t.alipayobjects.com/images/rmsweb/T1QqpgXhXkXXXXXXXX.png);
+      background-size: 39px 38px;
+      background-repeat: no-repeat;
+      background-position: 44px 12px;
+      text-indent: 48px;
+      border-color: #EBEBEB;
+    }
+    .upgrade-downLoadBrowser .jui-btn:first-child{
+      margin-right: 29px;
+      background-position: 52px 12px;
+      text-indent: 46px;
+      background-image: url(https://t.alipayobjects.com/images/rmsweb/T1WFVgXcxtXXXXXXXX.png);
+    }
+    .text{
+      position: absolute;
+      z-index: 999;
+      left: -1000px;
+      width: 250px;
+      height: 170px;
+      background-color: #E5E5E5;
+      background-image: url(https://t.alipayobjects.com/images/rmsweb/T1uaRgXbpuXXXXXXXX.png);
+      background-repeat: no-repeat;
+      background-position: center;
+      text-indent: -10000px;
+    }
+    .upgrade-body .upgrade-logo{
+      position: relative;
+      width: 250px;
+      margin: 0 auto;
+      overflow: hidden;
+    }
+    .game-tank{
+      background-image: url(https://t.alipayobjects.com/images/rmsweb/T1BqNgXaRrXXXXXXXX.png);
+      background-repeat: no-repeat;
+      background-position: 0 0;
+      display: block;
+      position: absolute;
+      width: 12px;
+      height: 16px;
+    }
+    .game-fight{
+      background-image: url(https://t.alipayobjects.com/images/rmsweb/T1ma4gXi0oXXXXXXXX.png);
+      background-repeat: no-repeat;
+      background-position: 0 0;
+      display: block;
+      position: absolute;
+      width: 2px;
+      height: 3px;
+    }
+    #J_tank1{
+      left: 32px;
+      top: 18px;
+      filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=2);
+      transform: rotate(180deg);
+    }
+    #J_tank2{
+      left: 77px;
+      left: 76px\9;
+      top: 139px;
+      top: 140px\9;
+      filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=1);
+      transform: rotate(90deg);
+    }
+    #J_tank3{
+      left: 104px;
+      top: 88px;
+    }
+    #J_tank4{
+      left: 201px;
+      left: 199px\9;
+      top: 112px;
+      top: 114px\9;
+      filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
+      transform: rotate(270deg);
+    }
+    
+    #J_fight1{
+      left: 37px;
+      top: 34px;
+      filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=2);
+      transform: rotate(180deg);
+    }
+    #J_fight2{
+      left: 90px;
+      top: 146px;
+      top: 145px\9;
+      filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=1);
+      transform: rotate(90deg);
+    }
+    #J_fight3{
+      left: 109px;
+      top: 87px;
+    }
+    #J_fight4{
+      left: 198px;
+      top: 118px;
+      top: 119px\9;
+      filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
+      transform: rotate(270deg);
+    }
+    
+    .upgrade-body .upgrade-logo .game-start{
+      background-color: #E5E5E5;
+      width: 250px;
+      height: 170px;
+      display: block;
+      position: absolute;
+      left: 0;
+      top: 0;
+      filter: progid:DXImageTransform.Microsoft.Alpha(opacity=80);
+      opacity: .8;
+    }
+    .game-start .game-start-txt{
+      background-image: url(https://t.alipayobjects.com/images/rmsweb/T1PW8gXe8sXXXXXXXX.png);
+      background-repeat: no-repeat;
+      width: 82px;
+      height: 22px;
+      display: block;
+      position: absolute;
+      left: 84px;
+      top: 50px;
+    }
+    .game-start .game-start-icon{
+      background-image: url(https://t.alipayobjects.com/images/rmsweb/T1BHhgXnNqXXXXXXXX.png);
+      background-repeat: no-repeat;
+      width: 29px;
+      height: 29px;
+      display: block;
+      position: absolute;
+      left: 110px;
+      top: 90px;
+      cursor: pointer;
+    }
+    .game-bomb{
+      position: absolute;
+      left: 200px;
+      z-index: 999;
+      display: none;
+      left: 83px;
+      top: 109px;
+    } 
+    </style>
+    <![endif]-->
+        <!--[if lte IE 9]>
+    <div class="browserUpgrade">
+          <div class="upgrade-header">
+            <div class="upgrade-header-content">
+              <span class="upgrade-text">浏览器版本太低，可能导致部分图片和信息缺失，需尽快升级浏览器</span>
+              <a class="jui-btn upgrade-btn upgrade-btn-360" href="http://se.360.cn/" target="_blank">下载360浏览器</a>
+              <a class="jui-btn upgrade-btn upgrade-btn-chrome" href="http://www.google.cn/intl/zh-CN/chrome/browser/desktop/index.html" target="_blank">下载Chrome浏览器</a>
+            </div>
+          </div>
+    </div>
+    
+    
+    <div class="browserUpgrade upgrade-flexBox fn-hide">
+          <div class="upgrade-body">
+            <span class="upgrade-logo">
+              <span class="game-tank J_firstGame" id="J_tank1"></span>
+              <span class="game-tank J_firstGame" id="J_tank2"></span>
+              <span class="game-tank J_firstGame" id="J_tank3"></span>
+              <span class="game-tank J_firstGame" id="J_tank4"></span>
+              <span class="game-fight J_firstGame" id="J_fight1"></span>
+              <span class="game-fight J_firstGame" id="J_fight2"></span>
+              <span class="text">Game Over</span>
+              <img src="https://t.alipayobjects.com/images/rmsweb/T17r0gXktfXXXXXXXX.png" height="170" />
+              <span class="game-start">
+                <span class="game-start-txt" id="J_startTxt"></span>
+                <span class="game-start-icon" id="J_start"></span>
+              </span>
+              <span class="game-bomb">
+                <img src="https://t.alipayobjects.com/images/rmsweb/T1FqFgXkJxXXXXXXXX.gif" height="71" />
+              </span>
+            </span>
+            <span class="upgrade-slogan">还停留在上个世纪？是时候升级浏览器了</span>
+            <span class="upgrade-slogan-explain ft-explain">浏览器版本太低，可能导致部分图片和信息缺失，需尽快升级浏览器?</span>
+            <a class="upgrade-keepVisit" href="javascript:;" id="J_donotUpgrade">暂不升级，继续浏览 ></a>
+            <p class="upgrade-downLoadBrowser">
+              <a class="jui-btn jui-btn-white" href="http://se.360.cn/" target="_blank">下载360浏览器</a>
+              <a class="jui-btn jui-btn-white" href="http://www.google.cn/intl/zh-CN/chrome/browser/desktop/index.html" target="_blank">下载Chrome浏览器</a>
+            </p>
+          </div>
+    </div>
+    <![endif]-->
+        <!--[if lte IE 9]>
+    <script type="text/javascript">
+    seajs.use([
+            'jquery/jquery/1.7.2/jquery',
+            'gallery/store/1.3.7/store'
+        ], function (jQuery, Store) {
+        // 长条提示
+        jQuery('body').prepend(jQuery('.browserUpgrade').eq(0));
+    
+        // 线下淘宝登录后首页展示全屏浮层
+        if(!/^\/merchant\/index\.htm/g.test(window.location.pathname)) return;
+    
+        if(!Store.get('FIRST_BROWE_UPGRADE_PAGE')) {
+                // first browe upgrade page
+                Store.set('FIRST_BROWE_UPGRADE_PAGE', 'true');            
+    
+          // 全屏提示
+                jQuery('.upgrade-flexBox').removeClass('fn-hide');
+          jQuery('body').css({ overflow:'hidden',height:jQuery('.upgrade-flexBox').height()});
+    
+          // game start
+          jQuery('#J_start').on('click', function() {
+    
+            jQuery('.game-start').fadeOut();
+              setTimeout(function() {
+                  start();
+              }, 500);
+          
+        });
+    
+        // keep brower
+        jQuery('#J_donotUpgrade').on('click', function() {
+          jQuery('body').removeAttr('style');
+          jQuery('.upgrade-flexBox').addClass('fn-hide');
+        });
+      }
+    });
+    
+    function start() {
+          // tank1 move
+          fightMove(document.getElementById('J_fight1'), 'y', 34, 67, 1.5);
+    
+          // tank3 move
+          fightMove(document.getElementById('J_tank3'), 'y', 88, 70, -0.8);
+    
+          // tank4 move
+          fightMove(document.getElementById('J_tank4'), 'x', 199, 179, -0.8);
+    
+          var xpos = 90;
+          var posTime = setInterval(function() {
+            xpos += 1.3;
+            document.getElementById('J_fight2').style.left = xpos + 'px';
+            if(xpos>=120) {
+              // bomb
+              document.querySelector('.game-bomb').style.display = 'block';
+              document.getElementById('J_fight2').style.display = 'none';
+    
+              clearInterval(posTime);
+              
+              // game over
+              setTimeout(function() {
+                document.querySelector('.game-bomb').style.display = 'none';
+                var firstGame = document.querySelectorAll('.J_firstGame');
+                for(var i=0;i<firstGame.length;i++) {
+                    firstGame[i].style.display = 'none';
+                }
+                document.querySelector('.upgrade-logo img').style.visibility = 'hidden';
+    
+                document.querySelector('.text').style.left = 0;
+                light();
+              }, 600);
+              
+            }
+          },100);
+      }
+    
+      function fightMove(_tank, _direction, _initPos, _targetPos, _step) {
+        var _initPosTime = setInterval(function() {
+          if(_step>0) {
+              _initPos += _step;
+          } else {
+              _initPos -= Math.abs(_step);
+          }
+    
+          if(_direction == 'x') {
+            _tank.style.left = _initPos + 'px';
+          } else {
+            _tank.style.top = _initPos + 'px';
+          }
+          if(_step>0 && _initPos >= _targetPos) {
+            clearInterval(_initPosTime);
+          } else if(_step<0 && _initPos <= _targetPos) {
+            clearInterval(_initPosTime);
+          }
+        }, 100);    
+      }
+    
+      function light() {
+        var _si = 0;
+        var _stime = setInterval(function() {
+          _si += 1;
+          if(_si>=4) {
+            clearInterval(_stime);
+            setTimeout(function() {
+              // repeat game
+              var firstGame = document.querySelectorAll('.J_firstGame');
+                for(var i=0;i<firstGame.length;i++) {
+                    firstGame[i].removeAttribute('style');
+                }
+                document.querySelector('.upgrade-logo img').removeAttribute('style');
+                document.querySelector('.game-start').removeAttribute('style');
+                document.querySelector('.text').removeAttribute('style');
+            }, 3000);
+          }
+    
+          if(document.querySelector('.text').style.backgroundImage == 'none') {
+            document.querySelector('.text').style.backgroundImage = 'url(https://t.alipayobjects.com/images/rmsweb/T1uaRgXbpuXXXXXXXX.png)';
+          } else {
+            document.querySelector('.text').style.backgroundImage = 'none';
+          }
+    
+        },100);
+      }
+    </script>
+    <![endif]-->
+        <!-- FD:76:crmhome/common/upgradeBrowser.vm:465:upgradeBrowser.schema:upgradeBrowser-浏览器升级提示cms:END -->
+        <!-- FD:76:crmhome/common/upgradeBrowser.vm:END -->
+        <!-- 口碑掌柜二维码下载 -->
+        <style>
+            .mappQrcodeBox {
+                position: fixed;
+                bottom: 50px;
+                right: 7px;
+                padding: 5px;
+                background-color: #fff;
+                border-radius: 5px;
+                border: 1px solid #e7e7eb;
+                z-index: 999;
+                text-align: center;
+                color: #808080;
+            }
+        </style>
+        <div class="mappQrcodeBox">
+            <img src="https://t.alipayobjects.com/images/rmsweb/T1FtXhXklcXXXXXXXX.png" width="70" />
+            <p>扫码下载
+                <br>口碑掌柜</p>
+        </div>
+
+</body>
+
+</html>

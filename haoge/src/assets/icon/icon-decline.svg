@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="16px" height="13px" viewBox="0 0 16 13" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 48.1 (47250) - http://www.bohemiancoding.com/sketch -->
+    <title>icon-decline</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="主界面" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(-934.000000, -500.000000)" stroke-linecap="round" stroke-linejoin="round">
+        <g id="账户状态" transform="translate(276.000000, 288.000000)" fill="#E74F5A" stroke="#E74F5A" stroke-width="0.5">
+            <path d="M669.998855,215.940557 L671.961243,214 L671.961243,218.944687 L667,218.906052 L669.287796,216.643707 L667.16361,214.474483 L664.424162,217.630276 L662,215.790403 L662,214.391807 L664.319979,216.224823 L667.119349,213 L669.998855,215.940557 Z M660,223 L672.5,223 C672.776142,223 673,223.223858 673,223.5 C673,223.776142 672.776142,224 672.5,224 L659.5,224 C659.223858,224 659,223.776142 659,223.5 L659,213.5 C659,213.223858 659.223858,213 659.5,213 C659.776142,213 660,213.223858 660,213.5 L660,223 Z" id="icon-decline"></path>
+        </g>
+    </g>
+</svg>

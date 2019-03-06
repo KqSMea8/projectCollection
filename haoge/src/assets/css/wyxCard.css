@@ -1,0 +1,101 @@
+
+.wyx {
+    width: 100%;
+    background: #fff;
+    padding: 20px;
+    box-sizing: border-box;
+    margin-top: 20px;
+}
+
+.wyx .box-card {
+    margin: 10px 0 40px;
+}
+
+.wyx .yuanRed {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    margin-right: 5px;
+    background: red
+}
+.wyx .yuan00025 {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    margin-right: 5px;
+    background: rgba(0, 0, 0, 0.25)
+}
+.wyx .yuanGreen{
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    margin-right: 5px;
+    background: #52C41A
+}
+
+
+
+.wyx a {
+    text-decoration: none;
+    /*color: inherit;*/
+    color:#409EFF
+}
+
+.wyx .box-card {
+    box-shadow: none;
+    /*border: none;*/
+}
+
+.wyx .el-card__header {
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bolder;
+    background:rgba(24, 144, 255, 0.1)!important;
+}
+.wyx button.el-button--text{
+    padding: 0;
+    font-size: 12px;
+}
+
+/* 表格无数据 */
+.noData img {
+    width: 36px;
+    height: 36px;
+}
+
+.noData p {
+    margin-top: 10px;
+}
+
+.el-table__empty-block {
+    min-height: 110px;
+}
+.black50p{
+    color: rgba(0, 0, 0, 0.5);
+}
+
+.wyx .tag div{
+    color:rgba(96, 98, 102, 0.65);
+    font-size: 12px;
+}
+
+    /*提示气泡*/
+.wyx .tag{z-index: 99;
+    font-size: 12px;
+    /*display:none;*/
+    width:310px;padding: 9px 19px;position: absolute;top:0;left:105%;background: rgba(230,247,255,1);border-radius: 2px ;border:1px solid #91D5FF;-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;line-height: 17px;color: rgba(96, 98, 102, 0.65);font-size: 12px;}
+.wyx .tag i{content: '';display: block;width:7px;height:7px;border-top: 1px solid #91D5FF;border-left: 1px solid  #91D5FF;position: absolute;top:15px;left: -5px;background: rgba(230,247,255,1);transform: rotate(-45deg);}
+.wyx .tag .qiangdu p{display: inline-block;margin-left: 9px;}
+.wyx .tag .qiangdu span{display: inline-block;width:16px;height:6px;background:rgba(178,178,178,1);margin-left: 4px;}
+.wyx .tag .di{color: #E8541E;}
+.wyx .tag .zhong{color: #FAAD14;}
+.wyx .tag .gao{color: #52C41A;}
+.wyx .tag .qiangdu .di .color{background: #E8541E;}
+.wyx .tag .qiangdu .zhong .color{background: #FAAD14;}
+.wyx .tag .qiangdu .gao .color{background: #52C41A;}
+.wyx .el-button--mini, .el-button--mini.is-round{
+    /*padding:6px 15px*/
+}

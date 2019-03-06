@@ -1,0 +1,75 @@
+.normal {
+    width: 100%;
+    height: 100%;
+}
+.head {
+    width: 100%;
+    height: .88rem;
+    display: flex;
+    line-height: .88rem;
+    background: #000;
+    a {
+        color:#ccc;
+        line-height: .88rem;
+        font-weight: 700;
+    }
+    a:first-child {
+        width: 20%;
+        font-size: .48rem;
+        span{
+            margin: 0 5px;
+        }
+    }
+    a:nth-child(2) {
+        flex: 1;
+        text-align: center;
+        font-weight: normal;
+        color:#fff;
+    }
+    a:last-child {
+        width: 10%;
+        font-size: .48rem;
+    }
+}
+.section {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    .userverify {
+        width: 80%;
+        margin: auto;
+        margin-top: 40%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        input{
+            width: 100%;
+            height: 35px;
+            border: none;
+            border: 1px solid #ccc;
+        }
+        input::-webkit-input-placeholder{
+            color:#000;
+        }
+        button{
+            width: 100%;
+            height:35px;
+            border: 1px solid #666;
+            background: #fff;
+            margin: 30px 0;
+            font-size: .3rem;
+        }
+        p{
+            display: flex;
+            float: right;
+            font-size: .32rem;
+            input{
+                width: 15px;
+                height: 15px;
+                margin: 3px;
+            }
+        }
+    }
+}

@@ -1,0 +1,124 @@
+@koubei-brand-color: #ff5800;
+
+.good_koubei {
+  padding: 30px;
+  width: 1000px;
+  .spec {
+    margin-bottom: 80px;
+    .banner {
+      width: 100%;
+      height: 231.67px;
+      background: url(https://zos.alipayobjects.com/rmsportal/QrHWfIkwvFOsyrV.png) @koubei-brand-color no-repeat center;
+      background-size: contain;
+      padding: 10px;
+      margin-bottom: 30px;
+    }
+    .section {
+      .mark {
+        color: @koubei-brand-color;
+      }      h4 {
+        position: relative;
+        &::before {
+          position: absolute;
+          top: 4px;
+          left: 0;
+          display: inline-block;
+          content: ' ';
+          width: 5px;
+          height: 16px;
+          background: @koubei-brand-color;
+        }
+        font-size: 16px;
+        font-weight: normal;
+        padding: 0 0 0 15px;
+        margin: 30px 0 5px 0;
+      }
+      p, ul, ol {
+        color: #888;
+        font-size: 14px;
+        line-height: 1.8;
+      }
+      li {
+        padding-left: 0;
+        margin-left: 18px;
+        list-style-type: disc;
+      }
+      ol {
+        counter-reset: item;
+      }
+      ol > li {
+        padding-left: 0;
+        margin-left: 0;
+        list-style-type: none;
+        &::before {
+          content: counters(item, ".") ". ";
+          counter-increment: item;
+        }
+      }
+    }
+  }
+  .dashboard {
+    .split-line-title {
+      color: @koubei-brand-color;
+      background: tint(@koubei-brand-color, 90%);
+      padding: 12px;
+      margin-bottom: 8px;
+      font-size: 16px;
+      text-align: center;
+    }
+    h3 {
+      margin: 8px auto 6px;
+      font-size: 16px;
+      font-weight: normal;
+      text-align: center;
+  }
+    .notes {
+      margin-bottom: 15px;
+      font-size: 14px;
+      color: @koubei-brand-color;
+      text-align: center;
+    }
+    .shop_list table {
+      border-spacing: 0 4px;
+      border-collapse: separate;
+      tr {
+        th:first-of-type {
+          padding-left: 0;
+        }
+        th:last-of-type {
+          padding-right: 0;
+        }
+        th {
+          padding: 0 5px 1px;
+          font-size: 16px;
+          font-weight: normal;
+          & > span {
+            display: block;
+            color: white;
+            text-align: center;
+            background: @koubei-brand-color;
+            padding: 5px;
+          }
+        }
+        td {
+          font-size: 14px;
+          text-align: center;
+          background: tint(@koubei-brand-color, 90%);
+          padding: 5px;
+        }
+      }
+      a {
+        color: @koubei-brand-color;
+      }
+    }
+  }
+  .arrow {
+    @size: 8px;
+    display: inline-block;
+    width: 0;
+    height: 0;
+    border-top: @size solid transparent;
+    border-bottom: @size solid transparent;
+    border-left: @size solid @koubei-brand-color;
+  }
+}

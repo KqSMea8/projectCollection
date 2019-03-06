@@ -1,0 +1,25 @@
+.notes {
+  padding: 10px 20px;
+  border: 1px solid #F2F2F2;
+  .title {
+    position: relative;
+    font-size: 14px;
+    padding-left: 6px;
+    margin-bottom: 6px;
+    &::before {
+      content: ' ';
+      display: block;
+      position: absolute;
+      left: -5px;
+      top: 10px;
+      height: 13px;
+      width: 4px;
+      background: #2DB7F5;
+    }
+  }
+  .content {
+    color: #999;
+    padding-left: 6px;
+    line-height: 20px;
+  }
+}

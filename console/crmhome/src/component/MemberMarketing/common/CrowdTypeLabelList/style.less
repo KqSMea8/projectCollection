@@ -1,0 +1,30 @@
+.group-label {
+  display: block;
+  width: 100%;
+  height: 60px;
+  background-color: white;
+  border: 1px solid #ccc;
+  color: #333;
+  box-sizing: border-box;
+  font-weight: 400px;
+  text-align: center;
+  line-height: 60px;
+  position: relative;
+  cursor: pointer;
+  & .icon-wrapper {
+    position: absolute;
+    display: none;
+    top: 5px;
+    right: 5px;
+    overflow: hidden;
+    line-height: 20px;
+  }
+  &.selected {
+    border: 2px solid #2db7f5;
+    color: #2db7f5;
+    & .icon-wrapper {
+      font-weight: bold;
+      display: block;
+    }
+  }
+}

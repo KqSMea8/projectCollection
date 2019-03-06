@@ -1,0 +1,103 @@
+{
+  "family": "kbservcenter",
+  "name": "kb-crmhome",
+  "version": "1.92.0",
+  "entry": {
+    "index": "./src/entry/index.jsx",
+    "spec": "./spec/index.jsx",
+    "commodity": "./src/entry/commodity.jsx",
+    "dishes": "./src/entry/dishes.jsx",
+    "emeberdialog": "./src/entry/emeberdialog.jsx",
+    "boh-home": "./src/entry/boh-home.jsx",
+    "bohauthiframe": "./src/entry/boh-auth-iframe.jsx",
+    "bohauth": "./src/entry/boh-auth.jsx",
+    "commonerror": "./src/entry/common-error.jsx",
+    "boh-management": "./src/entry/boh-management.jsx",
+    "ka-contract": "./src/entry/kacontract.jsx"
+  },
+  "dependencies": {
+    "@ali/tracker": "^3.0.1",
+    "@alipay/ajax": "^2.5.0",
+    "@alipay/hermes-asynctree": "3.0.1-alpha.6",
+    "@alipay/kb-ajax": "^1.0.4",
+    "@alipay/kb-fetch": "^1.0.1",
+    "@alipay/kb-systems-config": "^2.1.5",
+    "@alipay/page-store": "^1.1.4",
+    "@alipay/xform": "0.1.0-alpha.18",
+    "antd": "~1.5.1",
+    "async-validator": "^1.8.2",
+    "babel-runtime": "^6.9.2",
+    "classnames": "^2.2.1",
+    "decimal.js": "^5.0.8",
+    "gregorian-calendar": "^4.1.1",
+    "gregorian-calendar-format": "^4.1.0",
+    "hermes-react": "^1.4.1",
+    "hermes-treeselect": "0.1.6-beta.9",
+    "history": "^1.16.0",
+    "immutable": "^3.8.1",
+    "kb_postmsg": "^1.0.1",
+    "layout": "^2.2.0",
+    "lodash": "^4.11.1",
+    "lodash.debounce": "^3.1.1",
+    "matchmedia-polyfill": "^0.3.0",
+    "moment": "^2.13.0",
+    "object-assign": "^4.1.0",
+    "prop-types": "^15.6.1",
+    "qrcode.react": "^0.6.1",
+    "rc-util": "^4.5.0",
+    "react": "~0.14.x",
+    "react-copy-to-clipboard": "^4.1.0",
+    "react-dom": "~0.14.x",
+    "react-mixin": "^3.0.5",
+    "react-router": "^1.0.3",
+    "redux-saga": "^0.16.0"
+  },
+  "devDependencies": {
+    "@alipay/pecker": "~1.9.1",
+    "anyproxy-map-res": "^1.0.1",
+    "atool-build": "~0.8.0",
+    "atool-test": "^0.4.10",
+    "babel-eslint": "^4.0.5",
+    "babel-plugin-import": "^1.0.1",
+    "babel-plugin-transform-runtime": "^6.9.0",
+    "babel-polyfill": "^6.8.0",
+    "cz-conventional-changelog": "^1.2.0",
+    "dora": "^0.3.2",
+    "dora-plugin-proxy": "^0.6.0",
+    "dora-plugin-webpack": "^0.6.4",
+    "dora-plugin-livereload": "^0.5.3",
+    "eslint": "~1.6.0",
+    "eslint-config-airbnb": "~0.1.0",
+    "eslint-plugin-import": "^1.9.2",
+    "eslint-plugin-react": "~3.5.1",
+    "ghooks": "^1.3.2",
+    "mockjs": "^1.0.1-beta2",
+    "validate-commit-msg": "^2.8.0"
+  },
+  "scripts": {
+    "start": "npm run local",
+    "dev": "dora -p 8001 --plugins webpack?publicPath=/${npm_package_family}/${npm_package_name}/${npm_package_version}/,proxy?port=8981",
+    "deploy": "rm -rf node_modules && tnpm install && qt deploy . kb",
+    "local": "dora -p 8008 --plugins webpack?publicPath=/${npm_package_family}/${npm_package_name}/,proxy?port=8981,livereload",
+    "sit": "dora -p 8001 --plugins webpack?publicPath=/g/${npm_package_family}/${npm_package_name}/${npm_package_version}/,proxy?port=8981",
+    "lint": "eslint --ext .js,.jsx src --rulesdir eslint_rules",
+    "build": "rm -rf dist && atool-build --devtool=#source-map -o ./dist/${npm_package_family}/${npm_package_name}/${npm_package_version}/",
+    "proxylocal": "lsof -ti:8001 | xargs kill && NODE_ENV=local dora -p 8001 --plugins webpack & anyproxy-map-res -p 8101 --match .*${npm_package_family}/${npm_package_name}.*/ --replace http://localhost:8001/",
+    "tag": "node ./tag.js",
+    "pub": "git push origin && qt deploy . qy",
+    "ci": "pecker -r -e .eslintrc -z -d report src"
+  },
+  "config": {
+    "ghooks": {
+      "pre-commit": "npm run lint",
+      "commit-msg": "validate-commit-msg"
+    },
+    "validate-commit-msg": {
+      "types": "conventional-commit-types",
+      "helpMessage": "'git commit -m <message>' is forbidden, please use 'git cz' instead."
+    },
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  }
+}

@@ -1,0 +1,58 @@
+.boh-management {
+  .page-title {
+    font-size: 18px;
+  }
+  .sub-action {
+    text-align: right;
+  }
+  .action-bar {
+    padding: 0 0 10px;
+    .help {
+      text-align: right;
+    }
+  }
+  .footer {
+    margin-top: 10px;
+
+    .ant-pagination-options-size-changer {
+      margin-right: 0;
+    }
+  }
+  .pagination {
+    float: right;
+  }
+}
+
+.activation-tooltip {
+  opacity: 1;
+
+  .ant-tooltip-arrow {
+    border-width: 5px;
+    border-bottom-width: 0;
+    border-top-color: #d9d9d9;
+    bottom: 4px;
+
+    &::after {
+      position: absolute;
+      width: 0;
+      height: 0;
+      border-color: transparent;
+      border-style: solid;
+      content: " ";
+      bottom: 2px;
+      margin-left: -3px;
+      border-bottom-width: 0;
+      border-top-color: #fff;
+    }
+  }
+
+  .ant-tooltip-inner {
+    min-width: 177px;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #d9d9d9;
+    border-radius: 6px;
+    box-shadow: 0 1px 6px rgba(100, 100, 100, 0.2);
+    color: #333;
+  }
+}

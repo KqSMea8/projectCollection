@@ -1,0 +1,123 @@
+/* stylelint-disable no-descending-specificity */
+#index {
+  background-color: #f5f5f5;
+
+  * {
+    word-break: break-all;
+  }
+
+  .stronger,
+  .weak {
+    .am-badge-text {
+      margin-right: 20px;
+      padding: 0 11px;
+      border-radius: 2px;
+    }
+  }
+
+  .am-list-item .am-list-line-wrap .am-list-content {
+    white-space: nowrap;
+  }
+
+  .am-list-item .am-list-line .am-list-content {
+    overflow: visible;
+  }
+
+  .stronger {
+    .am-badge-text {
+      font-size: 22px;
+    }
+
+    &.valid .am-badge-text {
+      background: #21d386;
+    }
+
+    &.invalid .am-badge-text {
+      background: #f24e3e;
+    }
+  }
+
+  .weak {
+    .am-badge-text {
+      background: rgba(255, 228, 195, 0.4);
+      border: 1px solid rgba(233, 148, 47, 0.4);
+      border-radius: 3px;
+      font-size: 22px;
+      color: #ffa53a;
+    }
+  }
+
+  .section {
+    &.header {
+      padding: 0;
+
+      .detail-purposed {
+        padding-bottom: 30px;
+      }
+
+      .am-list {
+        padding-top: 30px;
+      }
+
+      .detail-name {
+        padding: 0 30px;
+        font-size: 32px;
+        color: #000;
+        letter-spacing: 0;
+        line-height: 40px;
+
+        .am-badge {
+          margin-left: 16px;
+        }
+      }
+
+      .am-list-body {
+        border: 0;
+
+        .am-list-line {
+          border: 0;
+
+          .am-list-arrow {
+            transform: translate(0, -32px);
+          }
+        }
+
+        .am-list-content {
+          font-size: 26px;
+          color: #888;
+          letter-spacing: 0;
+          line-height: 30px;
+          padding-bottom: 0;
+
+          div {
+            margin: 20px 0 0;
+          }
+        }
+
+        &::before {
+          display: none;
+        }
+      }
+    }
+
+    &.info {
+      padding: 0;
+
+      .am-list-content {
+        font-size: 32px;
+        color: #000;
+        line-height: 40px;
+        padding: 30px 0;
+      }
+
+      .am-list-extra {
+        flex-basis: 70%;
+        text-align: left;
+        padding: 30px 0;
+        font-size: 32px;
+        color: #888;
+        line-height: 40px;
+      }
+    }
+  }
+}

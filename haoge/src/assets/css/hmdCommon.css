@@ -1,0 +1,15 @@
+/* 表格无数据 */
+.noData img{
+    width:36px;
+    height:36px;
+}
+.noData p{
+    margin-top:10px;
+}
+.el-table__empty-block{
+    min-height: 110px;
+}
+/* 表格高度 */
+/* .el-table td, .el-table th{
+    padding:8px 0;
+} */

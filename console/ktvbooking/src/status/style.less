@@ -1,0 +1,64 @@
+#status {
+  .ant-table-bordered {
+    table {
+      border-collapse: collapse;
+    }
+  }
+
+  .ant-table-body {
+    td:hover {
+      .td-status {
+        .anticon-setting {
+          visibility: visible;
+          cursor: pointer;
+        }
+      }
+    }
+
+    .td-status {
+      position: relative;
+
+      .anticon-setting {
+        position: absolute;
+        top: 0;
+        right: 0;
+        font-size: 18px;
+        visibility: hidden;
+      }
+    }
+  }
+
+  .c-red {
+    color: #ff031d;
+  }
+}
+
+.status-page-popover {
+  .ant-popover-inner-content {
+    width: 250px;
+  }
+
+  .ant-popover-message-title {
+    padding-left: 0;
+  }
+
+  .anticon-exclamation-circle {
+    display: none;
+  }
+
+  .ant-form-item {
+    margin-bottom: 0;
+  }
+
+  .ant-form-item-control {
+    line-height: 28px;
+  }
+
+  .ant-alert-info {
+    border: none;
+    background-color: transparent;
+    padding: 0;
+    margin-top: 16px;
+    margin-bottom: 0;
+  }
+}

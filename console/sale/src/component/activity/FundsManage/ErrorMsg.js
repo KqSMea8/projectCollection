@@ -1,0 +1,13 @@
+export const ErrorMsg = {
+  ILLEGAL_PARAMS: '网络繁忙，请稍后重试',
+  SYSTEM_ERROR: '系统繁忙，请稍后重试',
+  CAPITAL_POOL_OPT_BIZ_ERROR: '资金池操作异常，请稍后重试',
+  CAPITAL_POOL_CONFIG_ILLEGAL_STATUS: '资金池配置状态异常，请稍后重试',
+  CAPITAL_POOL_NOT_EXIST: '资金池不存在',
+  CAPITAL_POOL_BALANCE_QUERY_SYSTEM_EXCEPTION: '资金池余额查询系统繁忙，请稍候重试',
+  CAPITAL_POOL_PRINCIPAL_ACCOUNT_NOT_EXIST: '资金池归属主体账号不存在',
+  CAPITAL_POOL_BALANCE_NOT_ENOUGH: '资金池余额不足，请立即充值',
+  CAPITAL_POOL_CONFIG_ALREADY_EXPIRE: '资金池已过期',
+  CAPITAL_POOL_SAME_NAME_EXIST: '存在同名资金池',
+  CAPITAL_POOL_ALREADY_INVALID: '资金池已失效',
+};

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="14px" height="12px" viewBox="0 0 14 12" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 48.1 (47250) - http://www.bohemiancoding.com/sketch -->
+    <title>icon-online</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <polygon id="path-1" points="0 0 14 0 14 12 0 12"></polygon>
+    </defs>
+    <g id="主界面" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(-25.000000, -264.000000)">
+        <g id="左侧导航" transform="translate(0.000000, 64.000000)">
+            <g id="icon-online" transform="translate(25.000000, 200.000000)">
+                <mask id="mask-2" fill="white">
+                    <use xlink:href="#path-1"></use>
+                </mask>
+                <g id="Clip-2"></g>
+                <path d="M1,12 L13,12 L13,11.0238647 L1,11.0238647 L1,12 Z M6.04162722,6.72970806 L3.74997482,4.62162692 L3.10834357,5.18923108 L6.13329171,7.94597724 L10.1666499,3.56758635 L9.43329372,3 L6.04162722,6.72970806 Z" id="Fill-1" fill="#7EC6EF" mask="url(#mask-2)"></path>
+                <rect id="Rectangle-17" stroke="#7EC6EF" mask="url(#mask-2)" x="0.5" y="0.5" width="13" height="9" rx="1"></rect>
+            </g>
+        </g>
+    </g>
+</svg>

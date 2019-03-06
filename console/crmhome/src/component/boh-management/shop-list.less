@@ -1,0 +1,58 @@
+.shop-list-container {
+  .shop-list {
+    .action {
+      color: #1890ff;
+      cursor: pointer;
+    }
+    .action-disabled {
+      color: #999999;
+    }
+    .shop-device-list-empty {
+      .ant-table-row-expand-icon {
+        display: none;
+      }
+    }
+  }
+  .ant-table-empty {
+    .ant-table-body {
+      height: auto;
+    }
+    .ant-table-placeholder {
+      display: none;
+    }
+    th {
+      border-bottom: none;
+    }
+  }
+  .ant-table-expanded-row {
+    >td:first-child {
+      border-right: none;
+    }
+    >td:last-child {
+      padding: 0 20px 0 0;
+    }
+  }
+  .no-result {
+    margin-top: 60px;
+    text-align: center;
+    .guide-title {
+      font-size: 16px;
+    }
+    .guide-info {
+      color: #999999;
+    }
+    .guide-action {
+      margin-top: 30px;
+    }
+  }
+}
+
+.activation-tooltip-box {
+  .ant-popover-inner {
+    min-width: auto;
+  }
+  .activation-tooltip {
+    padding: 10px;
+    border-radius: 3px;
+  }
+}

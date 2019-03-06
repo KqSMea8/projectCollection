@@ -1,0 +1,207 @@
+{
+  "get_all_region_city": [
+    {
+      "i": "zhejiang",
+      "n": "浙江"
+    },
+    {
+      "i": "hangzhou",
+      "n": "杭州",
+      "p": "zhejiang"
+    },
+    {
+      "i": "jiangsu",
+      "n": "江苏"
+    },
+    {
+      "i": "nanjing",
+      "n": "南京",
+      "p": "jiangsu"
+    }
+  ],
+  "midoffice_pc_provider_analysis_sum": {
+    "actural_receive_avg_amt": "@integer(1e5, 1e7)",
+    "actural_receive_avg_amt_week_ratio": 0.5811,
+    "order_avg_amt": "@integer(1e5, 1e7)",
+    "order_avg_amt_week_ratio": 0.15,
+    "online_store_cnt": "@integer(1e5, 1e7)",
+    "online_store_cnt_week_ratio": -0.15
+  },
+  "midoffice_pc_provider_analysis_chart": [
+    {
+      "date": "2010-05-01",
+      "tem": 7,
+      "city": "tokyo",
+      "age": 1,
+      "lt": 90
+    },
+    {
+      "date": "2010-05-02",
+      "tem": 6.9,
+      "city": "tokyo",
+      "age": 2,
+      "lt": 20
+    },
+    {
+      "date": "2010-05-03",
+      "tem": 9.5,
+      "city": "tokyo",
+      "age": 3,
+      "lt": 80
+    },
+    {
+      "date": "2010-05-04",
+      "tem": 14.5,
+      "city": "tokyo",
+      "age": 5,
+      "lt": 40
+    },
+    {
+      "date": "2010-05-05",
+      "tem": 18.2,
+      "city": "tokyo",
+      "age": 6,
+      "lt": 120
+    },
+    {
+      "date": "2010-05-06",
+      "tem": 21.5,
+      "city": "tokyo",
+      "age": 1,
+      "lt": 70
+    },
+    {
+      "date": "2010-05-07",
+      "tem": 25.2,
+      "city": "tokyo",
+      "age": 9,
+      "lt": 30
+    },
+    {
+      "date": "2010-05-08",
+      "tem": 26.5,
+      "city": "tokyo",
+      "age": 11,
+      "lt": 90
+    },
+    {
+      "date": "2010-05-09",
+      "tem": 23.3,
+      "city": "tokyo",
+      "age": 18,
+      "lt": 60
+    },
+    {
+      "date": "2010-05-10",
+      "tem": 18.3,
+      "city": "tokyo",
+      "age": 22,
+      "lt": 50
+    },
+    {
+      "date": "2010-05-11",
+      "tem": 13.9,
+      "city": "tokyo",
+      "age": 15,
+      "lt": 44
+    },
+    {
+      "date": "2010-05-12",
+      "tem": 9.6,
+      "city": "tokyo",
+      "age": 25,
+      "lt": 21
+    }
+  ],
+  "midoffice_pc_provider_analysis_test": {
+    "TTTTT": "饼干糕点:30,豆腐干:20,五香豆:10,蜜饯:9,运动健身用品:8,饼干糕点:30,豆腐干:20,五香豆:10,蜜饯:9,运动健身用品:8"
+  },
+  "midoffice_pc_provider_analysis_index": [
+    {
+      "appDesc": "",
+      "appTitle": "测试应用",
+      "appType": "BUSINESS_MONITOR",
+      "appUrl": "",
+      "gmtCreate": "2016-04-11 16:20:08",
+      "gmtModified": "2016-04-14 11:16:50",
+      "iconUrl": "",
+      "id": 5,
+      "industryDesc": "",
+      "officialVersion": "1",
+      "operator": "阿拓",
+      "partnerType": "brand",
+      "status": "1"
+    },
+    {
+      "appDesc": "描述",
+      "appTitle": "阿拓test40",
+      "appType": "BUSINESS_MONITOR",
+      "appUrl": "",
+      "gmtCreate": "2016-04-08 16:45:13",
+      "gmtModified": "2016-04-14 11:17:00",
+      "iconUrl": "",
+      "id": 4,
+      "industryDesc": "行业",
+      "officialVersion": "1",
+      "operator": "阿拓",
+      "partnerType": "brand",
+      "status": "1"
+    },
+    {
+      "appDesc": "asd",
+      "appTitle": "阿拓test3",
+      "appType": "SHOP",
+      "appUrl": "",
+      "gmtCreate": "2016-04-08 16:09:07",
+      "gmtModified": "2016-04-14 11:17:05",
+      "iconUrl": "",
+      "id": 3,
+      "industryDesc": "ad",
+      "officialVersion": "1",
+      "operator": "阿拓",
+      "partnerType": "retail",
+      "status": "1"
+    },
+    {
+      "appDesc": "描述",
+      "appTitle": "阿拓test2",
+      "appType": "BUSINESS_MONITOR",
+      "appUrl": "asdvasdas",
+      "gmtCreate": "2016-04-08 14:51:16",
+      "gmtModified": "2016-04-14 11:17:11",
+      "iconUrl": "adasdasd",
+      "id": 2,
+      "industryDesc": "asdsa",
+      "officialVersion": "0",
+      "operator": "阿拓",
+      "partnerType": "retail",
+      "status": "1"
+    }
+  ],
+  "midoffice_pc_provider_analysis_table": {
+    "detail|30": [
+      {
+        "key|+1": 1,
+        "key0": "@word",
+        "key1": "@natural(1e5,1e6)",
+        "key2": "@natural(1e5,1e6)",
+        "key3": "@natural(1e5,1e6)",
+        "key4": "@natural(1e5,1e6)",
+        "key5": "@natural(1e5,1e6)",
+        "key6": "@natural(1e5,1e6)",
+        "key7": "@natural(1e5,1e6)",
+        "key8": "@natural(1e5,1e6)",
+        "key9": "@natural(1e5,1e6)",
+        "key10": "@natural(1e5,1e6)",
+        "key11": "@natural(1e5,1e6)",
+        "key12": "@natural(1e5,1e6)",
+        "key13": "@natural(1e5,1e6)"
+      }
+    ],
+    "pagination": {
+      "total": 100,
+      "pageSize": 10,
+      "current": 1
+    }
+  }
+}

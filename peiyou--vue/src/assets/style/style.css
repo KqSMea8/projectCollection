@@ -1,0 +1,104 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+#particles{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #04152e;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50% 50%;
+}
+
+html, body, #app {
+  width: 100%;
+  height: 100%;
+}
+
+.particles-js-canvas-el{
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.login {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.login h1 {
+  font-family: MicrosoftYaHei-Bold;
+  font-size: 34px;
+  color: #FFFFFF;
+  letter-spacing: 2.66px;
+  line-height: 45px;
+  margin-top: 117px;
+  text-align: center;
+}
+
+.login form {
+  position: relative;
+  width: 410px;
+  height: 371px;
+  background: rgba(255, 247, 221, 0.2);
+  margin: 45px auto 0px;
+  padding-top: 12px;
+  z-index: 999;
+}
+
+.login form input {
+  width: 305px;
+  height: 60px;
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 2px;
+  margin: 29px 30px 0px;
+  padding-left: 46px;
+  border: none;
+}
+
+.login form p {
+  height: 19px;
+  font-family: MicrosoftYaHei;
+  font-size: 14px;
+  color: #FF4040;
+  letter-spacing: 1.1px;
+  margin: 14px 0px;
+  text-align: center;
+}
+
+.login form button {
+  width: 350px;
+  height: 60px;
+  background: #00D2C0;
+  border-radius: 2px;
+  border: none;
+  margin-left: 30px;
+  font-family: MicrosoftYaHei;
+  font-size: 20px;
+  color: #FFFFFF;
+  letter-spacing: 1.2px;
+}
+.login .login_icon_urer, .login_icon_password{
+  position: relative;
+  left:50px;
+  top:72px;
+  width: 18px;
+  height: 18px;
+}
+.login .login_icon_password{
+  top:72px;
+  left: 53px;
+}
+.userStage{
+  width: 100%;
+  height: 100%;
+}
+.userStage .ant-layout{
+  width: 100%;
+  height: 100%;
+}
+

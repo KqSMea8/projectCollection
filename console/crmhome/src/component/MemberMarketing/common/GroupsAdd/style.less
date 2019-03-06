@@ -1,0 +1,208 @@
+groups-add-name {
+  display: flex;
+  padding: 20px 10px;
+  background-color: #F2F2F2;
+  > div:first-child {
+    flex: 1;
+    > div {
+      margin-bottom: 0;
+    }
+  }
+  > div:nth-child(2) {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    > span {
+      padding-top: 10px;
+      font-size: small;
+      strong {
+        font-weight: normal;
+        color: red;
+      }
+    }
+  }
+  label {
+    font-size: 16px;
+    font-weight: bold;
+    padding: 4px 0;
+  }
+  p {
+    margin-top: 5px;
+    color: #999;
+    font-size: 12px;
+  }
+}
+@target-tag-height: 60px;
+.target-after(@content, @top, @color) {
+  content: @content;
+  position: absolute;
+  left: 0;
+  top: @top;
+  display: block;
+  font-size: 12px;
+  color: @color;
+  z-index: 1;
+}
+groups-add-target {
+  display: flex;
+  margin-top: 5px;
+  padding-left: 80px;
+  .groups-target1 {
+    &::after {
+      .target-after('请至少选择1个类型', 75px, #f50);
+    }
+  }
+  .groups-target2 {
+    &::after {
+      .target-after('请至少选择1个类型', 90px, #f50);
+    }
+  }
+  .groups-target2-error{
+    &::before {
+      .target-after('暂时无法获取人数，不影响该类会员的选择，可继续操作', 75px, #999);
+    }
+  }
+  > div {
+    border: 1px solid #fff;
+    border-radius: 5px;
+    padding: 10px 20px 15px 0px;
+    margin-bottom: 20px;
+    position: relative;
+    > div {
+      float: left;
+      width: 170px;
+      height: @target-tag-height;
+      border: 1px solid #ddd;
+      margin-right: 20px;
+      padding: 8px;
+      position: relative;
+      .icon-check {
+        color: #ccc;
+        display: inline-block;
+        position: absolute;
+        line-height: @target-tag-height;
+        font-size: 16px;
+        top: 0;
+        right: 8px;
+      }
+      &:last-child {
+        margin-right: 0px;
+      }
+    }
+    span {
+      color: #666;
+    }
+    .target {
+      border: 2px solid #2db7f5;
+      padding: 7px;
+      .icon-check {
+        color: #2db7f5;
+        top: -1px;
+        right: 7px;
+      }
+    }
+    > div:hover {
+      cursor: pointer;
+    }
+  }
+  & .c9 {
+    color: #999999;
+    font-size: 12px;
+  }
+  
+}
+
+groups-add-basic, groups-add-industry, groups-add-consumer, groups-add-location, groups-add-third, groups-custom-divide {
+  display: block;
+  > div:first-child {
+    position: relative;
+    height: 32px;
+    margin-top: 40px;
+    border-top: 1px dashed #eee;
+    span {
+      position: absolute;
+      top: -12px;
+      padding: 0 20px 0 100px;
+      background-color: #fff;
+    }
+    &::before {
+      content: '';
+      position: absolute;
+      left: 80px;
+      top: -10px;
+      display: block;
+      width: 5px;
+      height: 20px;
+      background-color: #2db7f5;
+      z-index: 1;
+    }
+  }
+}
+
+groups-add-basic > div:first-child {
+  margin-top: 15px;
+}
+
+groups-add-basic {
+  div[data-age] {
+    margin-bottom: 34px;
+    .ant-form-explain {
+      margin-top: 30px;
+    }
+  }
+}
+
+groups-add-consumer {
+  p {
+    margin-left: -10px;
+    text-align: center;
+  }
+  div[data-trade-amount], div[data-trade-count], div[data-trade-per-price] {
+    .ant-form-explain {
+      clear: both;
+      padding-top: 5px;
+      padding-bottom: 10px;
+    }
+  }
+}
+
+groups-add-location {
+  div[data-activity-lbs] {
+    a {
+      margin-left: 10px;
+    }
+  }
+}
+
+groups-add-third {
+  i {
+    margin-right: 5px;
+    color: #3AA8EB;
+  }
+}
+
+groups-custom-divide {
+  & .ant-checkbox-group {
+    display: inline-block;
+  }
+}
+
+.firstlink-tips {
+  padding: 10px 0 0 0;
+  & i {
+    color: #2db7f5;
+    font-size: 14px;
+    margin-right: 5px;
+  }
+}
+
+divide-template-tips {
+  & p{
+    & span.c9 {
+      color: #999999;
+    }
+    & span.c3 {
+      color: #333333;
+    }
+  }
+}
